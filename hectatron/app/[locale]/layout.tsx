@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import './globals.css';
 import Header from '@/components/Header';
+import { Inter } from 'next/font/google'
+const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 
 export default async function LocaleLayout({
   children,
@@ -18,7 +20,7 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${inter.className}`}>
       <body>
         <NextIntlClientProvider>
           <Header/>
