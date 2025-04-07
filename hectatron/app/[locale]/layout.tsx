@@ -1,9 +1,10 @@
-import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import './globals.css';
 import Header from '@/components/Header';
 import { Inter } from 'next/font/google'
+import Providers from './Providers';
 const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 
 export default async function LocaleLayout({
@@ -22,10 +23,10 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${inter.className}`}>
       <body>
-        <NextIntlClientProvider>
+        <Providers>
           <Header/>
           {children}
-        </NextIntlClientProvider>
+        </Providers>
       </body>
     </html>
   );
