@@ -2,7 +2,7 @@ import { hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import './globals.css';
-import Header from '@/components/Header';
+import Header from '@/app/[locale]/_components/Header';
 import { Inter } from 'next/font/google'
 import Providers from './Providers';
 const inter = Inter({ subsets: ['latin', 'cyrillic'] })

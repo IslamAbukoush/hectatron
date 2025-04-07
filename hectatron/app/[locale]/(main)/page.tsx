@@ -1,9 +1,13 @@
 
 import React from 'react'
-import Title from './Title'
 import Image from 'next/image'
-import Blur from './Blur'
-import InfiniteMarquee from './InfiniteMarquee'
+import Title from '@/app/[locale]/_components/Title';
+import Blur from '@/app/[locale]/_components/Blur';
+import InfiniteMarquee from '@/app/[locale]/_components/InfiniteMarquee';
+import WhyChooseUs from './_components/WhyChooseUs';
+import Services from './_components/Services';
+import Customers from './_components/Customers';
+
 
 const Home = () => {
   const techStackItems = [
@@ -15,7 +19,7 @@ const Home = () => {
 
   return (
     <div className="">
-      <div className='px-[100px] py-[50px]'>
+      <div className='px-[100px] py-[50px] flex flex-col gap-10 items-center justify-center'>
           <div className="flex flex-col gap-10 items-center justify-center">
               <Title title='Elevate Your Brand with Custom Web Solutions' description='We design and develop high-quality, custom websites that enhance your brand and drive results.'/>
               <div className="w-[200px] bg-button text-center font-bold text-[18px] text-white px-10 py-6 rounded-[24px] border-[1px] border-white/60 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.25),inset_-10px_-10px_20px_rgba(255,255,255,0.25)]">
@@ -31,6 +35,9 @@ const Home = () => {
       <div className="w-full bg-[#1A0000] mt-28">
           <InfiniteMarquee items={techStackItems} speed={5} />
       </div>
+      <WhyChooseUs/>
+      <Services/>
+      <Customers/>
     </div>
   )
 }
