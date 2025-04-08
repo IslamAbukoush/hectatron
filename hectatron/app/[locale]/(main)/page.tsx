@@ -23,7 +23,12 @@ const Home = () => {
       <div className='py-[50px] flex flex-col gap-10 items-center justify-center'>
           <div className="flex flex-col gap-10 items-center justify-center">
               <Title title='Elevate Your Brand with Custom Web Solutions' description='We design and develop high-quality, custom websites that enhance your brand and drive results.'/>
-              <div className="w-[200px] bg-button text-center font-bold text-[18px] text-white px-10 py-6 rounded-[24px] border-[1px] border-white/60 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.25),inset_-10px_-10px_20px_rgba(255,255,255,0.25)]">
+              <div className="
+                bg-button text-center font-bold text-white border-[1px] border-white/60 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.25),inset_-10px_-10px_20px_rgba(255,255,255,0.25)]
+                lg:text-base lg:px-10 lg:py-6 lg:rounded-[24px]
+                xs:text-sm
+                text-xs px-8 py-4 rounded-[16px]
+              ">
                   Get Started
               </div>
           </div>
