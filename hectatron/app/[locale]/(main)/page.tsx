@@ -8,6 +8,7 @@ import WhyChooseUs from './_components/WhyChooseUs';
 import Services from './_components/Services';
 import Customers from './_components/Customers';
 import FAQ from './_components/FAQ';
+import Footer from '../_components/Footer';
 
 
 const Home = () => {
@@ -41,10 +42,11 @@ const Home = () => {
       {/* <div className="w-full bg-[#1A0000] mt-28">
           <InfiniteMarquee items={techStackItems} speed={5} />
       </div> */}
-      {/* <WhyChooseUs/>
+      <WhyChooseUs/>
       <Services/>
       <Customers/>
-      <FAQ/> */}
+      <FAQ/>
+      <Footer />
     </div>
   )
 }
