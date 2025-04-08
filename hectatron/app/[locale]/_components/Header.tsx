@@ -49,7 +49,7 @@ const Header = () => {
                         {link.label}
                     </Link>
                 ))}
-                <Image src='/icons/global.svg' alt="language switcher icon" width={25} height={25} className="absolute right-2 cursor-pointer" />
+                <Image src='/icons/global.svg' alt="language switcher icon" width={25} height={25} className="cursor-pointer" />
             </div>
             <div className="md:flex hidden justify-center items-center w-full">
                 <div className="bg-button text-center content-center font-bold text-xs text-white lg:px-10 px-5 lg:text-sm py-6 rounded-3xl cursor-pointer border border-white/60 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.25),inset_-10px_-10px_20px_rgba(255,255,255,0.25)] text-nowrap">
