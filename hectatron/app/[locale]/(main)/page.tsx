@@ -7,6 +7,7 @@ import InfiniteMarquee from '@/app/[locale]/_components/InfiniteMarquee';
 import WhyChooseUs from './_components/WhyChooseUs';
 import Services from './_components/Services';
 import Customers from './_components/Customers';
+import FAQ from './_components/FAQ';
 
 
 const Home = () => {
@@ -38,6 +39,7 @@ const Home = () => {
       <WhyChooseUs/>
       <Services/>
       <Customers/>
+      <FAQ/>
     </div>
   )
 }

@@ -4,6 +4,9 @@ import { useState } from "react";
 import { CustomersBlockProps } from "@/lib/types/CustomersBlockProps";
 import CustomersBLock from "./CustomersBLock";
 import { twMerge } from "tailwind-merge";
+import * as m from "motion/react-m"
+import { AnimatePresence } from "motion/react";
+import { CustomerAnimation, CustomersAnimation } from "@/lib/animations/CustomerAnimation";
 
 const testimonials: CustomersBlockProps[] = [
   {
@@ -50,21 +53,29 @@ const testimonials: CustomersBlockProps[] = [
 
 const Customers = () => {
   const [currentPage, setCurrentPage] = useState(0);
+  const [direction, setDirection] = useState(1); // 1 for right-to-left, -1 for left-to-right
   const itemsPerPage = 2;
   const totalPages = Math.ceil(testimonials.length / itemsPerPage);
 
-  const handlePrevious = () => {
-    setCurrentPage((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
-  };
+  const [key, setKey] = useState(0);
 
+  const handlePrevious = () => {
+    setDirection(-1);
+    setCurrentPage((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
+    setKey(prevKey => prevKey + 1); // Force parent container to re-animate
+  };
+  
   const handleNext = () => {
+    setDirection(1);
     setCurrentPage((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
+    setKey(prevKey => prevKey + 1); // Force parent container to re-animate
   };
 
   const getCurrentItems = () => {
     const startIndex = currentPage * itemsPerPage;
     return testimonials.slice(startIndex, startIndex + itemsPerPage);
   };
+
 
   return (
     <div className="px-[100px] mt-[150px]">
@@ -94,22 +105,36 @@ const Customers = () => {
         </div>
       </div>
       
-      <div className="grid grid-cols-2 gap-20 mt-16 transition-all duration-500">
-        {getCurrentItems().map((item, index) => (
-          <div 
-            key={index} 
-            className="transform transition-all duration-500 hover:scale-105"
+          <m.div 
+            key={key} // Add this key to force re-render
+            variants={CustomersAnimation}
+            initial="hidden"
+            animate="vissible"
+            exit="exit"
+            className="grid grid-cols-2 gap-20 mt-16 overflow-hidden"
           >
-            <CustomersBLock {...item} />
-          </div>
-        ))}
-      </div>
+          <AnimatePresence mode="wait" custom={direction}>
+          {getCurrentItems().map((item, index) => (  
+            <m.div 
+              key={`${currentPage}-${index}`}
+              custom={direction}
+              variants={CustomerAnimation}
+              transition={{ duration: 0.5, ease: "linear", type: "spring", bounce: 0.5, stiffness: 100, damping: 20 }}
+            >
+              <CustomersBLock {...item} />
+            </m.div>
+          ))}
+        </AnimatePresence>
+      </m.div>
       
       <div className="flex items-center justify-center gap-2 mt-10">
         {Array.from({ length: totalPages }).map((_, index) => (
           <div
             key={index}
-            onClick={() => setCurrentPage(index)}
+            onClick={() => {
+              setDirection(index > currentPage ? 1 : -1);
+              setCurrentPage(index);
+            }}
             className={twMerge(
               "w-5 h-5 rounded-full cursor-pointer transition-all duration-300",
               index === currentPage ? "bg-[#FF7043]" : "bg-gray-500 hover:bg-gray-400"
