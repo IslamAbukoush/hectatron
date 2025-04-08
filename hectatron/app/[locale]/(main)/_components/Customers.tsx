@@ -11,24 +11,24 @@ import { CustomerAnimation, CustomersAnimation } from "@/lib/animations/Customer
 const testimonials: CustomersBlockProps[] = [
   {
     src: "/images/testimonial1.png",
-    alt: "Stephen Brekke",
-    title: "Stephen Brekke",
+    alt: "Stephen Brekke1",
+    title: "Stephen Brekke1",
     position: "Legacy Integration Producer",
     description:
       "If you want real marketing that works and effective implementation - mobile app's got you covered.",
   },
   {
     src: "/images/testimonial2.png",
-    alt: "Stephen Brekke",
-    title: "Stephen Brekke",
+    alt: "Stephen Brekke2",
+    title: "Stephen Brekke2",
     position: "Legacy Integration Producer",
     description:
       "If you want real marketing that works and effective implementation - mobile app's got you covered.",
   },
   {
     src: "/images/testimonial1.png",
-    alt: "Stephen Brekke",
-    title: "Stephen Brekke",
+    alt: "Stephen Brekke3",
+    title: "Stephen Brekke3",
     position: "Legacy Integration Producer",
     description:
       "If you want real marketing that works and effective implementation - mobile app's got you covered.",
@@ -53,7 +53,7 @@ const testimonials: CustomersBlockProps[] = [
 
 const Customers = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const [direction, setDirection] = useState(1); // 1 for right-to-left, -1 for left-to-right
+  const [direction, setDirection] = useState(1);
   const itemsPerPage = 2;
   const totalPages = Math.ceil(testimonials.length / itemsPerPage);
 
@@ -62,13 +62,11 @@ const Customers = () => {
   const handlePrevious = () => {
     setDirection(-1);
     setCurrentPage((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
-    setKey(prevKey => prevKey + 1); // Force parent container to re-animate
   };
   
   const handleNext = () => {
     setDirection(1);
     setCurrentPage((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
-    setKey(prevKey => prevKey + 1); // Force parent container to re-animate
   };
 
   const getCurrentItems = () => {
@@ -104,16 +102,16 @@ const Customers = () => {
           </button>
         </div>
       </div>
-      
+      <AnimatePresence mode="wait" custom={direction}>
           <m.div 
-            key={key} // Add this key to force re-render
+            key={currentPage}
             variants={CustomersAnimation}
             initial="hidden"
             animate="vissible"
             exit="exit"
             className="grid grid-cols-2 gap-20 mt-16 overflow-hidden"
           >
-          <AnimatePresence mode="wait" custom={direction}>
+          
           {getCurrentItems().map((item, index) => (  
             <m.div 
               key={`${currentPage}-${index}`}
@@ -124,8 +122,8 @@ const Customers = () => {
               <CustomersBLock {...item} />
             </m.div>
           ))}
-        </AnimatePresence>
       </m.div>
+        </AnimatePresence>
       
       <div className="flex items-center justify-center gap-2 mt-10">
         {Array.from({ length: totalPages }).map((_, index) => (
@@ -137,7 +135,7 @@ const Customers = () => {
             }}
             className={twMerge(
               "w-5 h-5 rounded-full cursor-pointer transition-all duration-300",
-              index === currentPage ? "bg-[#FF7043]" : "bg-gray-500 hover:bg-gray-400"
+              index === currentPage ? "active" : "bg-gray-500 hover:bg-gray-400"
             )}
           />
         ))}

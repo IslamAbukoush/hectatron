@@ -7,7 +7,7 @@
 }
 
 .text-gradient{
-  @apply bg-gradient-to-r from-[#737373] via-white to-[#737373] bg-clip-text text-transparent inline-block;
+  @apply bg-gradient-to-r from-[#737373] via-white to-[#737373] bg-clip-text text-transparent inline-block ;
 }
 
 .inner-shadow {

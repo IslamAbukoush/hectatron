@@ -8,9 +8,16 @@ export const CustomersAnimation: Variants = {
         opacity: 1,
         transition: {
             staggerChildren: 0.25,
-            duration: 0.8,
+            duration: 0.4,
             ease: "linear",
-            delayChildren: 0.2
+        }
+    },
+    exit: {
+        opacity: 0,
+        transition: {
+            staggerChildren: 0.25,
+            duration: 0.4,
+            ease: "linear",
         }
     }
 }
@@ -29,6 +36,10 @@ export const CustomerAnimation = {
     exit: (direction: number) => ({
       opacity: 0,
       x: direction * -300,
-      scale: 0.8
+      scale: 0.8,
+      transition: {
+        duration: 0.3,
+        ease: "linear",
+    }
     })
   };
