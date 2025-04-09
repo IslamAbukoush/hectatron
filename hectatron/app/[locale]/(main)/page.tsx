@@ -34,7 +34,7 @@ const Home = () => {
               </div>
           </div>
           <div className="overflow-hidden absolute top-0 left-0 w-full h-full -z-10">
-              <Image className='absolute top-[110px]' src='/iamges/robot.png' alt='robot' width={600} height={500}/>
+              <Image className='absolute top-[110px]' src='/images/robot.png' alt='robot' width={600} height={500}/>
               <Image className='absolute top-[-100px] right-0' src='/images/phone.png' alt='robot' width={600} height={500}/>
               <Blur className='top-[-350px] left-[45%] w-[250px] h-[500px] blur-[200px] rounded-full'/>
           </div>
