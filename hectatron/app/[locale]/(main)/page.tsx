@@ -39,9 +39,9 @@ const Home = () => {
               <Blur className='top-[-350px] left-[45%] w-[250px] h-[500px] blur-[200px] rounded-full'/>
           </div>
       </div>
-      {/* <div className="w-full bg-[#1A0000] mt-28">
-          <InfiniteMarquee items={techStackItems} speed={5} />
-      </div> */}
+      <div className="w-full bg-[#1A0000] mt-28">
+          <InfiniteMarquee items={techStackItems} speed={2} />
+      </div>
       <WhyChooseUs/>
       <Services/>
       <Customers/>
