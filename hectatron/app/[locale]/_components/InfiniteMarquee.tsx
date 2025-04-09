@@ -43,7 +43,7 @@ const InfiniteMarquee = ({ items, speed = 5 }: InfiniteMarqueeProps) => {
         className={`w-full flex items-center justify-center will-change-transform absolute`}
       >
         {items.map((item, index) => (
-          <div className='w-full flex justify-center items-center'>
+          <div className='w-full flex justify-center items-center' key={index}>
             <div
               key={index}
               className="flex-shrink-0 w-[150px] h-[100px] flex items-center justify-center"
