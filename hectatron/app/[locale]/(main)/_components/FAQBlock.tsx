@@ -4,6 +4,7 @@ import Image from "next/image"
 import * as m from "motion/react-m"
 import { useState } from "react";
 import { FAQBlockType } from "@/lib/types/FAQBlockType";
+import { cn } from "@/lib/utils";
 
 
 
@@ -19,16 +20,16 @@ const FAQBlock = ({title, description}: FAQBlockType) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut", type: "tween"}}
-      className="bg-[#1A1A32] rounded-[12px] p-8 inner-shadow border-2 border-[#FF5900]/20 flex flex-col gap-4 cursor-pointer"
+      className={cn("bg-[#1A1A32] rounded-[12px] p-8 inner-shadow border-2 border-[#FF5900]/20 flex flex-col gap-4 cursor-pointer", "max-sm:p-5 max-sm:gap-1")}
       onClick={handleToggle}
     >
-      <div className="flex flex-row gap-4 items-center justify-between translate-y-2">
-        <h2 className="font-semibold text-xl text-white">{title}</h2>
+      <div className={cn("flex flex-row gap-4 items-center justify-between translate-y-2", "max-sm:translate-y-1")}>
+        <h2 className={cn("font-semibold text-xl text-white", "max-md:text-lg max-sm:text-sm")}>{title}</h2>
         <m.div
           animate={{ rotate: isOpen ? 90 : 0 }}
           transition={{ duration: 0.3 }}
         >
-          <Image src='/icons/arrow-right.svg' alt="arrow" width={40} height={40}/>
+          <Image src='/icons/arrow-right.svg' alt="arrow" width={40} height={40} className={cn("max-sm:w-8")}/>
         </m.div>
       </div>
       
@@ -42,7 +43,7 @@ const FAQBlock = ({title, description}: FAQBlockType) => {
         transition={{ duration: 0.5 }}
         style={{ overflow: "hidden" }}
       >
-        <p className="text-lg text-white/60">
+        <p className={cn("text-lg text-white/60", "max-md:text-base max-sm:text-xs")}>
           {description}
         </p>
       </m.div>

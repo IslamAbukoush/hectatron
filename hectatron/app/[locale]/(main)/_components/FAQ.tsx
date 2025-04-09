@@ -1,6 +1,7 @@
 import { FAQBlockType } from "@/lib/types/FAQBlockType"
 import Title from "../../_components/Title"
 import FAQBlock from "./FAQBlock"
+import { cn } from "@/lib/utils"
 
 const faqs : FAQBlockType[] = [
   {
@@ -39,12 +40,12 @@ const faqs : FAQBlockType[] = [
 
 const FAQ = () => {
   return (
-    <div className="px-[100px] py-[50px] flex flex-col gap-10 items-center justify-center">
+    <div className={cn("px-[100px] py-[50px] flex flex-col gap-10 items-center justify-center", "max-md:px-[60px] max-sm:px-[40px] max-sm:py-[30px]")}>
         <Title 
             title='FAQs' 
             description='Find answers to common questions about our services, technology, and process. If you need more details, feel free to reach out!'
         />
-        <div className="grid grid-cols-2 gap-10 w-full">
+        <div className={cn("grid grid-cols-2 gap-10 w-full", "max-lg:grid-cols-1 max-")}>
             <div className="flex flex-col gap-10">
             {faqs.slice(0, 4).map((item, index) => (
               <FAQBlock 
