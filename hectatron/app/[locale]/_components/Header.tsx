@@ -20,7 +20,7 @@ const Header = () => {
     ];
 
     return (
-        <div className="md:grid lg:grid-cols-[1fr_2fr_1fr] md:grid-cols-[1fr_4fr_1fr] flex justify-between items-center py-8 px-4 z-10 h-[100px]">
+        <div className="fixed left-0 right-0 md:grid lg:grid-cols-[1fr_2fr_1fr] md:grid-cols-[1fr_4fr_1fr] flex justify-between items-center py-8 px-4 z-10 h-[100px]">
             <div className="relative h-full w-full flex justify-start md:justify-center items-center md:px-5">
                 <div className="relative w-full h-full flex justify-start">
                     <Image
