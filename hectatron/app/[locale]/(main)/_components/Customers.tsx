@@ -77,7 +77,7 @@ const Customers = () => {
 
 
   return (
-    <div className={cn("px-[100px] mt-[150px]", "max-md:px-[40px]")}>
+    <div className={cn("px-[100px] mt-[150px]", "max-md:px-[30px] max-md:mt-[80px]")}>
       <div className="flex max-lg:flex-col items-end justify-between">
         <div className="flex flex-col gap-6 items-start justify-center my-[10px]">
           <h1 className={cn("text-gradient text-6xl text-start", "max-lg:text-5xl max-sm:text-3xl")}>
