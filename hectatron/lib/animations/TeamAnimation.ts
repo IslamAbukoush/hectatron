@@ -17,9 +17,9 @@ export const TeamAnimation: Variants = {
     },
     exit: {
         transition: {
-            duration: 0.2,
+            duration: 0.1,
             ease: 'linear',
-            staggerChildren: 0.15
+            staggerChildren: 0.1
         }
     }
 }
@@ -44,13 +44,12 @@ export const LeftTeamMemberAnimation = {
     },
     exit:{
         opacity: 0,
-        scale: 0.65,
-        y: 200,
+        scale: 0.5,
         transition:{
             type: 'spring',
             stiffness: 100,
             damping: 20,
-            duration: 0.2,
+            duration: 0.1,
             ease: 'easeInOut'
         }
     }
@@ -76,13 +75,12 @@ export const RightTeamMemberAnimation = {
     },
     exit:{
         opacity: 0,
-        scale: 0.65,
-        y: 200,
+        scale: 0.5,
         transition:{
             type: 'spring',
             stiffness: 100,
             damping: 20,
-            duration: 0.2,
+            duration: 0.1,
             ease: 'easeInOut'
         }
     }
