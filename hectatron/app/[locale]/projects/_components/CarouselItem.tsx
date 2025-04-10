@@ -3,9 +3,10 @@
 import { CarouselType } from '@/lib/types/ItemsType'
 import Image from 'next/image'
 import * as m from 'motion/react-m'
-import { useState } from 'react'
 import { cn } from '@/lib/utils'
 import { useCarouselStore } from '@/lib/store/CarouselStore'
+import CarouselDetailes from './CarouselDetailes'
+import { AnimatePresence } from 'motion/react'
 
 const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
     const {activeCardId, setActiveCardId} = useCarouselStore();
@@ -28,7 +29,7 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
     const radius = 800;
     const rotate = angleDiff * rotateStep;
     const x = Math.cos((angleDiff - 3) * angleStep) * radius ;
-    const y = Math.sin((angleDiff - 3) * angleStep) * radius + 900;
+    const y = Math.sin((angleDiff - 3) * angleStep) * radius + 1000;
 
     const isActive = activeCardId === item.id;
 
@@ -45,7 +46,7 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
         translateY: 190
     }}
     animate={{
-        scale: isActive ? 1.2 : 1,
+        scale: isActive ? 1.3 : 1,
         zIndex: isActive ? 20 : 6 - Math.abs(angleDiff),
         rotate: rotate,
         y: y,
@@ -56,25 +57,23 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
     transition={{
         type: 'keyframes', 
         stiffness: 230, 
-        damping: 32,
-        duration: 0.4,
-        ease:"easeInOut"
+        damping: 32
     }}
     onClick={() => updateActiveCardId(item.id)}
-    className={cn("rounded-[8px] transition duration-300 absolute left-[30%] flex flex-col", isActive ? "" : "grayscale-100 contrast-50")}
+    className={cn(" transition duration-300 absolute left-[30%] flex flex-col", isActive ? "" : "grayscale-100 contrast-50")}
     >
-        {/* <div className="w-full text-center">
-            <h2 className='text-gradient text-4xl font-semibold'>{item.title}</h2>
-        </div> */}
-            <Image 
-            width={600} 
-            height={500} 
-            src={item.src} 
-            alt={item.alt}
-            draggable="false"
-            priority={index > 6 ? false : true}
-            />
-        {/* <p className='text-white/60 text-base'>{item.description}</p> */}
+        <Image 
+        width={600} 
+        height={500} 
+        src={item.src} 
+        alt={item.alt}
+        draggable="false"
+        priority={index > 6 ? false : true}
+        className='rounded-[8px]'
+        />
+        <AnimatePresence>
+            {isActive && <CarouselDetailes title={item.title} description={item.description}/>}
+        </AnimatePresence>
     </m.div>
   )
 }
