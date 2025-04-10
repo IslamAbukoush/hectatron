@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div className="">
       <div className='flex flex-col gap-10 items-center justify-center'>
-        <div className="flex flex-col gap-10 items-center justify-center h-screen">
+        <div className="flex flex-col gap-10 items-center pt-20 md:pt-30 h-[calc(100vh-100px)]">
           <Title title='Elevate Your Brand with Custom Web Solutions' description='We design and develop high-quality, custom websites that enhance your brand and drive results.' />
           <div className="
                 bg-button text-center font-bold text-white border-[1px] border-white/60 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.25),inset_-10px_-10px_20px_rgba(255,255,255,0.25)]
@@ -40,7 +40,7 @@ const Home = () => {
               xl:w-[900px] xl:h-[850px] xl:top-[20%] xl:left-[-150px]
               sm:w-[700px] sm:h-[700px] sm:top-[31%] sm:left-[-100px]
               xs:w-[700px] xs:h-[700px] xs:top-[31%] xs:left-[-100px]
-              min-w-[400px] min-h-[400px] w-[400px] h-[400px] top-[56%] left-[-60px]
+              min-w-[500px] min-h-[500px] w-[500px] h-[500px] top-[51%] left-[-70px]
               object-contain"
               src="/images/robot.png"
               alt="robot"
@@ -63,11 +63,11 @@ const Home = () => {
       <div className="w-full bg-[#1A0000]">
         <InfiniteMarquee items={techStackItems} speed={2} />
       </div>
-      {/* <WhyChooseUs />
+      <WhyChooseUs />
       <Services />
       <Customers />
       <FAQ />
-      <Footer /> */}
+      <Footer />
     </div>
   )
 }
