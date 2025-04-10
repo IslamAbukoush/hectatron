@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { usePathname } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
+import { useState, useEffect } from "react"
 
 interface LinkItem {
     href: string;
@@ -11,6 +12,27 @@ interface LinkItem {
 
 const Header = () => {
     const path = usePathname();
+    const [scroll, setScroll] = useState({ y: 0, prevY: 0, dir: 'up'});
+    const [scrollAmount, setScrollAmount] = useState({oldScroll: 'up', amount: 0});
+
+    useEffect(() => {
+        if(scroll.dir !== scrollAmount.oldScroll) {
+            setScrollAmount({oldScroll: scroll.dir, amount: 0})
+        } else {
+            setScrollAmount(prev => ({oldScroll: scroll.dir, amount: prev.amount + scroll.prevY - scroll.y}))
+        }
+    }, [scroll])
+
+    console.log(scrollAmount.amount)
+
+    useEffect(() => {
+        const onScroll = () => setScroll(prev => ({y: window.pageYOffset, prevY: prev.y, dir: (prev.y - window.pageYOffset) < 0 ? 'down' : 'up'}));
+        window.removeEventListener('scroll', onScroll);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+
+    
 
     const links: LinkItem[] = [
         { href: '/', label: 'Home' },
@@ -21,7 +43,7 @@ const Header = () => {
 
     return (
         <>
-            <div className="fixed left-0 right-0 md:grid lg:grid-cols-[1fr_2fr_1fr] md:grid-cols-[1fr_4fr_1fr] flex justify-between items-center py-8 px-4 z-10 h-[100px]">
+            <div className={cn(`fixed left-0 right-0 md:grid lg:grid-cols-[1fr_2fr_1fr] md:grid-cols-[1fr_4fr_1fr] flex justify-between items-center py-8 px-4 z-10 h-[100px] transition-transform`, {'translate-y-[-150%]': scroll.dir === 'down'})}>
                 <div className="relative h-full w-full flex justify-start md:justify-center items-center md:px-5">
                     <div className="relative w-full h-full flex justify-start">
                         <Link href={'/'} className="relative w-full h-full flex justify-start">
