@@ -5,10 +5,10 @@ import Image from 'next/image'
 import * as m from 'motion/react-m'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
-import { twMerge } from 'tailwind-merge'
+import { useCarouselStore } from '@/lib/store/CarouselStore'
 
 const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
-    const [activeCardId, setActiveCardId] = useState(12);
+    const {activeCardId, setActiveCardId} = useCarouselStore();
 
 
     const updateActiveCardId = (id: number) => {
@@ -22,7 +22,7 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
         return Math.abs(directDistance) < Math.abs(altDistance) ? directDistance : altDistance;
     }
     const normalizedActiveIndex = ((activeCardId % arrayLength) + arrayLength) % arrayLength;
-    const normalizedItemIndex = ((index % arrayLength) + arrayLength + 1) % arrayLength;
+    const normalizedItemIndex = ((index % arrayLength) + arrayLength ) % arrayLength;
 
     const angleDiff = getShortestRotationDistance(normalizedActiveIndex, normalizedItemIndex, arrayLength);
     const radius = 800;
@@ -56,7 +56,9 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
     transition={{
         type: 'keyframes', 
         stiffness: 230, 
-        damping: 32
+        damping: 32,
+        duration: 0.4,
+        ease:"easeInOut"
     }}
     onClick={() => updateActiveCardId(item.id)}
     className={cn("rounded-[8px] transition duration-300 absolute left-[30%] flex flex-col", isActive ? "" : "grayscale-100 contrast-50")}
@@ -64,9 +66,14 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
         {/* <div className="w-full text-center">
             <h2 className='text-gradient text-4xl font-semibold'>{item.title}</h2>
         </div> */}
-        <div className="">
-            <Image src={item.src} alt={item.alt} width={600} height={500} />
-        </div>
+            <Image 
+            width={600} 
+            height={500} 
+            src={item.src} 
+            alt={item.alt}
+            draggable="false"
+            priority={index > 6 ? false : true}
+            />
         {/* <p className='text-white/60 text-base'>{item.description}</p> */}
     </m.div>
   )
