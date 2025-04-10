@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { div } from 'motion/react-m';
 
 interface MarqueeItem {
   src: string;
@@ -37,7 +38,8 @@ const InfiniteMarquee = ({ items, speed = 5 }: InfiniteMarqueeProps) => {
   }, [items, speed]);
 
   return (
-    <div className="w-full overflow-x-hidden relative h-[100px]">
+    <div className='w-full overflow-hidden'>
+    <div className="min-w-[1000px] w-full overflow-x-hidden relative h-[100px]">
       <div
         ref={trackRef1}
         className={`w-full flex items-center justify-center will-change-transform absolute`}
@@ -80,6 +82,7 @@ const InfiniteMarquee = ({ items, speed = 5 }: InfiniteMarqueeProps) => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };
