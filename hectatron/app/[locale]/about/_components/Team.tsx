@@ -49,7 +49,6 @@ const Team: React.FC = () => {
                     variants={TeamAnimation}
                     initial='hidden'
                     animate='visible'
-                    exit='exit'
                     className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
                         <m.div
                         variants={LeftTeamMemberAnimation}
@@ -86,7 +85,6 @@ const Team: React.FC = () => {
                     variants={TeamAnimation}
                     initial='hidden'
                     animate='visible'
-                    exit='exit'
                     className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
                         <m.div
                         variants={LeftTeamMemberAnimation}
