@@ -2,6 +2,7 @@ import { WhyChooseType } from "@/lib/types/WhyChooseType"
 import Title from "../../_components/Title"
 import ServicesBlock from "./ServicesBlock"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 const services : WhyChooseType[] = [
     {
@@ -32,12 +33,18 @@ const services : WhyChooseType[] = [
 
 const Services = () => {
   return (
-    <div className={cn("px-[100px] mt-[150px]", "max-sm:px-[50px] max-md:mt-[80px]")}>
+    <div className={cn("px-[100px] mt-[150px] relative", "max-sm:px-[50px] max-md:mt-[80px]")}>
         <Title title='Services' description="Fast, secure, and scalable Next.js websites with expert support to keep your business ahead." />
         <div className={cn("grid grid-cols-1 gap-10 mt-20", "max-md:mt-10")}>
             {services.map((service, index) => (
                 <ServicesBlock key={index} {...service} />
             ))}
+        </div>
+        <div className="absolute right-0 top-[-300px] lg:block hidden -z-10">
+            <Image className="" src='/images/robot-hand.png' alt='Diamand' width={500} height={200}/>
+        </div>
+        <div className="absolute right-0 top-[800px] lg:block hidden -z-10">
+            <Image className="" src='/images/planet-diamand.png' alt='Diamand' width={500} height={200}/>
         </div>
     </div>
   )

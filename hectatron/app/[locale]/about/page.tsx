@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Footer from "../_components/Footer"
 import InfoBlock from "./_components/InfoBlock"
 import Team from "./_components/Team"
