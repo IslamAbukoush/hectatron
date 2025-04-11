@@ -1,6 +1,5 @@
 import { Link } from "@/i18n/navigation"
 import { cn } from "@/lib/utils";
-import { p } from "motion/react-m";
 import Image from "next/image"
 
 interface MediaType {

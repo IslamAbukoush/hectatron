@@ -6,18 +6,11 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
     FormMessage,
 } from "@/components/ui/form"
-
-type ItemProps = {
-    type: "firstName" | "lastName" | "email" | "phoneNumber" | "services" | "message",
-    label: string,
-    placeholder: string,
-}
 
 const formSchema = z.object({
     firstName: z.string().min(2).max(50),
@@ -46,7 +39,7 @@ export default function FormElement() {
     }
 
     type ItemProps = {
-        type: "firstName" | "lastName" | "email" | "phoneNumber" | "services" | "message",
+        type: "firstName" | "lastName" | "email" | "phoneNumber" | "message",
         label: string,
         placeholder: string,
     }
@@ -79,17 +72,35 @@ export default function FormElement() {
                         <Item type="email" label="Email" placeholder="johndoe@gmail.com" />
                         <Item type="phoneNumber" label="Phone Number" placeholder="+1 012 3456 789" />
                     </div>
-                    <RadioGroup defaultValue="newWebsite" name='services' className='flex flex-col'>
-                        <p className='text-white'>Select Service?</p>
-                        <div className='flex justify-between'>
-                            {['newWebsite', 'websiteRedisgn', 'websiteBugFixes', 'technicalConsultation'].map((item, i) => (
-                                <div className="flex items-center space-x-2" key={i}>
-                                    <RadioGroupItem value={item} id={item} />
-                                    <label htmlFor={item} className='text-white'>{item}</label>
-                                </div>
-                            ))}
-                        </div>
-                    </RadioGroup>
+                    
+                    {/* Properly connected RadioGroup using FormField */}
+                    <FormField
+                        control={form.control}
+                        name="services"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel className='text-white'>Select Service?</FormLabel>
+                                <FormControl>
+                                    <RadioGroup
+                                        value={field.value}
+                                        onValueChange={field.onChange}
+                                        className='flex flex-col'
+                                    >
+                                        <div className='flex justify-between'>
+                                            {['newWebsite', 'websiteRedisgn', 'websiteBugFixes', 'technicalConsultation'].map((item, i) => (
+                                                <div className="flex items-center space-x-2" key={i}>
+                                                    <RadioGroupItem value={item} id={item} />
+                                                    <label htmlFor={item} className='text-white'>{item}</label>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </RadioGroup>
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                    
                     <Item type="message" label="Message" placeholder="Write your message..." />
                     <button type="submit" className='cursor-pointer text-white rounded-md bg-[#FF8629] px-15 py-5'>Send Message</button>
                 </form>

@@ -21,7 +21,7 @@ const Header = () => {
         } else {
             setScrollAmount(prev => ({oldScroll: scroll.dir, amount: prev.amount + scroll.prevY - scroll.y}))
         }
-    }, [scroll])
+    }, [scroll, scrollAmount.oldScroll])
 
     console.log(scrollAmount.amount)
 

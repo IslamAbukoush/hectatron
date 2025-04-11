@@ -1,4 +1,3 @@
-import Footer from "../_components/Footer"
 import Title from "../_components/Title"
 import ProjectsCarousel from "./_components/ProjectsCarousel"
 
