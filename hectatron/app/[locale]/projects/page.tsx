@@ -9,7 +9,6 @@ const page = () => {
             <Title title="Projects" description="Fast, secure, and scalable Next.js websites with expert support to keep your business ahead." />
         </div>
         <ProjectsCarousel/>
-        <Footer/>
     </div>
   )
 }

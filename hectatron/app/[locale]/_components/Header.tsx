@@ -32,8 +32,6 @@ const Header = () => {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    
-
     const links: LinkItem[] = [
         { href: '/', label: 'Home' },
         { href: '/about', label: 'About' },

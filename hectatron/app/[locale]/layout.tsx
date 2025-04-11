@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import './globals.css';
 import Header from '@/app/[locale]/_components/Header';
+import Footer from './_components/Footer';
 import { Inter } from 'next/font/google'
 import Providers from './Providers';
 const inter = Inter({ subsets: ['latin', 'cyrillic'] })
@@ -26,6 +27,7 @@ export default async function LocaleLayout({
         <Providers>
           <Header/>
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
