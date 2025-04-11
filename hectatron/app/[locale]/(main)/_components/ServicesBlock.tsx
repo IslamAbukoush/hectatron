@@ -5,7 +5,7 @@ import { WhyChooseType } from '@/lib/types/WhyChooseType'
 
 const ServicesBlock = ({title, description, src, alt} : WhyChooseType) => {
   return (
-    <div className='flex flex-col sm:flex-row items-center gap-6 sm:gap-8 lg:gap-12 bg-[#1A1A32] w-full max-w-full rounded-xl sm:rounded-2xl p-4 sm:px-6 lg:px-10 py-6 sm:py-8 lg:py-12 border border-white/20 relative'>
+    <div className='flex flex-col sm:flex-row items-center gap-6 sm:gap-8 lg:gap-12 bg-[#1A1A32]  md:max-w-[80%] rounded-xl sm:rounded-2xl p-4 sm:px-6 lg:px-10 py-6 sm:py-8 lg:py-12 border border-white/20 relative'>
         <div className="relative flex-shrink-0">
           <Image 
             className='object-cover w-20 sm:w-24 md:w-28 lg:w-32 h-auto z-10 mx-auto' 

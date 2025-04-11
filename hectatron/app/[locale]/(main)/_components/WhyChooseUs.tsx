@@ -2,6 +2,7 @@ import { WhyChooseType } from "@/lib/types/WhyChooseType"
 import Title from "../../_components/Title"
 import Block from "./WhyBlock"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 const blocks :  WhyChooseType[] = [
   {
@@ -32,7 +33,7 @@ const blocks :  WhyChooseType[] = [
 
 const WhyChooseUs = () => {
   return (
-    <div className={cn("px-[100px] mt-[150px]", "max-md:px-[50px] max-sm:px-[30px]")}>
+    <div className={cn("px-[100px] mt-[150px] relative", "max-md:px-[50px] max-sm:px-[30px]")}>
         <Title
         title="Why Choose Us?"
         description="Fast, secure, and scalable Next.js websites with expert support to keep your business ahead."
@@ -41,6 +42,9 @@ const WhyChooseUs = () => {
             {blocks.map((block, index) => (
                 <Block key={index} {...block} />
             ))}
+        </div>
+        <div className="absolute right-0 top-[-100px] lg:block hidden -z-10">
+          <Image className="" src='/images/diamand.png' alt='Diamand' width={300} height={200}/>
         </div>
     </div>
   )
