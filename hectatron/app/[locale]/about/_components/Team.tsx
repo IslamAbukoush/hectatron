@@ -20,7 +20,7 @@ const Team: React.FC = () => {
     }
 
     return (
-        <div className='px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 flex flex-col gap-6 py-10'>
+        <div className='px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 flex flex-col gap-6 py-10 overflow-hidden'>
             <div className="text-center">
                 <h2 className='mx-auto text-gradient text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-5 sm:pb-8 lg:pb-10'>Team</h2>
             </div>
