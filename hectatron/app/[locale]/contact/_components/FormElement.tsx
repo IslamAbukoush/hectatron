@@ -1,4 +1,5 @@
 'use client'
+import emailjs from '@emailjs/browser';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -17,7 +18,7 @@ const formSchema = z.object({
     lastName: z.string().min(2).max(50),
     email: z.string().email(),
     phoneNumber: z.string().min(7).max(25),
-    services: z.enum(['newWebsite', 'websiteRedisgn', 'websiteBugFixes', 'technicalConsultation']),
+    service: z.enum(['newWebsite', 'websiteRedisgn', 'websiteBugFixes', 'technicalConsultation']),
     message: z.string().min(10).max(3000),
 })
 
@@ -29,13 +30,33 @@ export default function FormElement() {
             lastName: '',
             email: '',
             phoneNumber: '',
-            services: 'newWebsite',
+            service: 'newWebsite',
             message: '',
         },
     })
 
     function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values)
+        emailjs.send(
+            'service_ygz6zab',
+            'template_fuu8po9',
+            {
+                title: 'New inquery from Hectatron',
+                time: 'time',
+                name: `${values.firstName} ${values.lastName}`,
+                ...values,
+            },
+            {
+                publicKey: 'NxaXNUOZOCYcvu-Jx'
+            }
+        ).then(
+            () => {
+                console.log('SUCCESS!');
+            },
+            (error) => {
+                console.log('FAILED...', error.text);
+            },
+        );
     }
 
     type ItemProps = {
@@ -72,11 +93,11 @@ export default function FormElement() {
                         <Item type="email" label="Email" placeholder="johndoe@gmail.com" />
                         <Item type="phoneNumber" label="Phone Number" placeholder="+1 012 3456 789" />
                     </div>
-                    
+
                     {/* Properly connected RadioGroup using FormField */}
                     <FormField
                         control={form.control}
-                        name="services"
+                        name="service"
                         render={({ field }) => (
                             <FormItem>
                                 <FormLabel className='text-white'>Select Service?</FormLabel>
@@ -100,7 +121,7 @@ export default function FormElement() {
                             </FormItem>
                         )}
                     />
-                    
+
                     <Item type="message" label="Message" placeholder="Write your message..." />
                     <button type="submit" className='cursor-pointer text-white rounded-md bg-[#FF8629] px-15 py-5'>Send Message</button>
                 </form>

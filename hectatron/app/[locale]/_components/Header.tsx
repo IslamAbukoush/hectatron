@@ -24,7 +24,7 @@ const Header = () => {
         }
     }, [scroll, scrollAmount.oldScroll])
 
-    console.log(scrollAmount.amount)
+    // console.log(scrollAmount.amount)
 
     useEffect(() => {
         const onScroll = () => setScroll(prev => ({y: window.pageYOffset, prevY: prev.y, dir: (prev.y - window.pageYOffset) < 0 ? 'down' : 'up'}));
