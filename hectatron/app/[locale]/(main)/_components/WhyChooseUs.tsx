@@ -3,6 +3,8 @@ import Title from "../../_components/Title"
 import Block from "./WhyBlock"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import Star from "../../_components/Star"
+import Blur from "../../_components/Blur"
 
 const blocks :  WhyChooseType[] = [
   {
@@ -45,6 +47,13 @@ const WhyChooseUs = () => {
         </div>
         <div className="absolute right-0 top-[-100px] lg:block hidden -z-10">
           <Image className="" src='/images/diamand.png' alt='Diamand' width={300} height={200}/>
+        </div>
+        <Star className="right-[1%] top-[-130px]"/>
+        <Star className="left-[10%] top-[0px]"/>
+        <Star className="left-[2%] top-[500px]"/>
+        <Star className="right-[10%] top-[800px]"/>
+        <div className=" absolute top-0 left-0 w-full h-full -z-10">
+          <Blur className="top-[250px] left-[-10%] w-[200px] h-[300px]"/>
         </div>
     </div>
   )

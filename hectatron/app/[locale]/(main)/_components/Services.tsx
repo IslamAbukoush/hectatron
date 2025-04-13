@@ -3,6 +3,7 @@ import Title from "../../_components/Title"
 import ServicesBlock from "./ServicesBlock"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import Star from "../../_components/Star"
 
 const services : WhyChooseType[] = [
     {
@@ -46,6 +47,9 @@ const Services = () => {
         <div className="absolute right-0 top-[800px] lg:block hidden -z-10">
             <Image className="" src='/images/planet-diamand.png' alt='Diamand' width={500} height={200}/>
         </div>
+        <Star className="left-[1%] top-[300px] w-[40px]"/>
+        <Star className="right-[3%] top-[550px] w-[50px]"/>
+        <Star className="left-[2%] top-[1300px] w-[40px]"/>
     </div>
   )
 }

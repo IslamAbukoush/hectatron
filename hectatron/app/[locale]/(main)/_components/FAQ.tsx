@@ -2,6 +2,7 @@ import { FAQBlockType } from "@/lib/types/FAQBlockType"
 import Title from "../../_components/Title"
 import FAQBlock from "./FAQBlock"
 import { cn } from "@/lib/utils"
+import Star from "../../_components/Star"
 
 const faqs : FAQBlockType[] = [
   {
@@ -40,7 +41,7 @@ const faqs : FAQBlockType[] = [
 
 const FAQ = () => {
   return (
-    <div className={cn("px-[100px] py-[50px] flex flex-col gap-10 items-center justify-center", "max-md:px-[60px] max-sm:px-[30px] max-sm:py-[30px]")}>
+    <div className={cn("px-[100px] py-[50px] flex flex-col gap-10 items-center justify-center relative", "max-md:px-[60px] max-sm:px-[30px] max-sm:py-[30px]")}>
         <Title 
             title='FAQs' 
             description='Find answers to common questions about our services, technology, and process. If you need more details, feel free to reach out!'
@@ -65,6 +66,8 @@ const FAQ = () => {
               ))}
             </div>
         </div>
+        <Star className="left-[10%] top-[100px] w-[40px]"/>
+        <Star className="right-[3%] top-[850px] w-[40px]"/>
     </div>
   )
 }

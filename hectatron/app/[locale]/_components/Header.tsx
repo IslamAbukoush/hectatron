@@ -4,6 +4,7 @@ import Image from "next/image"
 import { usePathname } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
 import { useState, useEffect } from "react"
+import Blur from "./Blur"
 
 interface LinkItem {
     href: string;
@@ -88,6 +89,9 @@ const Header = () => {
                         className="object-contain"
                     />
                 </div>
+            </div>
+            <div className="absolute inset-0 w-full h-full -z-10">
+                <Blur className='top-[-450px] left-[50%] -translate-x-1/2 w-[250px] h-[500px] blur-[200px] rounded-full' />
             </div>
             <div className="w-full h-[100px]"></div>
         </>

@@ -5,6 +5,7 @@ import { useTeamStore } from "@/lib/store/teamStore"
 import Image from "next/image"
 import * as m from 'motion/react-m'
 import { cn } from "@/lib/utils"
+import Star from "../../_components/Star"
 
 interface InfoType{
     src: string,
@@ -14,32 +15,32 @@ interface InfoType{
 
 const infoMax: InfoType[] = [
     {
-        src: '/icons/facebook-color.png',
+        src: '/icons/facebook-about.svg',
         link: 'https://www.facebook.com/share/16aX8frmEy/',
         text: 'Maxim Roenco'
     },
     {
-        src: '/icons/telegram-color.svg',
+        src: '/icons/telegram-about.svg',
         link: '@Max_hdhi',
         text: '@Max_hdhi'
     },
     {
-        src: '/icons/instagram-color.svg',
+        src: '/icons/instagram-about.svg',
         link: 'https://www.instagram.com/max.roenko',
         text: 'max.roenko'
     },
     {
-        src: '/icons/google-color.svg',
+        src: '/icons/google-about.svg',
         link: 'maxroenco2004@gmail.com',
         text: 'maxroenco2004@gmail.com'
     },
     {
-        src: '/icons/github-color.svg',
+        src: '/icons/github-about.svg',
         link: 'https://github.com/MaxRoenco',
         text: 'MaxRoenco'
     },
     {
-        src: '/icons/linkedin-color.svg',
+        src: '/icons/linkedin-about.svg',
         link: 'linkedin.com/in/roencomax' ,
         text: 'Maxim Roenco'
     },
@@ -47,32 +48,32 @@ const infoMax: InfoType[] = [
 
 const infoIslam: InfoType[] = [
     {
-        src: '/icons/facebook-color.png',
+        src: '/icons/facebook-about.svg',
         link: 'https://www.facebook.com/share/16aX8frmEy/',
         text: 'Islam Abu-Koush'
     },
     {
-        src: '/icons/telegram-color.svg',
+        src: '/icons/telegram-about.svg',
         link: '@Max_hdhi',
         text: 'Islam Abu-Koush'
     },
     {
-        src: '/icons/instagram-color.svg',
+        src: '/icons/instagram-about.svg',
         link: 'https://www.instagram.com/max.roenko',
         text: 'Islam Abu-Koush'
     },
     {
-        src: '/icons/google-color.svg',
+        src: '/icons/google-about.svg',
         link: 'maxroenco2004@gmail.com',
         text: 'Islam Abu-Koush'
     },
     {
-        src: '/icons/github-color.svg',
+        src: '/icons/github-about.svg',
         link: 'https://github.com/MaxRoenco',
         text: 'Islam Abu-Koush'
     },
     {
-        src: '/icons/linkedin-color.svg',
+        src: '/icons/linkedin-about.svg',
         link: 'linkedin.com/in/roencomax' ,
         text: 'Islam Abu-Koush'
     },
@@ -102,10 +103,10 @@ const InfoBlock = () => {
             </div>
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4">
             {infoMax.map((item, index) => (
-                    <div className="flex px-4 py-1 border-2 border-white/20 rounded-[16px]" key={index}>
+                    <div className="flex px-4 py-2 border-2 border-white/20 rounded-[16px]" key={index}>
                         <Link href={item.link} className="w-full h-full flex items-center justify-between">
                             <Image src={item.src} alt={item.src} width={50} height={50} className="w-10 h-10 min-w-10" />
-                            <p className="text-white font-semibold text-base ml-2 truncate">{item.text}</p>
+                            <p className="text-white font-semibold text-sm ml-2 truncate">{item.text}</p>
                         </Link>
                     </div>
                 ))}
@@ -129,10 +130,10 @@ const InfoBlock = () => {
             </div>
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4">
             {infoIslam.map((item, index) => (
-                    <div className="flex px-4 py-1 border-2 border-white/20 rounded-[16px]" key={index}>
+                    <div className="flex px-4 py-2 border-2 border-white/20 rounded-[16px]" key={index}>
                         <Link href={item.link} className="w-full h-full flex items-center justify-between">
                             <Image src={item.src} alt={item.src} width={50} height={50} className="w-10 h-10 min-w-10" />
-                            <p className="text-white font-semibold text-base ml-2 truncate">{item.text}</p>
+                            <p className="text-white font-semibold text-sm ml-2 truncate">{item.text}</p>
                         </Link>
                     </div>
                 ))}
@@ -152,10 +153,12 @@ const InfoBlock = () => {
               alt="robot" 
               width={500} 
               height={500} 
-              className="xl:w-[600px] lg:w-[450px] object-contain"
+              className="xl:w-[600px] lg:w-[450px] object-contain -z-20"
             />
           </m.div>
         </div>
+        <Star className="top-[-50px] right-[5%]"/>
+        <Star className="top-[300px] right-[30%] w-[55px] h-[55px]"/>
     </div>
   )
 }

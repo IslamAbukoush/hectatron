@@ -9,6 +9,7 @@ import Services from './_components/Services';
 import Customers from './_components/Customers';
 import FAQ from './_components/FAQ';
 import Footer from '../_components/Footer';
+import Star from '../_components/Star';
 
 
 const Home = () => {
@@ -57,7 +58,6 @@ const Home = () => {
             width={500}
             height={400}
           />
-          <Blur className='top-[-350px] left-[50%] -translate-x-1/2 w-[250px] h-[500px] blur-[200px] rounded-full' />
         </div>
       </div>
       <div className="w-full bg-[#1A0000]">
@@ -67,6 +67,11 @@ const Home = () => {
       <Services />
       <Customers />
       <FAQ />
+      <div className=" w-full h-full top-0 left-0">
+        <Star className='top-[300px] left-[3%]' />
+        <Star className='top-[550px] left-[30%]' />
+        <Star className='top-[200px] right-[20%]' />
+      </div>
     </div>
   )
 }

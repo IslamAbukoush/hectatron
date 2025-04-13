@@ -1,9 +1,11 @@
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import Blur from "../../_components/Blur"
+import Star from "../../_components/Star"
 
 const WhatIs = () => {
   return (
-    <div className={cn("px-[150px] mt-[60px] flex flex-col", "max-lg:px-[50px]")}>
+    <div className={cn("px-[150px] mt-[60px] flex flex-col relative", "max-lg:px-[50px]")}>
       <div className="text-center">
         <h1 className={cn("w-fit text-gradient text-6xl", "max-lg:text-5xl max-sm:text-4xl")}>What is Hectatron?</h1>
       </div>
@@ -16,6 +18,12 @@ const WhatIs = () => {
               <Image className={cn("object-contain w-full max-w-[400px]", "max-lg:max-w-[300px] max-sm:max-w-[200px]")}  src="/images/hecta_logo.png" alt="Hectatron" width={500} height={300}/>
           </div>
       </div>
+      <div className="absolute inset-0 w-full h-full -z-10">
+        <Blur className="top-[400px] left-[-18%] w-[300px] h-[400px]"/>
+      </div>
+      <Star className="top-[0px] left-[5%]"/>
+      <Star className="top-[550px] left-[15%]"/>
+      <Star className="top-[50px] right-[10%] w-[60px] h-[60px]"/>
     </div>
   )
 }

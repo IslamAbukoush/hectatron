@@ -8,6 +8,8 @@ import * as m from "motion/react-m"
 import { AnimatePresence } from "motion/react";
 import { CustomerAnimation, CustomersAnimation } from "@/lib/animations/CustomerAnimation";
 import { cn } from "@/lib/utils";
+import Star from "../../_components/Star";
+import Blur from "../../_components/Blur";
 
 const testimonials: CustomersBlockProps[] = [
   {
@@ -77,8 +79,8 @@ const Customers = () => {
 
 
   return (
-    <div className={cn("px-[100px] mt-[150px]", "max-md:px-[30px] max-md:mt-[80px]")}>
-      <div className="flex max-lg:flex-col items-end justify-between">
+    <div className={cn("px-[100px] mt-[150px] relative", "max-md:px-[30px] max-md:mt-[80px]")}>
+      <div className="flex max-lg:flex-col items-end justify-between relative">
         <div className="flex flex-col gap-6 items-start justify-center my-[10px]">
           <h1 className={cn("text-gradient text-6xl text-start", "max-lg:text-5xl max-sm:text-3xl")}>
             See What Customers Say
@@ -140,6 +142,12 @@ const Customers = () => {
             )}
           />
         ))}
+      </div>
+      <Star className="right-[1%] top-[200px] w-[40px]"/>
+      <Star className="right-[15%] top-[700px] w-[40px]"/>
+      <div className="absolute inset-0 w-full h-full -z-10">
+        <Blur className="w-[200px] h-[700px] top-[-300px] left-[-20%]"/>
+        <Blur className="bottom-0 right-0 w-[200px] h-[400px]"/> 
       </div>
     </div>
   );
