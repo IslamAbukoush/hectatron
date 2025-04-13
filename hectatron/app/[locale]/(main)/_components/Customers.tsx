@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { CustomersBlockProps } from "@/lib/types/CustomersBlockProps";
 import CustomersBLock from "./CustomersBLock";
-import { twMerge } from "tailwind-merge";
 import * as m from "motion/react-m"
 import { AnimatePresence } from "motion/react";
 import { CustomerAnimation, CustomersAnimation } from "@/lib/animations/CustomerAnimation";
@@ -59,8 +58,6 @@ const Customers = () => {
   const [direction, setDirection] = useState(1);
   const itemsPerPage = 2;
   const totalPages = Math.ceil(testimonials.length / itemsPerPage);
-
-  const [key, setKey] = useState(0);
 
   const handlePrevious = () => {
     setDirection(-1);

@@ -1,3 +1,4 @@
+
 import Image from "next/image"
 import Blur from "../_components/Blur"
 import Title from "../_components/Title"

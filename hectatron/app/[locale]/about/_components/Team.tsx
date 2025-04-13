@@ -58,7 +58,7 @@ const Team: React.FC = () => {
                             <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gradient text-center'>Islam Abu-Koush - Co-Founder & Full-Stack Developer</h2>
                             <div className="flex flex-col text-base sm:text-lg md:text-xl text-white/60 gap-2 sm:gap-3">
                                 <p className='indent-8'>Islam is a versatile full-stack developer and co-founder of Hectatron. With a robust technical background in Next.js, React, Express.js, Tailwind CSS, and Node.js, he has honed his skills through diverse experiences, including hackathon projects like Codify and Investora.</p>
-                                <p className='indent-8'>His journey also includes working as a call center agent, which shaped his strong communication skills and client-oriented mindset. Islam's proficiency in Figma and Photoshop enables him to seamlessly integrate aesthetics with functionality, crafting modern, engaging web solutions.</p>
+                                <p className='indent-8'>His journey also includes working as a call center agent, which shaped his strong communication skills and client-oriented mindset. Islam&apos;s proficiency in Figma and Photoshop enables him to seamlessly integrate aesthetics with functionality, crafting modern, engaging web solutions.</p>
                                 <p className='indent-8'>Passionate about continuous learning, he actively explores new development practices to keep Hectatron at the forefront of web innovation.</p>
                             </div>
                         </m.div>
@@ -110,7 +110,7 @@ const Team: React.FC = () => {
                             <div className="flex flex-col text-base sm:text-lg md:text-xl text-white/60 gap-2 sm:gap-3">
                                 <p className='indent-8'>Maxim is a passionate full-stack developer and co-founder of Hectatron. With hands-on experience from internships at Amdaris, Smart Energy Solutions, and Quant-Apps, he excels in building modern web applications using Next.js, React, Tailwind CSS, Node.js, and MongoDB.</p>
                                 <p className='indent-8'>His projects range from interactive learning platforms to innovative financial tools, showcasing his problem-solving abilities and technical expertise. Maxim is also skilled in Figma and Photoshop, allowing him to create visually appealing and user-friendly interfaces.</p>
-                                <p className='indent-8'>Dedicated to delivering quality and performance, he constantly explores new technologies to enhance his craft. As a leader, he drives Hectatron's mission of building responsive, cutting-edge websites.</p>
+                                <p className='indent-8'>Dedicated to delivering quality and performance, he constantly explores new technologies to enhance his craft. As a leader, he drives Hectatron&apos;s mission of building responsive, cutting-edge websites.</p>
                             </div>
                         </m.div>
                     </m.div>
