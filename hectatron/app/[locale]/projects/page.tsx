@@ -15,6 +15,7 @@ const page = () => {
         <div className="absolute inset-0 w-full h-full -z-10 overflow-hidden">
           <Blur className="right-[-20%] top-[100px] w-[300px] h-[300px]"/>
           <Image className="absolute right-[5%] top-[150px] block max-md:hidden" src='/images/projects-planet.png' alt="planet" width={200} height={200}/>
+          {/* <Blur/> */}
         </div>
         <Star className="top-[150px] left-[5%]"/>
         <Star className="top-[550px] left-[2%]"/>

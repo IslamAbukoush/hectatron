@@ -1,5 +1,6 @@
 import { ItemsType } from "@/lib/types/ItemsType"
 import CarouselItem from "./CarouselItem"
+import Blur from "../../_components/Blur"
 
 const items : ItemsType[] = [
   {
@@ -95,6 +96,9 @@ const ProjectsCarousel = () => {
         {items.map((item, index) => (
           <CarouselItem key={index} item={item} index={index} arrayLength={items.length} />
         ))}
+      </div>
+      <div className="absolute inset-0 w-full h-full -z-10 overflow-hidden">
+          <Blur className="bottom-[-400px] left-[41%] w-[300px]"/>
       </div>
     </div>
   )
