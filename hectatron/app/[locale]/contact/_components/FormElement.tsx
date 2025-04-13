@@ -53,7 +53,7 @@ export default function FormElement() {
                     <FormItem>
                         <FormLabel className='text-white text-base'>{label}</FormLabel>
                         <FormControl>
-                            <input className='appearance-none outline-none text-white border-b-1 border-[#8D8D8D] py-2' placeholder={placeholder} {...field} />
+                            <input className='appearance-none outline-none text-white border-b-1 border-[#8D8D8D] py-2 w-full' placeholder={placeholder} {...field} />
                         </FormControl>
                         <FormMessage />
                     </FormItem>
@@ -66,7 +66,7 @@ export default function FormElement() {
         <div className='p-10'>
             <Form {...form} >
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                    <div className='grid grid-cols-2 gap-5'>
+                    <div className='grid grid-cols-1 gap-5 lg:grid-cols-1'>
                         <Item type="firstName" label="First Name" placeholder="John" />
                         <Item type="lastName" label="Last Name" placeholder="Doe" />
                         <Item type="email" label="Email" placeholder="johndoe@gmail.com" />
@@ -86,7 +86,7 @@ export default function FormElement() {
                                         onValueChange={field.onChange}
                                         className='flex flex-col'
                                     >
-                                        <div className='flex justify-between'>
+                                        <div className='grid grid-cols-1 min-[470px]:grid-cols-2 md:grid-cols-1 xl:grid-cols-4 min-[975px]:grid-cols-2'>
                                             {['newWebsite', 'websiteRedisgn', 'websiteBugFixes', 'technicalConsultation'].map((item, i) => (
                                                 <div className="flex items-center space-x-2" key={i}>
                                                     <RadioGroupItem value={item} id={item} />
