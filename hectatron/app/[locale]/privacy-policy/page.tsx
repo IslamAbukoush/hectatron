@@ -54,7 +54,7 @@ Misrepresent your identity or affiliation.`
 const page = () => {
   return (
     <div className="px-4 sm:px-6 md:px-10 lg:px-16 xl:px-[100px] py-6 sm:py-8 md:py-10 lg:py-[50px]">
-        <Title title="Privacy Policy" description="Effective Date [01.01.2030]" />
+        <Title title="Privacy Policy" description="Effective Date [01.01.2030]" left />
         <p className="text-sm sm:text-base text-white/60 my-4 sm:my-6">Welcome to Hectatron! These Terms of Service ("Terms") govern your access to and use of our website creation services, tools, and related content (collectively, the "Services"). By using our Services, you agree to these Terms in full.</p>
         <ol className="flex flex-col gap-3 sm:gap-4">
             {privacy.map((item, index) => (
