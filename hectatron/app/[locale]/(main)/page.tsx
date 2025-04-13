@@ -2,13 +2,11 @@
 import React from 'react'
 import Image from 'next/image'
 import Title from '@/app/[locale]/_components/Title';
-import Blur from '@/app/[locale]/_components/Blur';
 import InfiniteMarquee from '@/app/[locale]/_components/InfiniteMarquee';
 import WhyChooseUs from './_components/WhyChooseUs';
 import Services from './_components/Services';
 import Customers from './_components/Customers';
 import FAQ from './_components/FAQ';
-import Footer from '../_components/Footer';
 import Star from '../_components/Star';
 
 

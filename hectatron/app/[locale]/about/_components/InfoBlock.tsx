@@ -4,7 +4,6 @@ import { Link } from "@/i18n/navigation"
 import { useTeamStore } from "@/lib/store/teamStore"
 import Image from "next/image"
 import * as m from 'motion/react-m'
-import { cn } from "@/lib/utils"
 import Star from "../../_components/Star"
 
 interface InfoType{
