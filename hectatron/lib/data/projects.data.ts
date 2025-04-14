@@ -1,9 +1,6 @@
-import { ItemsType } from "@/lib/types/ItemsType"
-import CarouselItem from "./CarouselItem"
-import Blur from "../../_components/Blur"
-import { cn } from "@/lib/utils"
+import { ItemsType } from "../types/ItemsType";
 
-const items : ItemsType[] = [
+export const items : ItemsType[] = [
   {
     id: 0,
     slug: 'investora',
@@ -11,6 +8,7 @@ const items : ItemsType[] = [
     description: "Crypto project",
     src: "/screens/investora-1.png",
     alt: "investora",
+    
   },
   {
     id: 1,
@@ -101,20 +99,3 @@ const items : ItemsType[] = [
     alt: "investora",
   }
 ]
-
-const ProjectsCarousel = () => {
-  return (
-    <div className={cn("relative overflow-hidden w-full h-[800px]", "max-md:h-[700px] max-sm:h-[550px]")}>
-      <div className="absolute w-full h-full">
-        {items.map((item, index) => (
-          <CarouselItem key={index} item={item} index={index} arrayLength={items.length} />
-        ))}
-      </div>
-      <div className="absolute inset-0 w-full h-full -z-10 overflow-hidden">
-          <Blur className="bottom-[-400px] left-[41%] w-[300px]"/>
-      </div>
-    </div>
-  )
-}
-
-export default ProjectsCarousel

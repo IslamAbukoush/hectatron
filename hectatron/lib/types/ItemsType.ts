@@ -1,5 +1,6 @@
 export interface ItemsType{
     id: number,
+    slug: string
     title: string,
     description: string,
     src: string,
