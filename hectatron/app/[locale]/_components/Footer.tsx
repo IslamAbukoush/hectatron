@@ -1,4 +1,5 @@
-import { Link } from "@/i18n/navigation"
+'use client'
+import { Link, usePathname } from "@/i18n/navigation"
 import { cn } from "@/lib/utils";
 import Image from "next/image"
 
@@ -27,6 +28,11 @@ const pages : PageType[] = [
 ]
 
 const Footer = () => {
+    const path = usePathname();
+    const isProjectPreviewPage = path.includes('/projects-review/');
+    if (isProjectPreviewPage) {
+        return null;
+    }
   return (
     <div className={cn("flex flex-col gap-10 px-[100px] py-[30px] bg-gradient-to-t from-[#040411] to-[#1A1A32]",  "max-sm:px-[40px]")}>
         <div className={cn("grid grid-cols-2 gap-10", "max-lg:grid-cols-1")}>
