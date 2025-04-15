@@ -5,6 +5,7 @@ export interface ItemsType{
     description: string,
     src: string,
     alt: string,
+    link: string
   }
 export interface CarouselType {
   item: ItemsType,

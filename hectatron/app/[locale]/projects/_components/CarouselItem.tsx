@@ -9,12 +9,10 @@ import CarouselDetailes from './CarouselDetailes'
 import { AnimatePresence } from 'motion/react'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { usePathname } from 'next/navigation'
 
 const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
     const {activeCardId, setActiveCardId} = useCarouselStore();
     const [windowWidth, setWindowWidth] = useState(0);
-    const pathname = usePathname();
     const router = useRouter()
 
     useEffect(() => {
@@ -50,7 +48,7 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
     const updateActiveCardId = (id: number) => {
         if(id === activeCardId){
             setTimeout(() => {
-                router.push(`${pathname}/${item.slug}`)
+                router.push(`/ru/projects-review/${item.slug}`)
             }, 500)
         }else{
             setActiveCardId(id)
