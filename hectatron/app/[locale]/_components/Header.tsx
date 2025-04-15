@@ -24,7 +24,7 @@ const Header = () => {
         }
     }, [scroll, scrollAmount.oldScroll])
 
-    // console.log(scrollAmount.amount)
+    // console.log(scroll.y)
 
     useEffect(() => {
         const onScroll = () => setScroll(prev => ({y: window.pageYOffset, prevY: prev.y, dir: (prev.y - window.pageYOffset) < 0 ? 'down' : 'up'}));
@@ -42,7 +42,12 @@ const Header = () => {
 
     return (
         <>
-            <div className={cn(`fixed left-0 right-0 md:grid lg:grid-cols-[1fr_2fr_1fr] md:grid-cols-[1fr_4fr_1fr] flex justify-between items-center py-8 px-4 z-10 h-[100px] transition-transform`, {'translate-y-[-150%]': scroll.dir === 'down'})}>
+            <div className={cn(`fixed left-0 right-0 md:grid lg:grid-cols-[1fr_2fr_1fr] md:grid-cols-[1fr_4fr_1fr] flex justify-between items-center py-8 px-4 z-50 h-[110px] transition-transform`, {'translate-y-[-150%]': scroll.dir === 'down' && scroll.y > 100})}
+                    style={{
+                        backgroundColor: `rgba(3, 1, 23, ${Math.min(1, scroll.y/200)})`, 
+                        boxShadow: `0px 0px 15px 20px rgba(3, 1, 23, ${Math.min(1, scroll.y/200)})`
+                    }}
+                >
                 <div className="relative h-full w-full flex justify-start md:justify-center items-center md:px-5">
                     <div className="relative w-full h-full flex justify-start">
                         <Link href={'/'} className="relative w-full h-full flex justify-start">
