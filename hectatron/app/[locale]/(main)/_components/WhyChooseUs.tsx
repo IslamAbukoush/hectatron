@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 import Star from "../../_components/Star"
 import Blur from "../../_components/Blur"
+import * as m from 'motion/react-m'
+import { WhyChoosesAnimation } from "@/lib/animations/WhyChooseAnimation"
 
 const blocks :  WhyChooseType[] = [
   {
@@ -40,11 +42,16 @@ const WhyChooseUs = () => {
         title="Why Choose Us?"
         description="Fast, secure, and scalable Next.js websites with expert support to keep your business ahead."
         />
-        <div className={cn("grid grid-cols-2 gap-10 mt-20", "max-lg:grid-cols-1 max-lg:mt-10")}>
+        <m.div
+        variants={WhyChoosesAnimation}
+        initial='hidden'
+        whileInView='vissible'
+        viewport={{once: true}}
+        className={cn("grid grid-cols-2 gap-10 mt-20 overflow-hidden", "max-lg:grid-cols-1 max-lg:mt-10")}>
             {blocks.map((block, index) => (
                 <Block key={index} {...block} />
             ))}
-        </div>
+        </m.div>
         <div className="absolute right-0 top-[-100px] lg:block hidden -z-10">
           <Image className="" src='/images/diamand.png' alt='Diamand' width={300} height={200}/>
         </div>

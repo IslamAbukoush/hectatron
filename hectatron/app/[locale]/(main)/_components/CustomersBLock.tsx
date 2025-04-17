@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const CustomersBLock = ({src, alt, title, position, description}: CustomersBlockProps) => {
   return (
-    <div className={cn("bg-[#1A1A32] rounded-[16px] p-10 flex flex-col gap-4 border-2 border-white/20", "max-sm:p-5")}>
+    <div className={cn("bg-[#1A1A32] rounded-[16px] p-10 flex flex-col gap-4 border-2 border-white/20", "max-sm:p-5 max-xl:max-w-[600px]")}>
       <div className="flex items-center gap-6 justify-evenly">
         <div className={cn("relative w-40 h-40 flex-shrink-0 rounded-full overflow-hidden", "max-sm:w-25 max-sm:h-25")}>
           <Image 
@@ -24,7 +24,6 @@ const CustomersBLock = ({src, alt, title, position, description}: CustomersBlock
               </svg>
             ))}
           </div>
-          
           <div className="flex flex-col items-start justify-start">
             <h3 className={cn("text-gradient font-bold text-3xl", "max-sm:text-xl")}>{title}</h3>
             <p className={cn("text-gray-400 text-base", "max-sm:text-sm")}>{position}</p>

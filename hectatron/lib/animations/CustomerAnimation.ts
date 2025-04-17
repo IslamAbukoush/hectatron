@@ -7,17 +7,17 @@ export const CustomersAnimation: Variants = {
     vissible: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.25,
-            duration: 0.4,
+            staggerChildren: 0.2,
+            duration: 0.3,
             ease: "linear",
         }
     },
     exit: {
         opacity: 0,
         transition: {
-            staggerChildren: 0.25,
-            duration: 0.4,
-            ease: "linear",
+            staggerChildren: 0.1, // Faster stagger for exit
+            duration: 0.4, // Faster duration
+            ease: "easeOut",
         }
     }
 }
@@ -25,8 +25,8 @@ export const CustomersAnimation: Variants = {
 export const CustomerAnimation = {
     hidden: (direction: number) => ({
       opacity: 0,
-      x: direction * 300,
-      scale: 0.8
+      x: direction * 250, // Slightly reduced distance
+      scale: 0.9
     }),
     vissible: {
       opacity: 1,
@@ -35,11 +35,11 @@ export const CustomerAnimation = {
     },
     exit: (direction: number) => ({
       opacity: 0,
-      x: direction * -300,
-      scale: 0.8,
+      x: direction * -250,
+      scale: 0.9,
       transition: {
-        duration: 0.3,
-        ease: "linear",
-    }
+        duration: 0.1, // Faster exit animation (was 0.6)
+        ease: "easeOut", // Changed from linear for smoother feel
+      }
     })
-  };
+};

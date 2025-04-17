@@ -5,6 +5,7 @@ import { usePathname } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
 import { useState, useEffect } from "react"
 import Blur from "./Blur"
+import * as m from 'motion/react-m'
 
 interface LinkItem {
     href: string;
@@ -15,25 +16,30 @@ const Header = () => {
     const path = usePathname();
     const isProjectPreviewPage = path.includes('/projects-review/');
     
-    const [scroll, setScroll] = useState({ y: 0, prevY: 0, dir: 'up'});
-    const [scrollAmount, setScrollAmount] = useState({oldScroll: 'up', amount: 0});
+    const [scroll, setScroll] = useState({ y: 0, lastY: 0, direction: 'up' });
+    const [headerVisible, setHeaderVisible] = useState(true);
 
     useEffect(() => {
-        if(scroll.dir !== scrollAmount.oldScroll) {
-            setScrollAmount({oldScroll: scroll.dir, amount: 0})
-        } else {
-            setScrollAmount(prev => ({oldScroll: scroll.dir, amount: prev.amount + scroll.prevY - scroll.y}))
-        }
-    }, [scroll, scrollAmount.oldScroll])
+        const handleScroll = () => {
+            const currentScrollY = window.pageYOffset;
+            const direction = currentScrollY > scroll.lastY ? 'down' : 'up';
+            
+            setScroll({
+                y: currentScrollY,
+                lastY: scroll.y,
+                direction
+            });
+            
+            if (direction === 'down' && currentScrollY > 100) {
+                setHeaderVisible(false);
+            } else if (direction === 'up') {
+                setHeaderVisible(true);
+            }
+        };
 
-    // console.log(scroll.y)
-
-    useEffect(() => {
-        const onScroll = () => setScroll(prev => ({y: window.pageYOffset, prevY: prev.y, dir: (prev.y - window.pageYOffset) < 0 ? 'down' : 'up'}));
-        window.removeEventListener('scroll', onScroll);
-        window.addEventListener('scroll', onScroll, { passive: true });
-        return () => window.removeEventListener('scroll', onScroll);
-    }, []);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [scroll.lastY, scroll.y]);
 
     const links: LinkItem[] = [
         { href: '/', label: 'Home' },
@@ -41,18 +47,42 @@ const Header = () => {
         { href: '/projects', label: 'Projects' },
         { href: '/contact', label: 'Contact' },
     ];
+    
     if (isProjectPreviewPage) {
         return null;
-      }
+    }
+
+    const bgOpacity = Math.min(1, scroll.y / 200);
 
     return (
         <>
-            <div className={cn(`fixed left-0 right-0 md:grid lg:grid-cols-[1fr_2fr_1fr] md:grid-cols-[1fr_4fr_1fr] flex justify-between items-center py-8 px-4 z-50 h-[110px] transition-transform`, {'translate-y-[-150%]': scroll.dir === 'down' && scroll.y > 100})}
-                    style={{
-                        backgroundColor: `rgba(3, 1, 23, ${Math.min(1, scroll.y/200)})`, 
-                        boxShadow: `0px 0px 15px 20px rgba(3, 1, 23, ${Math.min(1, scroll.y/200)})`
-                    }}
-                >
+            <m.div 
+                initial={{
+                    opacity: 0,
+                    y: -100,
+                    scale: 0.8
+                }}
+                animate={{
+                    opacity: 1,
+                    y: headerVisible ? 0 : -150,
+                    scale: 1
+                }}
+                transition={{
+                    duration: 0.5,
+                    ease: [0.25, 0.1, 0.25, 1.0],
+                    y: {
+                        duration: 0.4,
+                        ease: [0.25, 0.1, 0.25, 1.0]
+                    }
+                }}
+                className={cn(
+                    "fixed left-0 right-0 md:grid lg:grid-cols-[1fr_2fr_1fr] md:grid-cols-[1fr_4fr_1fr] flex justify-between items-center py-8 px-4 z-50 h-[110px]"
+                )}
+                style={{
+                    backgroundColor: `rgba(3, 1, 23, ${bgOpacity})`, 
+                    boxShadow: `0px 0px 15px 20px rgba(3, 1, 23, ${bgOpacity})`
+                }}
+            >
                 <div className="relative h-full w-full flex justify-start md:justify-center items-center md:px-5">
                     <div className="relative w-full h-full flex justify-start">
                         <Link href={'/'} className="relative w-full h-full flex justify-start">
@@ -99,7 +129,7 @@ const Header = () => {
                         className="object-contain"
                     />
                 </div>
-            </div>
+            </m.div>
             <div className="absolute inset-0 w-full h-full -z-10">
                 <Blur className='top-[-450px] left-[50%] -translate-x-1/2 w-[250px] h-[500px] blur-[200px] rounded-full' />
             </div>
