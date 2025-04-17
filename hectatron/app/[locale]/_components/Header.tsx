@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 import { useState, useEffect } from "react"
 import Blur from "./Blur"
 import * as m from 'motion/react-m'
+import MobileMenu from "./MobileMenu"
 
 interface LinkItem {
     href: string;
@@ -18,6 +19,9 @@ const Header = () => {
     
     const [scroll, setScroll] = useState({ y: 0, lastY: 0, direction: 'up' });
     const [headerVisible, setHeaderVisible] = useState(true);
+
+    const [scrollAmount, setScrollAmount] = useState({oldScroll: 'up', amount: 0});
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -121,7 +125,7 @@ const Header = () => {
                         Get Started
                     </div>
                 </div>
-                <div className="h-[40px] w-[40px] relative flex items-center justify-center md:hidden cursor-pointer">
+                <div className="h-[40px] w-[40px] relative flex items-center justify-center md:hidden cursor-pointer" onClick={() => setMenuOpen(prev => !prev)}>
                     <Image
                         src="/icons/menu.svg"
                         alt="menu icon"
@@ -134,6 +138,7 @@ const Header = () => {
                 <Blur className='top-[-450px] left-[50%] -translate-x-1/2 w-[250px] h-[500px] blur-[200px] rounded-full' />
             </div>
             <div className="w-full h-[100px]"></div>
+            <MobileMenu isOpen={menuOpen} />
         </>
     )
 }
