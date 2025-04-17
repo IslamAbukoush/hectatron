@@ -97,8 +97,8 @@ const Customers = () => {
         <m.div 
             initial={{
               opacity: 0,
-              y: -50, // Reduced distance
-              scale: 0.9 // Less dramatic scale change
+              y: -50,
+              scale: 0.9 
             }}
             whileInView={{
               opacity: 1,
@@ -141,14 +141,13 @@ const Customers = () => {
         </m.div>
       </div>
       
-      {/* Re-enable AnimatePresence for proper exit animations */}
       <div className="relative overflow-hidden">
         <AnimatePresence initial={false} mode="wait" custom={direction}>
           <m.div 
             key={currentPage}
             variants={CustomersAnimation}
             initial="hidden"
-            animate="vissible" // Changed from whileInView to animate
+            animate="visible" 
             exit="exit"
             className={cn("grid grid-cols-2 gap-20 mt-16", "max-xl:grid-cols-1 max-xl:place-items-center max-xl:justify-items-center max-sm:gap-10 max-sm:mt-10")}
           >
@@ -157,7 +156,6 @@ const Customers = () => {
                 key={`${currentPage}-${index}`}
                 custom={direction}
                 variants={CustomerAnimation}
-                // Remove the inline transition to use the one from the variants
               >
                 <CustomersBLock {...item} />
               </m.div>
