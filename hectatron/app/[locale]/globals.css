@@ -40,6 +40,10 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+:root:has(.no-doc-scroll) {
+  overflow:hidden;
+}
+
 .text-gradient{
   @apply bg-gradient-to-r from-[#737373] via-white to-[#737373] bg-clip-text text-transparent inline-block;
   padding-bottom: 0.2em;

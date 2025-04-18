@@ -6,6 +6,9 @@ import { cn } from "@/lib/utils"
 import { useState, useEffect } from "react"
 import Blur from "./Blur"
 import MobileMenu from "./MobileMenu"
+import { useWindowSize } from "@/lib/hooks/useWindowSize"
+import LanguageSwitcher from "./LanguageSwitcher"
+import { useLocale } from "next-intl"
 
 interface LinkItem {
     href: string;
@@ -14,25 +17,33 @@ interface LinkItem {
 
 const Header = () => {
     const path = usePathname();
+    const locale = useLocale();
     const isProjectPreviewPage = path.includes('/projects-review/');
-    
-    const [scroll, setScroll] = useState({ y: 0, prevY: 0, dir: 'up'});
-    const [scrollAmount, setScrollAmount] = useState({oldScroll: 'up', amount: 0});
+
+
+    const [width, height] = useWindowSize();
+    const [scroll, setScroll] = useState({ y: 0, prevY: 0, dir: 'up' });
+    const [scrollAmount, setScrollAmount] = useState({ oldScroll: 'up', amount: 0 });
     const [menuOpen, setMenuOpen] = useState(false);
-    // console.log(menuOpen)
+    
+    useEffect(() => {
+        setMenuOpen(prev => prev ? width < 768 : prev);
+    }, [width])
 
     useEffect(() => {
-        if(scroll.dir !== scrollAmount.oldScroll) {
-            setScrollAmount({oldScroll: scroll.dir, amount: 0})
+        setMenuOpen(false);
+    }, [path])
+
+    useEffect(() => {
+        if (scroll.dir !== scrollAmount.oldScroll) {
+            setScrollAmount({ oldScroll: scroll.dir, amount: 0 })
         } else {
-            setScrollAmount(prev => ({oldScroll: scroll.dir, amount: prev.amount + scroll.prevY - scroll.y}))
+            setScrollAmount(prev => ({ oldScroll: scroll.dir, amount: prev.amount + scroll.prevY - scroll.y }))
         }
     }, [scroll, scrollAmount.oldScroll])
 
-    // console.log(scroll.y)
-
     useEffect(() => {
-        const onScroll = () => setScroll(prev => ({y: window.pageYOffset, prevY: prev.y, dir: (prev.y - window.pageYOffset) < 0 ? 'down' : 'up'}));
+        const onScroll = () => setScroll(prev => ({ y: window.pageYOffset, prevY: prev.y, dir: (prev.y - window.pageYOffset) < 0 ? 'down' : 'up' }));
         window.removeEventListener('scroll', onScroll);
         window.addEventListener('scroll', onScroll, { passive: true });
         return () => window.removeEventListener('scroll', onScroll);
@@ -46,16 +57,16 @@ const Header = () => {
     ];
     if (isProjectPreviewPage) {
         return null;
-      }
+    }
 
     return (
         <>
-            <div className={cn(`fixed left-0 right-0 md:grid lg:grid-cols-[1fr_2fr_1fr] md:grid-cols-[1fr_4fr_1fr] flex justify-between items-center py-8 px-4 z-50 h-[110px] transition-transform`, {'translate-y-[-150%]': scroll.dir === 'down' && scroll.y > 100})}
-                    style={{
-                        backgroundColor: `rgba(3, 1, 23, ${Math.min(1, scroll.y/200)})`, 
-                        boxShadow: `0px 0px 15px 20px rgba(3, 1, 23, ${Math.min(1, scroll.y/200)})`
-                    }}
-                >
+            <div className={cn(`fixed left-0 right-0 md:grid lg:grid-cols-[1fr_2fr_1fr] md:grid-cols-[1fr_4fr_1fr] flex justify-between items-center py-8 px-4 z-50 h-[110px] transition-transform`, { 'translate-y-[-150%]': scroll.dir === 'down' && scroll.y > 100 })}
+                style={{
+                    backgroundColor: `rgba(3, 1, 23, ${Math.min(+!menuOpen, scroll.y / 200)})`,
+                    boxShadow: `0px 0px 15px 20px rgba(3, 1, 23, ${Math.min(+!menuOpen, scroll.y / 200)})`
+                }}
+            >
                 <div className="relative h-full w-full flex justify-start md:justify-center items-center md:px-5">
                     <div className="relative w-full h-full flex justify-start">
                         <Link href={'/'} className="relative w-full h-full flex justify-start">
@@ -87,7 +98,7 @@ const Header = () => {
                             {link.label}
                         </Link>
                     ))}
-                    <Image src='/icons/global.svg' alt="language switcher icon" width={25} height={25} className="cursor-pointer" />
+                    <LanguageSwitcher locale={locale.toUpperCase()} />
                 </div>
                 <div className="md:flex hidden justify-center items-center w-full">
                     <div className="bg-button text-center content-center font-bold text-xs text-white lg:px-10 px-5 lg:text-sm py-6 rounded-3xl cursor-pointer border border-white/60 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.25),inset_-10px_-10px_20px_rgba(255,255,255,0.25)] text-nowrap">
@@ -107,7 +118,7 @@ const Header = () => {
                 <Blur className='top-[-450px] left-[50%] -translate-x-1/2 w-[250px] h-[500px] blur-[200px] rounded-full' />
             </div>
             <div className="w-full h-[100px]"></div>
-            <MobileMenu isOpen={menuOpen} />
+            <MobileMenu isOpen={menuOpen} path={path} />
         </>
     )
 }
