@@ -8,17 +8,20 @@ import Services from './_components/Services';
 import Customers from './_components/Customers';
 import FAQ from './_components/FAQ';
 import Star from '../_components/Star';
+import { getTranslations } from 'next-intl/server';
 import * as m from 'motion/react-m'
 import Alert from '../_components/Alert';
 
 
-const Home = () => {
+const Home = async () => {
   const techStackItems = [
     { src: '/images/nextjs.png', alt: 'Next.js' },
     { src: '/images/figma.png', alt: 'Figma' },
     { src: '/images/react.png', alt: 'React' },
     { src: '/images/tailwind.png', alt: 'Tailwind' },
   ];
+
+  const t = await getTranslations('home');
 
   return (
     <div className="">
@@ -34,7 +37,7 @@ const Home = () => {
             height={700}
             priority
           />
-          <Title title='Elevate Your Brand with Custom Web Solutions' description='We design and develop high-quality, custom websites that enhance your brand and drive results.' />
+          <Title title={t('title')} description={t('description')}  />
           <m.div 
             initial={{
               opacity: 0,

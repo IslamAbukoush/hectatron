@@ -1,6 +1,6 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
-    }
+  "home": {
+    "title": "Elevate Your Brand with Custom Web Solutions",
+    "description": "We design and develop high-quality, custom websites that enhance your brand and drive results."
   }
+}
