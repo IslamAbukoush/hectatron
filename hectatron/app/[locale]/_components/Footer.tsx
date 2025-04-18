@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image"
 import * as m from 'motion/react-m'
 import { socialIconAnimation } from "@/lib/animations/constactAnimations";
+import NewsLetter from "./NewsLetter";
 
 interface MediaType {
     src: string;
@@ -41,19 +42,7 @@ const Footer = () => {
                 <div className={cn("flex items-center justify-start", "max-lg:justify-center")}>
                     <Image src="/images/logo_text.png" alt="logo" width={300} height={100} className="opacity-60 w-2/3" />
                 </div>
-                <div className="px-5 xs:px-12 py-6 flex flex-col gap-4 items-start inner-shadow rounded-[24px] border-2 border-[#D86A15]/20">
-                    <h3 className={cn("text-lg font-semibold text-white/80", "max-sm:text-base")}>Subscribe to our newsletter!</h3>
-                    <div className="w-full flex gap-4 items-center justify-between">
-                        <input type="email" placeholder="example@email.com" className={cn("w-full p-4 max-sm:p-2 rounded-[20px] items-center bg-white border-1 border-[#D86A15]/60 placeholder:text-black/40 placeholder:text-lg placeholder:font-semibold", "max-sm:placeholder:text-sm")} />
-                        <m.div                         initial={{opacity: 0, scale: 0}}
-                        animate={{opacity: 1, scale: 1}}
-                        whileHover={{color: '#FF7043', scale: 1.15}}
-                        transition={{ type: 'spring', stiffness: 250, damping: 10, duration: 0.3}}
-                        className="cursor-pointer">
-                            <Image src="/icons/arrow-right.svg" alt="arrow" width={50} height={50} />
-                        </m.div>
-                    </div>
-                </div>
+                <NewsLetter />
             </div>
             <hr className="border-[1px] border-[#D86A15]" />
             <div className={cn("flex max-lg:flex-col gap-4 items-center justify-between text-white/80 font-semibold", "max-sm:text-sm")}>
