@@ -5,6 +5,7 @@ import { useTeamStore } from "@/lib/store/teamStore"
 import Image from "next/image"
 import * as m from 'motion/react-m'
 import Star from "../../_components/Star"
+import { buttonAnimation } from "@/lib/animations/buttonAnimation"
 
 interface InfoType{
     src: string,
@@ -129,12 +130,17 @@ const InfoBlock = () => {
             </div>
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4">
             {infoIslam.map((item, index) => (
-                    <div className="flex px-4 py-2 border-2 border-white/20 rounded-[16px]" key={index}>
+                    <m.div 
+                    variants={buttonAnimation}
+                    initial='hidden'
+                    animate='visible'
+                    whileHover='hover'
+                    className="flex px-4 py-2 border-2 border-white/20 rounded-[16px] cursor-pointer" key={index}>
                         <Link href={item.link} className="w-full h-full flex items-center justify-between">
                             <Image src={item.src} alt={item.src} width={50} height={50} className="w-10 h-10 min-w-10" />
                             <p className="text-white font-semibold text-sm ml-2 truncate">{item.text}</p>
                         </Link>
-                    </div>
+                    </m.div>
                 ))}
             </div>
         </m.div>)}

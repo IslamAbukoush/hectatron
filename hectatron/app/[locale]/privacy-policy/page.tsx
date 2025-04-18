@@ -56,7 +56,17 @@ const page = () => {
   return (
     <div className="px-4 sm:px-6 md:px-10 lg:px-16 xl:px-[100px] py-6 sm:py-8 md:py-10 lg:py-[50px]">
         <Title title="Privacy Policy" description="Effective Date [01.01.2030]" left />
-        <p className="text-sm sm:text-base text-white/60 my-4 sm:my-6">Welcome to Hectatron! These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website creation services, tools, and related content (collectively, the &quot;Services&quot;). By using our Services, you agree to these Terms in full.</p>
+        <m.p 
+        initial={{opacity: 0, y: -20, scale: 0.8}}
+        whileInView={{opacity: 1, y: 0, scale: 1}}
+        transition={{ 
+            type: 'spring',
+            stiffness: 300,
+            damping: 10,
+            duration: 0.3
+        }}
+        viewport={{once: true, amount: 0.5}}
+        className="text-sm sm:text-base text-white/60 my-4 sm:my-6">Welcome to Hectatron! These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website creation services, tools, and related content (collectively, the &quot;Services&quot;). By using our Services, you agree to these Terms in full.</m.p>
         <ol className="flex flex-col gap-3 sm:gap-4">
             {privacy.map((item, index) => (
                 <m.div

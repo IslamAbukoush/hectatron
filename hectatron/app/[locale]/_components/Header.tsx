@@ -9,6 +9,8 @@ import MobileMenu from "./MobileMenu"
 import { useWindowSize } from "@/lib/hooks/useWindowSize"
 import LanguageSwitcher from "./LanguageSwitcher"
 import { useLocale } from "next-intl"
+import * as m from 'motion/react-m'
+import { buttonAnimation } from "@/lib/animations/buttonAnimation"
 
 interface LinkItem {
     href: string;
@@ -61,8 +63,12 @@ const Header = () => {
     }
 
     return (
-        <>
-            <div className={cn(`fixed left-0 right-0 md:grid lg:grid-cols-[1fr_2fr_1fr] md:grid-cols-[1fr_4fr_1fr] flex justify-between items-center py-8 px-4 z-50 h-[110px] transition-transform`, { 'translate-y-[-150%]': scroll.dir === 'down' && scroll.y > 100 })}
+        <m.div
+        initial={{opacity: 0, scale: 0.5, y: -100}}
+        animate={{opacity: 1, scale: 1, y: 0}}
+        transition={{ duration: 0.5}}>
+            <m.div 
+            className={cn(`fixed left-0 right-0 md:grid lg:grid-cols-[1fr_2fr_1fr] md:grid-cols-[1fr_4fr_1fr] flex justify-between items-center py-8 px-4 z-50 h-[110px] transition-transform`, { 'translate-y-[-150%]': scroll.dir === 'down' && scroll.y > 100 })}
                 style={{
                     backgroundColor: `rgba(3, 1, 23, ${Math.min(+!menuOpen, scroll.y / 200)})`,
                     boxShadow: `0px 0px 15px 20px rgba(3, 1, 23, ${Math.min(+!menuOpen, scroll.y / 200)})`
@@ -102,9 +108,14 @@ const Header = () => {
                     <LanguageSwitcher locale={locale.toUpperCase()} />
                 </div>
                 <div className="md:flex hidden justify-center items-center w-full">
-                    <div className="bg-button text-center content-center font-bold text-xs text-white lg:px-10 px-5 lg:text-sm py-6 rounded-3xl cursor-pointer border border-white/60 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.25),inset_-10px_-10px_20px_rgba(255,255,255,0.25)] text-nowrap">
-                        Get Started
-                    </div>
+                    <m.div 
+                    variants={buttonAnimation}
+                    initial='hidden'
+                    animate='visible'
+                    whileHover='hover'
+                    className="bg-button text-center content-center font-bold text-xs text-white lg:px-10 px-5 lg:text-sm py-6 rounded-3xl cursor-pointer border border-white/60 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.25),inset_-10px_-10px_20px_rgba(255,255,255,0.25)] text-nowrap">
+                        <Link href='/contact'>Get Started</Link>
+                    </m.div>
                 </div>
                 <div className="h-[40px] w-[40px] relative flex items-center justify-center md:hidden cursor-pointer" onClick={() => setMenuOpen(prev => !prev)}>
                     <Image
@@ -114,13 +125,13 @@ const Header = () => {
                         className="object-contain"
                     />
                 </div>
-            </div>
+            </m.div>
             <div className="absolute inset-0 w-full h-full -z-10">
                 <Blur className='top-[-450px] left-[50%] -translate-x-1/2 w-[250px] h-[500px] blur-[200px] rounded-full' />
             </div>
             <div className="w-full h-[100px]"></div>
             <MobileMenu isOpen={menuOpen} path={path} />
-        </>
+        </m.div>
     )
 }
 
