@@ -3,6 +3,8 @@ import { Link } from "@/i18n/navigation"
 import { cn } from "@/lib/utils"
 
 import Blur from "./Blur"
+import LanguageSwitcher from "./LanguageSwitcher"
+
 const pages = [
     { text: 'Home', link: '/', icon: '/icons/home.svg' },
     { text: 'About', link: '/about', icon: '/icons/about.svg' },
@@ -15,16 +17,15 @@ export default function MobileMenu({ isOpen, path }: { isOpen: boolean, path: st
             <div></div>
             <div className="flex justify-center items-center">
                 <div className="inline-flex flex-col relative">
-                    <Blur className="w-[200px] h-[200px] blur-[100px] opacity-70 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-0"/>
+                    <Blur className="w-[200px] h-[200px] blur-[100px] opacity-70 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-0" />
                     {pages.map((page, i) => (
                         <Link href={page.link} key={page.text} className={cn(`flex items-center gap-4 py-5 px-3 z-10 text-[#ffffff9f]`, { 'border-b border-[#ffffff9f]': i !== pages.length - 1, 'text-white': path === page.link })}>
-                            <Image src={page.icon} alt={page.text} width={30} height={30} className={cn(`h-auto w-7 opacity-70`, {'opacity-100': path === page.link})} />
+                            <Image src={page.icon} alt={page.text} width={30} height={30} className={cn(`h-auto w-7 opacity-70`, { 'opacity-100': path === page.link })} />
                             <p className="text-xl">{page.text}</p>
                         </Link>
                     ))}
                     <div className="flex items-center justify-center gap-2 pt-6">
-                        <Image alt="global" src={'/icons/global.svg'} width={50} height={50} />
-                        <p className="text-white text-2xl">EN</p>
+                        <LanguageSwitcher />
                     </div>
                 </div>
             </div>

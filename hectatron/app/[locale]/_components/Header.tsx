@@ -12,6 +12,7 @@ import { useLocale } from "next-intl"
 import * as m from 'motion/react-m'
 import { buttonAnimation } from "@/lib/animations/buttonAnimation"
 
+
 interface LinkItem {
     href: string;
     label: string;
@@ -19,7 +20,6 @@ interface LinkItem {
 
 const Header = () => {
     const path = usePathname();
-    const locale = useLocale();
     const isProjectPreviewPage = path.includes('/projects-review/');
 
 
@@ -105,7 +105,7 @@ const Header = () => {
                             {link.label}
                         </Link>
                     ))}
-                    <LanguageSwitcher locale={locale.toUpperCase()} />
+                    <LanguageSwitcher />
                 </div>
                 <div className="md:flex hidden justify-center items-center w-full">
                     <m.div 
