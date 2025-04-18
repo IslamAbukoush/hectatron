@@ -8,7 +8,7 @@ import Blur from "./Blur"
 import MobileMenu from "./MobileMenu"
 import { useWindowSize } from "@/lib/hooks/useWindowSize"
 import LanguageSwitcher from "./LanguageSwitcher"
-import { useLocale } from "next-intl"
+// import { useLocale } from "next-intl"
 import * as m from 'motion/react-m'
 import { buttonAnimation } from "@/lib/animations/buttonAnimation"
 
