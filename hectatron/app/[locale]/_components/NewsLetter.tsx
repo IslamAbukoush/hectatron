@@ -32,6 +32,7 @@ export default function NewsLetter() {
         console.log(values)
         setMessage('You are now subscribed!\nYou will get our latest news in your inbox.');
         setIsOpen(true);
+        form.reset();
     }
     return (
         <Form {...form}>
