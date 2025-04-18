@@ -1,5 +1,6 @@
 import { IPrivacy } from "@/lib/types/IPrivacy"
 import Title from "../_components/Title"
+import * as m from 'motion/react-m'
 
 const privacy : IPrivacy[] = [
     {
@@ -58,10 +59,20 @@ const page = () => {
         <p className="text-sm sm:text-base text-white/60 my-4 sm:my-6">Welcome to Hectatron! These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website creation services, tools, and related content (collectively, the &quot;Services&quot;). By using our Services, you agree to these Terms in full.</p>
         <ol className="flex flex-col gap-3 sm:gap-4">
             {privacy.map((item, index) => (
-                <div key={index} className="flex flex-col">
+                <m.div
+                initial={{opacity: 0, y: -20, scale: 0.8}}
+                whileInView={{opacity: 1, y: 0, scale: 1}}
+                transition={{ 
+                    type: 'spring',
+                    stiffness: 300,
+                    damping: 10,
+                    duration: 0.3
+                }}
+                viewport={{once: true, amount: 0.5}}
+                key={index} className="flex flex-col">
                     <h2 className="text-white font-semibold text-lg sm:text-xl md:text-2xl">{item.title}</h2>
                     <p className="text-white/60 text-sm sm:text-base">{item.description}</p>
-                </div>
+                </m.div>
             ))}
         </ol>
     </div>

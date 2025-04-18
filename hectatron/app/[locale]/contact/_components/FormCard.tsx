@@ -58,14 +58,14 @@ export default function FormCard() {
                 initial="hidden"
                 animate="visible"
             >
-                <m.div variants={socialIconAnimation} whileHover="hover">
-                    <Image src='/icons/twitter.svg' alt="twitter" width={30} height={30} />
+                <m.div variants={socialIconAnimation} whileHover="hover" className="cursor-pointer">
+                    <Image src='/icons/twitter.svg' alt="twitter" width={40} height={30} />
                 </m.div>
-                <m.div variants={socialIconAnimation} whileHover="hover">
-                    <Image src='/icons/insta.svg' alt="instagram" width={30} height={30} />
+                <m.div variants={socialIconAnimation} whileHover="hover" className="cursor-pointer">
+                    <Image src='/icons/insta.svg' alt="instagram" width={40} height={30} />
                 </m.div>
-                <m.div variants={socialIconAnimation} whileHover="hover">
-                    <Image src='/icons/discord.svg' alt="discord" width={30} height={30} />
+                <m.div variants={socialIconAnimation} whileHover="hover" className="cursor-pointer">
+                    <Image src='/icons/discord.svg' alt="discord" width={40} height={30} />
                 </m.div>
             </m.div>
         </m.div>
