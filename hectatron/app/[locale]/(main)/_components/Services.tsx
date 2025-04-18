@@ -36,7 +36,8 @@ const Services = () => {
   return (
     <div className={cn("px-[100px] mt-[150px] relative", "max-sm:px-[50px] max-md:mt-[80px]")}>
         <Title title='Services' description="Fast, secure, and scalable Next.js websites with expert support to keep your business ahead." />
-        <div className={cn("grid grid-cols-1 gap-10 mt-20", "max-md:mt-10")}>
+        <div 
+        className={cn("grid grid-cols-1 gap-10 mt-20", "max-md:mt-10")}>
             {services.map((service, index) => (
                 <ServicesBlock key={index} {...service} />
             ))}

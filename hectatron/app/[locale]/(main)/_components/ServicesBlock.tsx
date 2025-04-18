@@ -2,10 +2,17 @@ import Image from 'next/image'
 import React from 'react'
 import Blur from '../../_components/Blur'
 import { WhyChooseType } from '@/lib/types/WhyChooseType'
+import * as m from 'motion/react-m'
+import { ServicesAnimation } from '@/lib/animations/ServicesAnimation'
 
 const ServicesBlock = ({title, description, src, alt} : WhyChooseType) => {
   return (
-    <div className='flex flex-col sm:flex-row items-center gap-6 sm:gap-8 lg:gap-12 bg-[#1A1A32]  md:max-w-[80%] rounded-xl sm:rounded-2xl p-4 sm:px-6 lg:px-10 py-6 sm:py-8 lg:py-12 border border-white/20 relative'>
+    <m.div 
+    variants={ServicesAnimation}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }} 
+    className='flex flex-col sm:flex-row items-center gap-6 sm:gap-8 lg:gap-12 bg-[#1A1A32]  md:max-w-[80%] rounded-xl sm:rounded-2xl p-4 sm:px-6 lg:px-10 py-6 sm:py-8 lg:py-12 border border-white/20 relative'>
         <div className="relative flex-shrink-0">
           <Image 
             className='object-cover w-20 sm:w-24 md:w-28 lg:w-32 h-auto z-10 mx-auto' 
@@ -23,7 +30,7 @@ const ServicesBlock = ({title, description, src, alt} : WhyChooseType) => {
             <h1 className='text-xl sm:text-2xl lg:text-3xl font-bold text-gradient text-center sm:text-left'>{title}</h1>
             <p className='text-white/40 text-sm sm:text-base lg:text-lg w-full text-center sm:text-left mt-2'>{description}</p>
         </div>
-    </div>
+    </m.div>
   )
 }
 

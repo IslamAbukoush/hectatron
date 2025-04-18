@@ -8,7 +8,9 @@ const page = () => {
   return (
     <div>
         <div className="mt-15 relative w-full h-full">
+          <div className="flex items-center justify-center text-center">
             <Title title="Projects" description="Fast, secure, and scalable Next.js websites with expert support to keep your business ahead." />
+          </div>
         </div>
         <ProjectsCarousel/>
         <div className="absolute inset-0 w-full h-full -z-10 overflow-hidden">

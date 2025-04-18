@@ -9,6 +9,7 @@ import { LeftTeamMemberAnimation, RightTeamMemberAnimation, TeamAnimation } from
 import { AnimatePresence } from 'motion/react';
 import Blur from '../../_components/Blur';
 import Star from '../../_components/Star';
+import { TitleAnimation } from '@/lib/animations/TitleAnimation';
 
 const Team: React.FC = () => {
     const { currentTeamMember, setCurrentTeamMember } = useTeamStore();
@@ -23,9 +24,15 @@ const Team: React.FC = () => {
 
     return (
         <div className='px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24 flex flex-col gap-6 py-10 overflow-hidden relative'>
-            <div className="text-center">
+            <m.div 
+                variants={TitleAnimation}
+                initial="hidden"
+                animate="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                className="text-center"
+            >
                 <h2 className='mx-auto text-gradient text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-5 sm:pb-8 lg:pb-10'>Team</h2>
-            </div>
+            </m.div>
             
             <div className="grid grid-cols-2 bg-white/11 rounded-[12px] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white/80 py-3 sm:py-5 cursor-pointer">
                 <div 
@@ -50,7 +57,8 @@ const Team: React.FC = () => {
                     key='islam'
                     variants={TeamAnimation}
                     initial='hidden'
-                    animate='visible'
+                    whileInView='visible'
+                    viewport={{once: true, amount: 0.5}}
                     className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
                         <m.div
                         variants={LeftTeamMemberAnimation}
@@ -86,7 +94,8 @@ const Team: React.FC = () => {
                     key='maxim'
                     variants={TeamAnimation}
                     initial='hidden'
-                    animate='visible'
+                    whileInView='visible'
+                    viewport={{once: true, amount: 0.5}}
                     className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
                         <m.div
                         variants={LeftTeamMemberAnimation}
