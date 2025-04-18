@@ -1,3 +1,4 @@
+import Alert from "../_components/Alert"
 import Title from "../_components/Title"
 import FormCard from "./_components/FormCard"
 import FormElement from "./_components/FormElement"
@@ -9,6 +10,7 @@ export default function page() {
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1.1fr] mt-20 mx-5 md:mx-10 lg:mx-20 xl:grid-cols-[1fr_2fr]">
                 <FormCard />
                 <FormElement />
+                <Alert/>
             </div>
         </div>
     )

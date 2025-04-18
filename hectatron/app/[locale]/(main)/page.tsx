@@ -9,6 +9,7 @@ import Customers from './_components/Customers';
 import FAQ from './_components/FAQ';
 import Star from '../_components/Star';
 import * as m from 'motion/react-m'
+import Alert from '../_components/Alert';
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
 
   return (
     <div className="">
+      <Alert/>
       <div className='flex flex-col gap-10 items-center justify-center'>
         <div
         className="relative overflow-hidden flex flex-col gap-10 items-center pt-20 md:pt-30 h-[calc(100vh-100px)]">

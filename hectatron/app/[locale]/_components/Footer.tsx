@@ -2,6 +2,8 @@
 import { Link, usePathname } from "@/i18n/navigation"
 import { cn } from "@/lib/utils";
 import Image from "next/image"
+import * as m from 'motion/react-m'
+import { socialIconAnimation } from "@/lib/animations/constactAnimations";
 
 interface MediaType {
     src: string;
@@ -43,7 +45,13 @@ const Footer = () => {
                     <h3 className={cn("text-lg font-semibold text-white/80", "max-sm:text-base")}>Subscribe to our newsletter!</h3>
                     <div className="w-full flex gap-4 items-center justify-between">
                         <input type="email" placeholder="example@email.com" className={cn("w-full p-4 max-sm:p-2 rounded-[20px] items-center bg-white border-1 border-[#D86A15]/60 placeholder:text-black/40 placeholder:text-lg placeholder:font-semibold", "max-sm:placeholder:text-sm")} />
-                        <Image src="/icons/arrow-right.svg" alt="arrow" width={50} height={50} />
+                        <m.div                         initial={{opacity: 0, scale: 0}}
+                        animate={{opacity: 1, scale: 1}}
+                        whileHover={{color: '#FF7043', scale: 1.15}}
+                        transition={{ type: 'spring', stiffness: 250, damping: 10, duration: 0.3}}
+                        className="cursor-pointer">
+                            <Image src="/icons/arrow-right.svg" alt="arrow" width={50} height={50} />
+                        </m.div>
                     </div>
                 </div>
             </div>
@@ -52,14 +60,25 @@ const Footer = () => {
                 <p>© Hectatron all rights reserved</p>
                 <div className="flex gap-4 xs:gap-10 items-center justify-center">
                     {pages.map((item, index) => (
-                        <Link key={index} href={item.link}>{item.text}</Link>
+                        <m.div 
+                        initial={{opacity: 0, scale: 0}}
+                        animate={{opacity: 1, scale: 1}}
+                        whileHover={{color: '#FF7043', scale: 1.1}}
+                        transition={{ type: 'spring', stiffness: 200, damping: 15, duration: 0.3}}
+                        key={index} className="cursor-pointer">
+                            <Link href={item.link}>{item.text}</Link>
+                        </m.div>
                     ))}
                 </div>
                 <div className="flex gap-4 items-center justify-center">
                     {media.map((item, index) => (
-                        <Link href={item.link} key={index} target="_blank" rel="noopener noreferrer">
+                        <m.div
+                        variants={socialIconAnimation} initial='hidden' animate='visible' whileHover="hover" className="cursor-pointer"
+                        key={index}>
+                        <Link href={item.link} target="_blank" rel="noopener noreferrer">
                             <Image src={item.src} alt={item.alt} width={30} height={30} />
                         </Link>
+                        </m.div>
                     ))}
                 </div>
             </div>

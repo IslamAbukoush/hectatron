@@ -14,6 +14,7 @@ import {
     FormLabel,
     FormMessage,
 } from "@/components/ui/form"
+import { useFormStore } from '@/lib/store/FormStore';
 
 const formSchema = z.object({
     firstName: z.string().min(2).max(50),
@@ -25,6 +26,7 @@ const formSchema = z.object({
 })
 
 export default function FormElement() {
+    const {setIsOpen} = useFormStore()
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -54,6 +56,7 @@ export default function FormElement() {
         ).then(
             () => {
                 console.log('SUCCESS!');
+                setIsOpen(true);
             },
             (error) => {
                 console.log('FAILED...', error.text);

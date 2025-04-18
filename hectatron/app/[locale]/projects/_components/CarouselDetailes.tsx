@@ -23,7 +23,7 @@ const CarouselDetailes = ({ title, description }: TypeDetailes) => {
       </m.div>
       <m.div
         {...animateDiv}
-        className="absolute bottom-[-25%] w-full text-center px-4 md:px-6 lg:px-8">
+        className={cn("absolute bottom-[-25%] w-full text-center px-4 md:px-6 lg:px-8", "max-sm:bottom-[-55%]")}>
         <p className='text-white/60 text-sm sm:text-base'>{description}</p>
       </m.div>
     </div>
