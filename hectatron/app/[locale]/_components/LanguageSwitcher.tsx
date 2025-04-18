@@ -1,13 +1,14 @@
 'use client'
-import { useRef } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/navigation";
 import { usePathname } from "@/i18n/navigation";
 import useComponentVisible from "@/lib/hooks/useComponentVisible";
+import { useLocale } from "next-intl";
 
-export default function LanguageSwitcher({ locale }: { locale: string }) {
+export default function LanguageSwitcher() {
     const path = usePathname();
+    const locale = useLocale().toUpperCase();
     const {
         ref,
         toggleElement,

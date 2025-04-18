@@ -8,7 +8,6 @@ import Blur from "./Blur"
 import MobileMenu from "./MobileMenu"
 import { useWindowSize } from "@/lib/hooks/useWindowSize"
 import LanguageSwitcher from "./LanguageSwitcher"
-import { useLocale } from "next-intl"
 
 interface LinkItem {
     href: string;
@@ -17,7 +16,6 @@ interface LinkItem {
 
 const Header = () => {
     const path = usePathname();
-    const locale = useLocale();
     const isProjectPreviewPage = path.includes('/projects-review/');
 
 
@@ -99,7 +97,7 @@ const Header = () => {
                             {link.label}
                         </Link>
                     ))}
-                    <LanguageSwitcher locale={locale.toUpperCase()} />
+                    <LanguageSwitcher />
                 </div>
                 <div className="md:flex hidden justify-center items-center w-full">
                     <div className="bg-button text-center content-center font-bold text-xs text-white lg:px-10 px-5 lg:text-sm py-6 rounded-3xl cursor-pointer border border-white/60 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.25),inset_-10px_-10px_20px_rgba(255,255,255,0.25)] text-nowrap">
