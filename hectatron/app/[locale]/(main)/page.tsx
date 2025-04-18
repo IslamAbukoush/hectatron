@@ -11,6 +11,8 @@ import Star from '../_components/Star';
 import { getTranslations } from 'next-intl/server';
 import * as m from 'motion/react-m'
 import Alert from '../_components/Alert';
+import { buttonAnimation } from '@/lib/animations/buttonAnimation';
+import { Link } from '@/i18n/navigation';
 
 
 const Home = async () => {
@@ -38,26 +40,14 @@ const Home = async () => {
             priority
           />
           <Title title={t('title')} description={t('description')}  />
-          <m.div 
-            initial={{
-              opacity: 0,
-              scale: 0,
-              y: -100
-            }}
-            animate={{
-              y: 0,
-              opacity: 1,
-              scale: 1
-            }}
-            transition={{ duration: 0.5}}
-          className="
-                z-10 bg-button text-center font-bold text-white border-[1px] border-white/60 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.25),inset_-10px_-10px_20px_rgba(255,255,255,0.25)]
-                lg:text-base lg:px-10 lg:py-6 lg:rounded-[24px]
-                xs:text-sm
-                text-xs px-8 py-4 rounded-[16px]
-              ">
-            Get Started
-          </m.div>
+                    <m.div 
+                    variants={buttonAnimation}
+                    initial='hidden'
+                    animate='visible'
+                    whileHover='hover'
+                    className="bg-button text-center content-center font-bold text-xs text-white lg:px-10 px-5 lg:text-sm py-6 rounded-3xl cursor-pointer border border-white/60 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.25),inset_-10px_-10px_20px_rgba(255,255,255,0.25)] text-nowrap">
+                        <Link href='/contact'>Get Started</Link>
+                    </m.div>
         </div>
         <div className="overflow-hidden absolute top-0 left-0 w-full h-full -z-10">
           <Image

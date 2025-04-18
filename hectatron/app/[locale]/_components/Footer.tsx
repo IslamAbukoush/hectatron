@@ -4,7 +4,9 @@ import { cn } from "@/lib/utils";
 import Image from "next/image"
 import * as m from 'motion/react-m'
 import { socialIconAnimation } from "@/lib/animations/constactAnimations";
+import { textAnimation } from "@/lib/animations/buttonAnimation";
 import NewsLetter from "./NewsLetter";
+
 
 interface MediaType {
     src: string;
@@ -50,10 +52,10 @@ const Footer = () => {
                 <div className="flex gap-4 xs:gap-10 items-center justify-center">
                     {pages.map((item, index) => (
                         <m.div 
-                        initial={{opacity: 0, scale: 0}}
-                        animate={{opacity: 1, scale: 1}}
-                        whileHover={{color: '#FF7043', scale: 1.1}}
-                        transition={{ type: 'spring', stiffness: 200, damping: 15, duration: 0.3}}
+                        variants={textAnimation}
+                        initial='hidden'
+                        animate='visible'
+                        whileHover='hover'
                         key={index} className="cursor-pointer">
                             <Link href={item.link}>{item.text}</Link>
                         </m.div>
