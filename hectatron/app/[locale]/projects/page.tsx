@@ -3,13 +3,15 @@ import Blur from "../_components/Blur"
 import Title from "../_components/Title"
 import ProjectsCarousel from "./_components/ProjectsCarousel"
 import Star from "../_components/Star"
+import { getTranslations } from "next-intl/server"
 
-const page = () => {
+const page = async () => {
+  const t = await getTranslations("projects");
   return (
     <div>
         <div className="mt-15 relative w-full h-full">
           <div className="flex items-center justify-center text-center">
-            <Title title="Projects" description="Fast, secure, and scalable Next.js websites with expert support to keep your business ahead." />
+            <Title title={t("title")} description={t("description")} />
           </div>
         </div>
         <ProjectsCarousel/>

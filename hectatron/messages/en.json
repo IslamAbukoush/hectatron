@@ -8,9 +8,103 @@
     },
     "getStarted": "Get Started"
   },
+  "footer": {
+    "home": "Home",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of use",
+    "copyright": "© Hectatron all rights reserved"
+  },
+  "newsletter": {
+    "title": "Subscribe to our newsletter!",
+    "placeholder": "example@email.com",
+    "success": "You are now subscribed!\nYou will get our latest news in your inbox."
+  },
+  "whatIs": {
+    "title": "What is Hectatron?",
+    "p1": "Hectatron is a dynamic IT company specializing in modern website development, optimization, and SEO. Founded by Maxim and Islam Abu-Koush, both experienced full-stack developers, Hectatron brings together cutting-edge technologies like Next.js, Tailwind CSS, and other modern libraries to deliver high-quality, efficient, and responsive web solutions.",
+    "p2": "With a passion for innovation and a commitment to excellence, our team focuses on creating websites that are not only visually appealing but also optimized for performance and search engine visibility. Whether it's building from scratch or enhancing existing platforms, Hectatron is dedicated to delivering tailored solutions that meet our clients' needs."
+  },
+  "team": {
+    "title": "Team",
+    "maximTab": "Maxim",
+    "islamTab": "Islam",
+    "imageAlt": "Hectatron Team",
+  
+    "islamTitle": "Islam Abu-Koush - Co-Founder & Full-Stack Developer",
+    "islamP1": "Islam is a versatile full-stack developer and co-founder of Hectatron. With a robust technical background in Next.js, React, Express.js, Tailwind CSS, and Node.js, he has honed his skills through diverse experiences, including hackathon projects like Codify and Investora.",
+    "islamP2": "His journey also includes working as a call center agent, which shaped his strong communication skills and client-oriented mindset. Islam's proficiency in Figma and Photoshop enables him to seamlessly integrate aesthetics with functionality, crafting modern, engaging web solutions.",
+    "islamP3": "Passionate about continuous learning, he actively explores new development practices to keep Hectatron at the forefront of web innovation.",
+  
+    "maximTitle": "Maxim Roenco - Co-Founder & Full-Stack Developer",
+    "maximP1": "Maxim is a passionate full-stack developer and co-founder of Hectatron. With hands-on experience from internships at Amdaris, Smart Energy Solutions, and Quant-Apps, he excels in building modern web applications using Next.js, React, Tailwind CSS, Node.js, and MongoDB.",
+    "maximP2": "His projects range from interactive learning platforms to innovative financial tools, showcasing his problem-solving abilities and technical expertise. Maxim is also skilled in Figma and Photoshop, allowing him to create visually appealing and user-friendly interfaces.",
+    "maximP3": "Dedicated to delivering quality and performance, he constantly explores new technologies to enhance his craft. As a leader, he drives Hectatron's mission of building responsive, cutting-edge websites."
+  },
+  "infobox": {
+    "islamTab": "Islam Abu-Koush",
+    "maximTab": "Maxim Roenco",
+    "roleWebDeveloper": "Web developer",
+    "roleCoFounder": "Co-Founder"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Fast, secure, and scalable Next.js websites with expert support to keep your business ahead.",
+    "items": [
+      {
+        "title": "Investora",
+        "description": "A crypto-focused web platform designed for tracking and visualizing investments."
+      },
+      {
+        "title": "Movies & TV Shows Website",
+        "description": "A responsive platform for browsing and discovering popular movies and TV shows."
+      },
+      {
+        "title": "Movies & TV Shows Website",
+        "description": "A modern UI concept for a streaming service clone with visual content previews."
+      },
+      {
+        "title": "Portfolio Website",
+        "description": "Interactive 3D portfolio showcasing projects and skills using Three.js and React."
+      },
+      {
+        "title": "Portfolio Website",
+        "description": "Immersive developer portfolio featuring real-time animations and transitions."
+      },
+      {
+        "title": "Portfolio Website",
+        "description": "A creative showcase using 3D visuals to enhance the user experience."
+      },
+      {
+        "title": "Portfolio Website",
+        "description": "Sleek and performance-optimized 3D developer portfolio using WebGL."
+      },
+      {
+        "title": "Portfolio Website",
+        "description": "Minimalistic yet dynamic 3D portfolio built for showcasing frontend skills."
+      },
+      {
+        "title": "Portfolio Website",
+        "description": "Animated 3D portfolio providing an engaging, interactive user journey."
+      },
+      {
+        "title": "IT Company – Quant Apps",
+        "description": "A professional website for Quant Apps, a tech company offering mobile and web development solutions."
+      },
+      {
+        "title": "IT Company – Quant Apps",
+        "description": "Corporate website highlighting services and projects of Quant Apps with a clean, modern layout."
+      },
+      {
+        "title": "Ramadan Tracker",
+        "description": "A helpful tool for tracking daily Ramadan activities, timings, and prayers with visual guidance."
+      }
+    ]
+  },
   "home": {
     "title": "Elevate Your Brand with Custom Web Solutions",
     "description": "We design and develop high-quality, custom websites that enhance your brand and drive results.",
+    "getStarted": "Get Started",
+    "testimonial": "Testimonial",
     "customers": {
       "title": "See What Customers Say",
       "subtitle": "We design and develop high-quality, custom websites that enhance your brand and drive results.",

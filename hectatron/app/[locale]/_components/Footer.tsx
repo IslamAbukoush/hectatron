@@ -6,7 +6,7 @@ import * as m from 'motion/react-m'
 import { socialIconAnimation } from "@/lib/animations/constactAnimations";
 import { textAnimation } from "@/lib/animations/buttonAnimation";
 import NewsLetter from "./NewsLetter";
-
+import { useTranslations } from "next-intl";
 
 interface MediaType {
     src: string;
@@ -21,23 +21,18 @@ const media: MediaType[] = [
     { src: '/icons/facebook.svg', alt: 'facebook', link: 'https://www.linkedin.com/company/hecatron/' },
 ]
 
-interface PageType {
-    text: string;
-    link: string;
-}
-
-const pages: PageType[] = [
-    { text: 'Home', link: '/' },
-    { text: 'Privacy Policy', link: '/privacy-policy' },
-    { text: 'Terms of use', link: '/terms-of-use' },
-]
-
 const Footer = () => {
+    const t = useTranslations('footer');
     const path = usePathname();
     const isProjectPreviewPage = path.includes('/projects-review/');
     if (isProjectPreviewPage) {
         return null;
     }
+    const pages = [
+        { text: t('home'), link: '/' },
+        { text: t('privacyPolicy'), link: '/privacy-policy' },
+        { text: t('termsOfUse'), link: '/terms-of-use' },
+    ];
     return (
         <div className={cn("flex flex-col gap-10 px-4 xs:px-8 sm:px-20 py-[30px] bg-gradient-to-t from-[#040411] to-[#1A1A32]")}>
             <div className={cn("grid grid-cols-2 gap-10", "max-lg:grid-cols-1")}>
@@ -48,7 +43,7 @@ const Footer = () => {
             </div>
             <hr className="border-[1px] border-[#D86A15]" />
             <div className={cn("flex max-lg:flex-col gap-4 items-center justify-between text-white/80 font-semibold", "max-sm:text-sm")}>
-                <p>© Hectatron all rights reserved</p>
+                <p>{t('copyright')}</p>
                 <div className="flex gap-4 xs:gap-10 items-center justify-center">
                     {pages.map((item, index) => (
                         <m.div 

@@ -46,7 +46,7 @@ const Home = async () => {
                     animate='visible'
                     whileHover='hover'
                     className="bg-button text-center content-center font-bold text-xs text-white lg:px-10 px-5 lg:text-sm py-6 rounded-3xl cursor-pointer border border-white/60 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.25),inset_-10px_-10px_20px_rgba(255,255,255,0.25)] text-nowrap">
-                        <Link href='/contact'>Get Started</Link>
+                        <Link href='/contact'>{t("getStarted")}</Link>
                     </m.div>
         </div>
         <div className="overflow-hidden absolute top-0 left-0 w-full h-full -z-10">

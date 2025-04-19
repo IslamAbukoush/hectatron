@@ -8,9 +8,103 @@
         },
         "getStarted": "Get Started"
       },
+      "footer": {
+        "home": "Acasă",
+        "privacyPolicy": "Politica de confidențialitate",
+        "termsOfUse": "Termeni de utilizare",
+        "copyright": "© Hectatron toate drepturile rezervate"
+      },
+      "newsletter": {
+        "title": "Abonează-te la newsletter!",
+        "placeholder": "exemplu@email.com",
+        "success": "Te-ai abonat cu succes!\nVei primi cele mai noi știri pe email."
+      },
+      "whatIs": {
+        "title": "Ce este Hectatron?",
+        "p1": "Hectatron este o companie IT dinamică, specializată în dezvoltarea modernă a site-urilor web, optimizare și SEO. Fondată de Maxim și Islam Abu-Koush, ambii dezvoltatori full-stack cu experiență, Hectatron reunește tehnologii de ultimă generație precum Next.js, Tailwind CSS și alte librării moderne pentru a oferi soluții web de înaltă calitate, eficiente și responsive.",
+        "p2": "Cu o pasiune pentru inovație și un angajament pentru excelență, echipa noastră se concentrează pe crearea de site-uri care nu sunt doar atrăgătoare vizual, ci și optimizate pentru performanță și vizibilitate în motoarele de căutare. Fie că este vorba de construcție de la zero sau de îmbunătățirea unor platforme existente, Hectatron livrează soluții personalizate pentru nevoile clienților."
+      },
+      "team": {
+        "title": "Echipă",
+        "maximTab": "Maxim",
+        "islamTab": "Islam",
+        "imageAlt": "Echipa Hectatron",
+      
+        "islamTitle": "Islam Abu-Koush - Co-fondator & Full-Stack Developer",
+        "islamP1": "Islam este un dezvoltator full-stack versatil și co-fondator al Hectatron. Cu o bază tehnică solidă în Next.js, React, Express.js, Tailwind CSS și Node.js, și-a perfecționat abilitățile prin experiențe diverse, inclusiv proiecte de hackathon precum Codify și Investora.",
+        "islamP2": "Drumul său include și activitatea ca agent call-center, care i-a dezvoltat abilități de comunicare și focalizarea pe client. Priceperea lui în Figma și Photoshop îi permite să îmbine estetica cu funcționalitatea, creând soluții web moderne și atractive.",
+        "islamP3": "Pasionat de învățarea continuă, explorează constant noi practici pentru a menține Hectatron în avangarda inovației web.",
+      
+        "maximTitle": "Maxim Roenco - Co-fondator & Full-Stack Developer",
+        "maximP1": "Maxim este un dezvoltator full-stack pasionat și co-fondator al Hectatron. Cu experiență practică acumulată la internship-uri la Amdaris, Smart Energy Solutions și Quant-Apps, excelează în construirea de aplicații web moderne folosind Next.js, React, Tailwind CSS, Node.js și MongoDB.",
+        "maximP2": "Proiectele sale variază de la platforme de învățare interactive la instrumente financiare inovatoare, remarcându-se prin abilități de rezolvare a problemelor și expertiză tehnică. Maxim cunoaște foarte bine și Figma, și Photoshop, putând crea interfețe plăcute și ușor de folosit.",
+        "maximP3": "Dedicat calității și performanței, explorează constant noi tehnologii. Ca lider, conduce misiunea Hectatron de a crea site-uri responsive și moderne."
+      },
+      "infobox": {
+        "islamTab": "Islam Abu-Koush",
+        "maximTab": "Maxim Roenco",
+        "roleWebDeveloper": "Dezvoltator web",
+        "roleCoFounder": "Cofondator"
+      },
+      "projects": {
+        "title": "Proiecte",
+        "description": "Site-uri Next.js rapide, sigure și scalabile, cu suport de specialitate pentru a-ți menține afacerea în frunte.",
+        "items": [
+            {
+              "title": "Investora",
+              "description": "O platformă web axată pe criptomonede, concepută pentru urmărirea și vizualizarea investițiilor."
+            },
+            {
+              "title": "Site de Filme și Emisiuni TV",
+              "description": "O platformă receptivă pentru navigarea și descoperirea filmelor și emisiunilor TV populare."
+            },
+            {
+              "title": "Site de Filme și Emisiuni TV",
+              "description": "Un concept modern de interfață pentru un serviciu de streaming cu previzualizări vizuale de conținut."
+            },
+            {
+              "title": "Site Portofoliu",
+              "description": "Portofoliu 3D interactiv care prezintă proiecte și abilități folosind Three.js și React."
+            },
+            {
+              "title": "Site Portofoliu",
+              "description": "Portofoliu de dezvoltator captivant cu animații și tranziții în timp real."
+            },
+            {
+              "title": "Site Portofoliu",
+              "description": "O prezentare creativă folosind vizualuri 3D pentru a îmbunătăți experiența utilizatorului."
+            },
+            {
+              "title": "Site Portofoliu",
+              "description": "Portofoliu 3D elegant și optimizat pentru performanță folosind WebGL."
+            },
+            {
+              "title": "Site Portofoliu",
+              "description": "Portofoliu 3D minimalist, dar dinamic, construit pentru a evidenția abilitățile frontend."
+            },
+            {
+              "title": "Site Portofoliu",
+              "description": "Portofoliu 3D animat care oferă o experiență de utilizator captivantă și interactivă."
+            },
+            {
+              "title": "Companie IT – Quant Apps",
+              "description": "Un site profesional pentru Quant Apps, o companie tehnologică care oferă soluții de dezvoltare web și mobilă."
+            },
+            {
+              "title": "Companie IT – Quant Apps",
+              "description": "Site corporativ care evidențiază serviciile și proiectele Quant Apps cu un design curat și modern."
+            },
+            {
+              "title": "Tracker Ramadan",
+              "description": "Un instrument util pentru urmărirea activităților zilnice din Ramadan, a orelor și rugăciunilor, cu ghidare vizuală."
+            }
+          ]          
+      },
     "home": {
         "title": "Ridică-ți brandul cu soluții web personalizate",
         "description": "Proiectăm și dezvoltăm site-uri web personalizate, de înaltă calitate, care îți îmbunătățesc brandul și generează rezultate.",
+        "getStarted": "Începe acum",
+        "testimonial": "Testimonial",
         "customers": {
             "title": "Vezi ce spun clienții",
             "subtitle": "Proiectăm și dezvoltăm site-uri web personalizate, de înaltă calitate, care îți îmbunătățesc marca și generează rezultate.",
