@@ -98,9 +98,53 @@
         "title": "متتبع رمضان",
         "description": "أداة مفيدة لتتبع أنشطة رمضان اليومية، والأوقات، والصلوات مع توجيه بصري."
       }
-    ]
-    
+    ]    
   },
+  "contact": {
+    "title": "اتصل بنا",
+    "description": "مواقع Next.js سريعة وآمنة وقابلة للتوسع مع دعم خبير للحفاظ على تقدم عملك."
+  },
+  "contactCard": {
+    "title": "معلومات الاتصال",
+    "description": "اكتب شيئًا لبدء الدردشة المباشرة!",
+    "phone": "+373 697-048-56",
+    "email": "hectatron.web@gmail.com",
+    "location": "كشيناو منزل إسلام"
+  },
+  "contactForm": {
+    "emailTitle": "استفسار جديد من Hectatron",
+    "firstName": {
+      "label": "الاسم الأول",
+      "placeholder": "جون"
+    },
+    "lastName": {
+      "label": "اسم العائلة",
+      "placeholder": "دو"
+    },
+    "email": {
+      "label": "البريد الإلكتروني",
+      "placeholder": "johndoe@gmail.com"
+    },
+    "phoneNumber": {
+      "label": "رقم الهاتف",
+      "placeholder": "+966 512 345 678"
+    },
+    "serviceLabel": "اختر الخدمة",
+    "services": {
+      "newWebsite": "موقع إلكتروني جديد",
+      "websiteRedisgn": "إعادة تصميم الموقع",
+      "websiteBugFixes": "إصلاح أخطاء الموقع",
+      "technicalConsultation": "استشارة تقنية"
+    },
+    "message": {
+      "label": "الرسالة",
+      "placeholder": "اكتب رسالتك..."
+    },
+    "sendMessage": "إرسال الرسالة",
+    "sending": "جارٍ الإرسال...",
+    "success": "تم استلام رسالتك!\nسيتواصل معك فريقنا في أقرب وقت ممكن.",
+    "error": "حدث خطأ. الرجاء المحاولة لاحقًا."
+  },  
   "home": {
     "title": "ارتقِ بعلامتك التجارية من خلال حلول الويب المخصصة",
     "description": "نصمم ونطور مواقع ويب مخصصة وعالية الجودة تعزز علامتك التجارية وتحقق النتائج.",

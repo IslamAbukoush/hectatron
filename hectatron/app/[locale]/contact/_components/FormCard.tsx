@@ -3,8 +3,10 @@
 import Image from "next/image"
 import * as m from "motion/react-m"
 import { cardAnimation, listItemAnimation, socialIconAnimation, staggerContainer } from "@/lib/animations/constactAnimations"
+import { useTranslations } from "next-intl"
 
 export default function FormCard() {
+    const t = useTranslations('contactCard');
     return (
         <m.div 
             className="bg-[#1A1A32] relative rounded-xl overflow-hidden p-5 xs:p-10 flex flex-col gap-10 md:gap-32"
@@ -22,13 +24,13 @@ export default function FormCard() {
                     className="text-[#FF8629] font-semibold text-2xl xs:text-3xl"
                     variants={listItemAnimation}
                 >
-                    Contact Information
+                    {t('title')}
                 </m.p>
                 <m.p 
                     className="text-[#C9C9C9] text-sm xs:text-base md:text-xl"
                     variants={listItemAnimation}
                 >
-                    Say something to start a live chat!
+                    {t('description')}
                 </m.p>
             </m.div>
 
@@ -40,15 +42,15 @@ export default function FormCard() {
             >
                 <m.li variants={listItemAnimation}>
                     <Image src="/icons/phone.svg" alt="phone" width={24} height={24} className="w-10 h-10 md:w-[24px] md:h-[24px]" />
-                    +373 697-048-56
+                    {t('phone')}
                 </m.li>
                 <m.li variants={listItemAnimation}>
                     <Image src="/icons/mail.svg" alt="email" width={24} height={24} className="w-10 h-10 md:w-[24px] md:h-[24px]" />
-                    hectatron.web@gmail.com
+                    {t('email')}
                 </m.li>
                 <m.li variants={listItemAnimation}>
                     <Image src="/icons/location.svg" alt="location" width={24} height={24} className="w-12 h-12 md:w-[24px] md:h-[24px]" />
-                    Chisinau Islam's Home
+                    {t('location')}
                 </m.li>
             </m.ul>
             

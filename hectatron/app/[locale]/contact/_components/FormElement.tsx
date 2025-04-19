@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/form"
 import { useFormStore } from '@/lib/store/FormStore';
 import { useState } from 'react';
+import { useTranslations } from "next-intl";
 
 const formSchema = z.object({
     firstName: z.string().min(2).max(50),
@@ -27,9 +28,10 @@ const formSchema = z.object({
 })
 
 export default function FormElement() {
+    const t = useTranslations('contactForm');
     const { setIsOpen, setMessage } = useFormStore()
     const [isSubmitting, setIsSubmitting] = useState(false);
-    
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -44,12 +46,12 @@ export default function FormElement() {
 
     function onSubmit(values: z.infer<typeof formSchema>) {
         setIsSubmitting(true);
-        
+
         emailjs.send(
             'service_ygz6zab',
             'template_fuu8po9',
             {
-                title: 'New inquery from Hectatron',
+                title: t('emailTitle'),
                 time: 'time',
                 name: `${values.firstName} ${values.lastName}`,
                 ...values,
@@ -59,15 +61,13 @@ export default function FormElement() {
             }
         ).then(
             () => {
-                console.log('SUCCESS!');
-                setMessage('Am primit mesajul tău!\nEchipa noastră îți va răspunde în cel mai scurt timp.')
+                setMessage(t('success'));
                 setIsOpen(true);
                 form.reset(); // Reset the form after successful submission
                 setIsSubmitting(false);
             },
             (error) => {
-                console.log('FAILED...', error.text);
-                setMessage('A apărut o eroare. Te rugăm să încerci din nou mai târziu.')
+                setMessage(t('error'));
                 setIsOpen(true);
                 setIsSubmitting(false);
             },
@@ -110,6 +110,13 @@ export default function FormElement() {
         )
     }
 
+    const radioOptions = [
+        { value: 'newWebsite', label: t('services.newWebsite') },
+        { value: 'websiteRedisgn', label: t('services.websiteRedisgn') },
+        { value: 'websiteBugFixes', label: t('services.websiteBugFixes') },
+        { value: 'technicalConsultation', label: t('services.technicalConsultation') }
+    ];
+
     return (
         <m.div
             className='p-10'
@@ -123,13 +130,11 @@ export default function FormElement() {
                         initial="hidden"
                         animate="visible"
                     >
-                        <Item type="firstName" label="First Name" placeholder="John" index={0} />
-                        <Item type="lastName" label="Last Name" placeholder="Doe" index={1} />
-                        <Item type="email" label="Email" placeholder="johndoe@gmail.com" index={2} />
-                        <Item type="phoneNumber" label="Phone Number" placeholder="+1 012 3456 789" index={3} />
+                        <Item type="firstName" label={t('firstName.label')} placeholder={t('firstName.placeholder')} index={0} />
+                        <Item type="lastName" label={t('lastName.label')} placeholder={t('lastName.placeholder')} index={1} />
+                        <Item type="email" label={t('email.label')} placeholder={t('email.placeholder')} index={2} />
+                        <Item type="phoneNumber" label={t('phoneNumber.label')} placeholder={t('phoneNumber.placeholder')} index={3} />
                     </m.div>
-
-                    {/* Properly connected RadioGroup using FormField */}
                     <m.div
                         variants={formFieldAnimation}
                         initial="hidden"
@@ -141,7 +146,7 @@ export default function FormElement() {
                             name="service"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className='text-white'>Select Service?</FormLabel>
+                                    <FormLabel className='text-white'>{t('serviceLabel')}</FormLabel>
                                     <FormControl>
                                         <RadioGroup
                                             value={field.value}
@@ -155,15 +160,15 @@ export default function FormElement() {
                                                 initial="hidden"
                                                 animate="visible"
                                             >
-                                                {['newWebsite', 'websiteRedisgn', 'websiteBugFixes', 'technicalConsultation'].map((item, i) => (
+                                                {radioOptions.map((item, i) => (
                                                     <m.div
                                                         className="flex items-center space-x-2"
                                                         key={i}
                                                         variants={formFieldAnimation}
                                                         custom={i}
                                                     >
-                                                        <RadioGroupItem value={item} id={item} disabled={isSubmitting} />
-                                                        <label htmlFor={item} className='text-white'>{item}</label>
+                                                        <RadioGroupItem value={item.value} id={item.value} disabled={isSubmitting} />
+                                                        <label htmlFor={item.value} className='text-white'>{item.label}</label>
                                                     </m.div>
                                                 ))}
                                             </m.div>
@@ -174,16 +179,14 @@ export default function FormElement() {
                             )}
                         />
                     </m.div>
-
                     <m.div
                         variants={formFieldAnimation}
                         initial="hidden"
                         animate="visible"
                         custom={5}
                     >
-                        <Item type="message" label="Message" placeholder="Write your message..." index={5} />
+                        <Item type="message" label={t('message.label')} placeholder={t('message.placeholder')} index={5} />
                     </m.div>
-
                     <m.button
                         type="submit"
                         className={`cursor-pointer text-white rounded-md bg-[#FF8629] px-15 py-5 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
@@ -200,10 +203,10 @@ export default function FormElement() {
                                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>
-                                Sending...
+                                {t('sending')}
                             </span>
                         ) : (
-                            'Send Message'
+                            t('sendMessage')
                         )}
                     </m.button>
                 </form>

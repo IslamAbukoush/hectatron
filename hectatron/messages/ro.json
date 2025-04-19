@@ -100,6 +100,51 @@
             }
           ]          
       },
+      "contact":{
+        "title": "Contactează-ne",
+        "description": "Site-uri Next.js rapide, sigure și scalabile, cu suport de specialitate pentru a-ți menține afacerea în frunte."
+      },
+      "contactCard": {
+        "title": "Informații de contact",
+        "description": "Scrie-ne ceva pentru a începe un chat live!",
+        "phone": "+373 697-048-56",
+        "email": "hectatron.web@gmail.com",
+        "location": "Chișinău, la Islam acasă"
+      },
+      "contactForm": {
+        "emailTitle": "Cerere nouă de la Hectatron",
+        "firstName": {
+          "label": "Prenume",
+          "placeholder": "Ion"
+        },
+        "lastName": {
+          "label": "Nume",
+          "placeholder": "Popescu"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "ionpopescu@gmail.com"
+        },
+        "phoneNumber": {
+          "label": "Număr de telefon",
+          "placeholder": "+40 712 345 678"
+        },
+        "serviceLabel": "Selectează serviciul",
+        "services": {
+          "newWebsite": "Website Nou",
+          "websiteRedisgn": "Redesign Website",
+          "websiteBugFixes": "Corectare Erori Website",
+          "technicalConsultation": "Consultanță Tehnică"
+        },
+        "message": {
+          "label": "Mesaj",
+          "placeholder": "Scrie mesajul tău..."
+        },
+        "sendMessage": "Trimite Mesajul",
+        "sending": "Se trimite...",
+        "success": "Am primit mesajul tău!\nEchipa noastră te va contacta cât mai curând posibil.",
+        "error": "A apărut o eroare. Te rugăm să încerci din nou mai târziu."
+      },      
     "home": {
         "title": "Ridică-ți brandul cu soluții web personalizate",
         "description": "Proiectăm și dezvoltăm site-uri web personalizate, de înaltă calitate, care îți îmbunătățesc brandul și generează rezultate.",
