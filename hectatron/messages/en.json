@@ -1,6 +1,148 @@
 {
+  "header": {
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "getStarted": "Get Started"
+  },
   "home": {
     "title": "Elevate Your Brand with Custom Web Solutions",
-    "description": "We design and develop high-quality, custom websites that enhance your brand and drive results."
+    "description": "We design and develop high-quality, custom websites that enhance your brand and drive results.",
+    "customers": {
+      "title": "See What Customers Say",
+      "subtitle": "We design and develop high-quality, custom websites that enhance your brand and drive results.",
+      "navigation": {
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "testimonials": [
+        {
+          "title": "Stephen Brekke1",
+          "position": "Legacy Integration Producer",
+          "description": "If you want real marketing that works and effective implementation - mobile app's got you covered."
+        },
+        {
+          "title": "Stephen Brekke2",
+          "position": "Legacy Integration Producer",
+          "description": "If you want real marketing that works and effective implementation - mobile app's got you covered."
+        },
+        {
+          "title": "Stephen Brekke3",
+          "position": "Legacy Integration Producer",
+          "description": "If you want real marketing that works and effective implementation - mobile app's got you covered."
+        },
+        {
+          "title": "John Doe",
+          "position": "Marketing Specialist",
+          "description": "If you want real marketing that works and effective implementation - mobile app's got you covered."
+        },
+        {
+          "title": "Jane Smith",
+          "position": "UX Designer",
+          "description": "If you want real marketing that works and effective implementation - mobile app's got you covered."
+        }
+      ]
+    },
+    "faq": {
+      "title": "FAQs",
+      "description": "Find answers to common questions about our services, technology, and process. If you need more details, feel free to reach out!",
+      "questions": [
+        {
+          "title": "What is Next.js, and why do you use it?",
+          "description": "Next.js is a React framework that enables server-side rendering, static site generation, and API routes. It is used for its performance optimization, automatic code splitting, and easy setup for production-ready apps."
+        },
+        {
+          "title": "How does your team handle project management?",
+          "description": "We use Agile methodologies to manage projects, ensuring flexibility and adaptability to changes. Regular sprints, stand-ups, and retrospectives help us stay aligned with client goals."
+        },
+        {
+          "title": "What technologies do you specialize in?",
+          "description": "We specialize in a wide range of technologies including React, Node.js, Python, and various cloud platforms. Our team is always learning to keep up with the latest trends."
+        },
+        {
+          "title": "How do you ensure code quality?",
+          "description": "We follow best practices in coding standards, conduct regular code reviews, and use automated testing tools to ensure high code quality and maintainability."
+        },
+        {
+          "title": "What is your approach to UI/UX design?",
+          "description": "Our approach is user-centered, focusing on usability and accessibility. We conduct user research and testing to create intuitive and engaging designs."
+        },
+        {
+          "title": "How do you handle client communication?",
+          "description": "We prioritize clear and transparent communication with clients through regular updates, feedback sessions, and dedicated project managers."
+        },
+        {
+          "title": "What is your process for deploying applications?",
+          "description": "We follow a CI/CD pipeline for deploying applications, ensuring smooth transitions from development to production with minimal downtime."
+        },
+        {
+          "title": "How do you handle security in your applications?",
+          "description": "We implement security best practices including data encryption, secure authentication, and regular security audits to protect user data."
+        }
+      ]
+    },
+    "services": {
+    "title": "Services",
+    "description": "Fast, secure, and scalable Next.js websites with expert support to keep your business ahead.",
+    "items": [
+      {
+        "title": "Web Development",
+        "description": "Build modern, responsive, and dynamic websites using Next.js, Tailwind CSS, and the latest web technologies.",
+        "src": "/icons/cubic.png",
+        "alt": "Web Dev"
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Create visually stunning and user-friendly interfaces that enhance user experience and engagement.",
+        "src": "/icons/batery.png",
+        "alt": "UI/UX"
+      },
+      {
+        "title": "SEO Optimization",
+        "description": "Implement effective SEO strategies to improve your website's visibility and ranking on search engines.",
+        "src": "/icons/seo.png",
+        "alt": "SEO"
+      },
+      {
+        "title": "E-commerce Solutions",
+        "description": "Develop robust e-commerce platforms with secure payment gateways and seamless shopping experiences.",
+        "src": "/icons/monitor.png",
+        "alt": "E-commerce"
+      }
+    ]
+  },
+  "whychoose": {
+    "title": "Why Choose Us?",
+    "description": "Fast, secure, and scalable Next.js websites with expert support to keep your business ahead.",
+    "items": [
+      {
+        "title": "Lightning-Fast Performance",
+        "description": "Next.js ensures lightning-fast load times with server-side rendering (SSR), static generation (SSG), and optimized caching, delivering a smooth user experience.",
+        "src": "/icons/performance.png",
+        "alt": "performance"
+      },
+      {
+        "title": "Rock-Solid Security",
+        "description": "We implement SSL encryption, secure authentication, and DDoS protection, ensuring your website is safe from threats and vulnerabilities.",
+        "src": "/icons/security.png",
+        "alt": "security"
+      },
+      {
+        "title": "Scalable & Reliable",
+        "description": "Designed to handle high traffic effortlessly, our solutions provide stability, efficiency, and seamless growth for your business.",
+        "src": "/icons/scalable.png",
+        "alt": "scalability"
+      },
+      {
+        "title": "Continuous Support",
+        "description": "We offer ongoing maintenance, security updates, and performance optimizations, so your website stays secure and up-to-date at all times.",
+        "src": "/icons/support.png",
+        "alt": "support"
+      }
+    ]
+  }
   }
 }

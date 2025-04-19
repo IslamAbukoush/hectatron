@@ -10,54 +10,51 @@ import { cn } from "@/lib/utils";
 import Star from "../../_components/Star";
 import Blur from "../../_components/Blur";
 import { WhyChooseAnimation, WhyChoosesAnimation } from "@/lib/animations/WhyChooseAnimation";
-
-const testimonials: CustomersBlockProps[] = [
-  {
-    src: "/images/testimonial1.png",
-    alt: "Stephen Brekke1",
-    title: "Stephen Brekke1",
-    position: "Legacy Integration Producer",
-    description:
-      "If you want real marketing that works and effective implementation - mobile app's got you covered.",
-  },
-  {
-    src: "/images/testimonial2.png",
-    alt: "Stephen Brekke2",
-    title: "Stephen Brekke2",
-    position: "Legacy Integration Producer",
-    description:
-      "If you want real marketing that works and effective implementation - mobile app's got you covered.",
-  },
-  {
-    src: "/images/testimonial1.png",
-    alt: "Stephen Brekke3",
-    title: "Stephen Brekke3",
-    position: "Legacy Integration Producer",
-    description:
-      "If you want real marketing that works and effective implementation - mobile app's got you covered.",
-  },
-  {
-    src: "/images/testimonial1.png",
-    alt: "John Doe",
-    title: "John Doe",
-    position: "Marketing Specialist",
-    description:
-      "If you want real marketing that works and effective implementation - mobile app's got you covered.",
-  },
-  {
-    src: "/images/testimonial2.png",
-    alt: "Jane Smith",
-    title: "Jane Smith",
-    position: "UX Designer",
-    description:
-      "If you want real marketing that works and effective implementation - mobile app's got you covered.",
-  },
-];
+import { useTranslations } from "next-intl"
 
 const Customers = () => {
+  const  t  = useTranslations('home');
   const [currentPage, setCurrentPage] = useState(0);
   const [direction, setDirection] = useState(1);
   const [windowWidth, setWindowWidth] = useState(0);
+  
+  const testimonials: CustomersBlockProps[] = [
+    {
+      src: "/images/testimonial1.png",
+      alt: t('customers.testimonials.0.title'),
+      title: t('customers.testimonials.0.title'),
+      position: t('customers.testimonials.0.position'),
+      description: t('customers.testimonials.0.description'),
+    },
+    {
+      src: "/images/testimonial2.png",
+      alt: t('customers.testimonials.1.title'),
+      title: t('customers.testimonials.1.title'),
+      position: t('customers.testimonials.1.position'),
+      description: t('customers.testimonials.1.description'),
+    },
+    {
+      src: "/images/testimonial1.png",
+      alt: t('customers.testimonials.2.title'),
+      title: t('customers.testimonials.2.title'),
+      position: t('customers.testimonials.2.position'),
+      description: t('customers.testimonials.2.description'),
+    },
+    {
+      src: "/images/testimonial1.png",
+      alt: t('customers.testimonials.3.title'),
+      title: t('customers.testimonials.3.title'),
+      position: t('customers.testimonials.3.position'),
+      description: t('customers.testimonials.3.description'),
+    },
+    {
+      src: "/images/testimonial2.png",
+      alt: t('customers.testimonials.4.title'),
+      title: t('customers.testimonials.4.title'),
+      position: t('customers.testimonials.4.position'),
+      description: t('customers.testimonials.4.description'),
+    },
+  ];
   
   useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -111,11 +108,10 @@ const Customers = () => {
             viewport={{ once: true }}
             className="flex flex-col gap-6 items-start justify-center my-[10px]">
           <h1 className={cn("text-gradient text-6xl text-start", "max-lg:text-5xl max-sm:text-3xl")}>
-            See What Customers Say
+            {t('customers.title')}
           </h1>
           <p className={cn("text-xl text-white/60 max-w-[70%] text-start", "max-lg:text-lg max-sm:text-sm")}>
-            We design and develop high-quality, custom websites that enhance your
-            brand and drive results.
+            {t('customers.subtitle')}
           </p>
         </m.div>
         <m.div 
@@ -129,14 +125,14 @@ const Customers = () => {
             onClick={handlePrevious}
             className="bg-[#FF7043] border-1 border-white/40 py-2 rounded-[8px] w-[140px] text-center items-center hover:bg-[#FF8C69] transition-colors cursor-pointer max-sm:w-[100px]"
           >
-            Previous
+            {t('customers.navigation.previous')}
           </m.button>
           <m.button
             variants={WhyChooseAnimation}
             onClick={handleNext}
             className="bg-[#1A1A32] border-1 border-white/40 py-2 rounded-[8px] w-[140px] text-center items-center hover:bg-[#252544] transition-colors cursor-pointer max-sm:w-[100px]"
           >
-            Next
+            {t('customers.navigation.next')}
           </m.button>
         </m.div>
       </div>

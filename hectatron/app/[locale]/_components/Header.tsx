@@ -8,10 +8,9 @@ import Blur from "./Blur"
 import MobileMenu from "./MobileMenu"
 import { useWindowSize } from "@/lib/hooks/useWindowSize"
 import LanguageSwitcher from "./LanguageSwitcher"
-// import { useLocale } from "next-intl"
 import * as m from 'motion/react-m'
 import { buttonAnimation } from "@/lib/animations/buttonAnimation"
-
+import { useTranslations } from "next-intl" // Import the translation hook
 
 interface LinkItem {
     href: string;
@@ -19,9 +18,9 @@ interface LinkItem {
 }
 
 const Header = () => {
+    const t = useTranslations(); // Initialize the translation hook
     const path = usePathname();
     const isProjectPreviewPage = path.includes('/projects-review/');
-
 
     const [width, height] = useWindowSize();
     const [scroll, setScroll] = useState({ y: 0, prevY: 0, dir: 'up' });
@@ -51,11 +50,12 @@ const Header = () => {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
+    // Define links with translated labels
     const links: LinkItem[] = [
-        { href: '/', label: 'Home' },
-        { href: '/about', label: 'About' },
-        { href: '/projects', label: 'Projects' },
-        { href: '/contact', label: 'Contact' },
+        { href: '/', label: t('header.navigation.home') },
+        { href: '/about', label: t('header.navigation.about') },
+        { href: '/projects', label: t('header.navigation.projects') },
+        { href: '/contact', label: t('header.navigation.contact') },
     ];
 
     if (isProjectPreviewPage) {
@@ -114,7 +114,7 @@ const Header = () => {
                     animate='visible'
                     whileHover='hover'
                     className="bg-button text-center content-center font-bold text-xs text-white lg:px-10 px-5 lg:text-sm py-6 rounded-3xl cursor-pointer border border-white/60 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.25),inset_-10px_-10px_20px_rgba(255,255,255,0.25)] text-nowrap">
-                        <Link href='/contact'>Get Started</Link>
+                        <Link href='/contact'>{t('header.getStarted')}</Link>
                     </m.div>
                 </div>
                 <div className="h-[40px] w-[40px] relative flex items-center justify-center md:hidden cursor-pointer" onClick={() => setMenuOpen(prev => !prev)}>

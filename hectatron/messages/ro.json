@@ -1,6 +1,148 @@
 {
+    "header": {
+        "navigation": {
+          "home": "Home",
+          "about": "About",
+          "projects": "Projects",
+          "contact": "Contact"
+        },
+        "getStarted": "Get Started"
+      },
     "home": {
         "title": "Ridică-ți brandul cu soluții web personalizate",
-        "description": "Proiectăm și dezvoltăm site-uri web personalizate, de înaltă calitate, care îți îmbunătățesc brandul și generează rezultate."
+        "description": "Proiectăm și dezvoltăm site-uri web personalizate, de înaltă calitate, care îți îmbunătățesc brandul și generează rezultate.",
+        "customers": {
+            "title": "Vezi ce spun clienții",
+            "subtitle": "Proiectăm și dezvoltăm site-uri web personalizate, de înaltă calitate, care îți îmbunătățesc marca și generează rezultate.",
+            "navigation": {
+                "previous": "Anterior",
+                "next": "Următor"
+            },
+            "testimonials": [
+                {
+                "title": "Stephen Brekke1",
+                "position": "Producător de Integrare Legacy",
+                "description": "Dacă dorești marketing real care funcționează și implementare eficientă - aplicația mobilă te acoperă."
+                },
+                {
+                "title": "Stephen Brekke2",
+                "position": "Producător de Integrare Legacy",
+                "description": "Dacă dorești marketing real care funcționează și implementare eficientă - aplicația mobilă te acoperă."
+                },
+                {
+                "title": "Stephen Brekke3",
+                "position": "Producător de Integrare Legacy",
+                "description": "Dacă dorești marketing real care funcționează și implementare eficientă - aplicația mobilă te acoperă."
+                },
+                {
+                "title": "John Doe",
+                "position": "Specialist în Marketing",
+                "description": "Dacă dorești marketing real care funcționează și implementare eficientă - aplicația mobilă te acoperă."
+                },
+                {
+                "title": "Jane Smith",
+                "position": "Designer UX",
+                "description": "Dacă dorești marketing real care funcționează și implementare eficientă - aplicația mobilă te acoperă."
+                }
+            ]
+        },
+        "faq": {
+            "title": "Întrebări frecvente",
+            "description": "Găsește răspunsuri la întrebări frecvente despre serviciile, tehnologia și procesul nostru. Dacă ai nevoie de mai multe detalii, nu ezita să ne contactezi!",
+            "questions": [
+            {
+                "title": "Ce este Next.js și de ce îl folosiți?",
+                "description": "Next.js este un framework React care permite renderizare pe server, generare statică de site-uri și rute API. Este folosit pentru optimizarea performanței, împărțirea automată a codului și configurarea rapidă a aplicațiilor gata de producție."
+            },
+            {
+                "title": "Cum gestionează echipa voastră proiectele?",
+                "description": "Folosim metodologii Agile pentru a gestiona proiectele, asigurând flexibilitate și adaptabilitate la schimbări. Sprinturile regulate, stand-up-urile și retrospectivele ne ajută să rămânem aliniați cu obiectivele clientului."
+            },
+            {
+                "title": "În ce tehnologii sunteți specializați?",
+                "description": "Suntem specializați într-o gamă largă de tehnologii, incluzând React, Node.js, Python și diverse platforme cloud. Echipa noastră este mereu în proces de învățare pentru a ține pasul cu cele mai noi tendințe."
+            },
+            {
+                "title": "Cum asigurați calitatea codului?",
+                "description": "Respectăm cele mai bune practici de codare, realizăm recenzii regulate de cod și folosim instrumente automate de testare pentru a asigura calitatea ridicată și mentenabilitatea codului."
+            },
+            {
+                "title": "Care este abordarea voastră privind UI/UX design?",
+                "description": "Abordarea noastră este centrată pe utilizator, concentrându-ne pe utilizabilitate și accesibilitate. Efectuăm cercetări și teste cu utilizatorii pentru a crea designuri intuitive și atractive."
+            },
+            {
+                "title": "Cum comunicați cu clienții?",
+                "description": "Prioritizăm comunicarea clară și transparentă cu clienții prin actualizări regulate, sesiuni de feedback și manageri de proiect dedicați."
+            },
+            {
+                "title": "Care este procesul vostru de lansare al aplicațiilor?",
+                "description": "Folosim un pipeline CI/CD pentru lansarea aplicațiilor, asigurând tranziții line de la dezvoltare la producție cu timp de inactivitate minim."
+            },
+            {
+                "title": "Cum asigurați securitatea aplicațiilor?",
+                "description": "Implementăm cele mai bune practici de securitate, inclusiv criptarea datelor, autentificare sigură și audituri periodice pentru a proteja datele utilizatorilor."
+            }
+            ]
+        },
+        "services": {
+            "title": "Servicii",
+            "description": "Site-uri Next.js rapide, sigure și scalabile cu suport de specialitate pentru a-ți menține afacerea în frunte.",
+            "items": [
+              {
+                "title": "Dezvoltare Web",
+                "description": "Construim site-uri moderne, responsive și dinamice folosind Next.js, Tailwind CSS și cele mai noi tehnologii web.",
+                "src": "/icons/cubic.png",
+                "alt": "Dezvoltare Web"
+              },
+              {
+                "title": "Design UI/UX",
+                "description": "Creăm interfețe vizual atractive și ușor de folosit care îmbunătățesc experiența utilizatorului.",
+                "src": "/icons/batery.png",
+                "alt": "UI/UX"
+              },
+              {
+                "title": "Optimizare SEO",
+                "description": "Implementăm strategii SEO eficiente pentru a îmbunătăți vizibilitatea și poziționarea site-ului tău.",
+                "src": "/icons/seo.png",
+                "alt": "SEO"
+              },
+              {
+                "title": "Soluții E-commerce",
+                "description": "Dezvoltăm platforme e-commerce robuste cu plăți securizate și experiențe de cumpărături fără probleme.",
+                "src": "/icons/monitor.png",
+                "alt": "E-commerce"
+              }
+            ]
+          },
+          "whychoose": {
+            "title": "De ce să ne alegi?",
+            "description": "Site-uri Next.js rapide, sigure și scalabile cu suport de experți pentru a-ți menține afacerea în față.",
+            "items": [
+              {
+                "title": "Performanță de top",
+                "description": "Next.js asigură timpi de încărcare extrem de rapizi prin SSR, SSG și caching optimizat, oferind o experiență excelentă utilizatorilor.",
+                "src": "/icons/performance.png",
+                "alt": "performanță"
+              },
+              {
+                "title": "Securitate solidă",
+                "description": "Implementăm criptare SSL, autentificare sigură și protecție DDoS pentru ca site-ul tău să fie ferit de amenințări și vulnerabilități.",
+                "src": "/icons/security.png",
+                "alt": "securitate"
+              },
+              {
+                "title": "Scalabil & Fiabil",
+                "description": "Gata să gestioneze volume mari de trafic, soluțiile noastre oferă stabilitate și creștere fără efort pentru afacerea ta.",
+                "src": "/icons/scalable.png",
+                "alt": "scalabilitate"
+              },
+              {
+                "title": "Suport Continu",
+                "description": "Oferim întreținere constantă, update-uri de securitate și optimizări pentru ca site-ul tău să rămână sigur și actualizat.",
+                "src": "/icons/support.png",
+                "alt": "suport"
+              }
+            ]
+          }
     }
 }
