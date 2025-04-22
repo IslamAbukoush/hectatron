@@ -16,6 +16,7 @@
     "@radix-ui/react-slot": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "flowbite": "^3.1.2",
     "hectatron": "file:",
     "lucide-react": "^0.487.0",
     "motion": "^12.6.3",

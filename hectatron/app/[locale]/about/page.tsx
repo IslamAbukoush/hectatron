@@ -4,7 +4,7 @@ import WhatIs from "./_components/WhatIs"
 
 const page = () => {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 mt-[60px]">
         <WhatIs/>
         <Team />
         <InfoBlock/>

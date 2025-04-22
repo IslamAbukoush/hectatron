@@ -16,7 +16,7 @@
   },
   "newsletter": {
     "title": "اشترك في النشرة البريدية!",
-    "placeholder": "مثال@email.com",
+    "placeholder": "example@email.com",
     "success": "تم اشتراكك!\nستصلك آخر أخبارنا على بريدك الإلكتروني."
   },
   "whatIs": {

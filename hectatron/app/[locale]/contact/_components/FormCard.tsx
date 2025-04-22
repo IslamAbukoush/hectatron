@@ -12,7 +12,7 @@ export default function FormCard() {
             className="bg-[#1A1A32] relative rounded-xl overflow-hidden p-5 xs:p-10 flex flex-col gap-10 md:gap-32"
             variants={cardAnimation}
         >
-            <Image src='/icons/circles.svg' alt="circles" width={200} height={200} className="absolute bottom-0 right-0 z-0 w-[150px] h-[150px] xs:w-[200px] xs:h-[200px]" />
+            <Image src='/icons/circles.svg' alt="circles" width={200} height={200} className="absolute bottom-0 right-0 z-0 w-[150px] h-[150px] xs:w-[200px] xs:h-[200px] rtl:-scale-x-100 rtl:left-0 rtl:right-auto" />
             
             <m.div 
                 className="flex flex-col gap-3 items-center md:items-start"

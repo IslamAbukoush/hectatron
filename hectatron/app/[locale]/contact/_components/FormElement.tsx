@@ -162,7 +162,7 @@ export default function FormElement() {
                                             >
                                                 {radioOptions.map((item, i) => (
                                                     <m.div
-                                                        className="flex items-center space-x-2"
+                                                        className="flex items-center space-x-2 rtl:flex-row-reverse rtl:space-x-reverse"
                                                         key={i}
                                                         variants={formFieldAnimation}
                                                         custom={i}

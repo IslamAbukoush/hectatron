@@ -26,9 +26,9 @@ const ServicesBlock = ({title, description, src, alt} : WhyChooseType) => {
           </div>
         </div>
         
-        <div className="flex flex-col mt-4 sm:mt-0 w-full">
+        <div className="flex flex-col mt-4 sm:mt-0 w-full rtl:items-start">
             <h1 className='text-xl sm:text-2xl lg:text-3xl font-bold text-gradient text-center sm:text-left'>{title}</h1>
-            <p className='text-white/40 text-sm sm:text-base lg:text-lg w-full text-center sm:text-left mt-2'>{description}</p>
+            <p className='text-white/40 text-sm sm:text-base lg:text-lg w-full text-center sm:text-left sm:rtl:text-right mt-2'>{description}</p>
         </div>
     </m.div>
   )

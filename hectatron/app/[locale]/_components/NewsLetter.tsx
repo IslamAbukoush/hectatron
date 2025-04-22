@@ -66,7 +66,7 @@ export default function NewsLetter() {
                             transition={{ type: 'spring', stiffness: 250, damping: 10, duration: 0.3 }}
                             className="cursor-pointer"
                         >
-                            <Image src="/icons/arrow-right.svg" alt="arrow" width={50} height={50} />
+                            <Image src="/icons/arrow-right.svg" alt="arrow" width={50} height={50} className="rtl:rotate-180" />
                         </m.button>
                     </div>
                 </div>

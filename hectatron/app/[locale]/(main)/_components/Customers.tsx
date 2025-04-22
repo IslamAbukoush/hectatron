@@ -13,11 +13,11 @@ import { WhyChooseAnimation, WhyChoosesAnimation } from "@/lib/animations/WhyCho
 import { useTranslations } from "next-intl"
 
 const Customers = () => {
-  const  t  = useTranslations('home');
+  const t = useTranslations('home');
   const [currentPage, setCurrentPage] = useState(0);
   const [direction, setDirection] = useState(1);
   const [windowWidth, setWindowWidth] = useState(0);
-  
+
   const testimonials: CustomersBlockProps[] = [
     {
       src: "/images/testimonial1.png",
@@ -55,13 +55,13 @@ const Customers = () => {
       description: t('customers.testimonials.4.description'),
     },
   ];
-  
+
   useEffect(() => {
     setWindowWidth(window.innerWidth);
-    
+
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
-    
+
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -77,7 +77,7 @@ const Customers = () => {
     setDirection(-1);
     setCurrentPage((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
   };
-  
+
   const handleNext = () => {
     setDirection(1);
     setCurrentPage((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
@@ -91,22 +91,22 @@ const Customers = () => {
   return (
     <div className={cn("px-[100px] mt-[150px] relative", "max-md:px-[30px] max-md:mt-[80px]")}>
       <div className="flex max-lg:flex-col items-end justify-between relative">
-        <m.div 
-            initial={{
-              opacity: 0,
-              y: -50,
-              scale: 0.9 
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              scale: 1
-            }}
-            transition={{
-              duration: 0.4,
-            }}
-            viewport={{ once: true }}
-            className="flex flex-col gap-6 items-start justify-center my-[10px]">
+        <m.div
+          initial={{
+            opacity: 0,
+            y: -50,
+            scale: 0.9
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            scale: 1
+          }}
+          transition={{
+            duration: 0.4,
+          }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-6 items-start justify-center my-[10px]">
           <h1 className={cn("text-gradient text-6xl text-start", "max-lg:text-5xl max-sm:text-3xl")}>
             {t('customers.title')}
           </h1>
@@ -114,7 +114,7 @@ const Customers = () => {
             {t('customers.subtitle')}
           </p>
         </m.div>
-        <m.div 
+        <m.div
           variants={WhyChoosesAnimation}
           initial='hidden'
           whileInView='vissible'
@@ -136,19 +136,19 @@ const Customers = () => {
           </m.button>
         </m.div>
       </div>
-      
+
       <div className="relative overflow-hidden">
         <AnimatePresence initial={false} mode="wait" custom={direction}>
-          <m.div 
+          <m.div
             key={currentPage}
             variants={CustomersAnimation}
             initial="hidden"
-            animate="visible" 
+            animate="visible"
             exit="exit"
             className={cn("grid grid-cols-2 gap-20 mt-16", "max-xl:grid-cols-1 max-xl:place-items-center max-xl:justify-items-center max-sm:gap-10 max-sm:mt-10")}
           >
-            {getCurrentItems().map((item, index) => (  
-              <m.div 
+            {getCurrentItems().map((item, index) => (
+              <m.div
                 key={`${currentPage}-${index}`}
                 custom={direction}
                 variants={CustomerAnimation}
@@ -159,7 +159,7 @@ const Customers = () => {
           </m.div>
         </AnimatePresence>
       </div>
-      
+
       <div className={cn("flex items-center justify-center gap-2 mt-10", "max-sm:mt-5")}>
         {Array.from({ length: totalPages }).map((_, index) => (
           <div
@@ -175,11 +175,11 @@ const Customers = () => {
           />
         ))}
       </div>
-      <Star className="right-[1%] top-[200px] w-[40px]"/>
-      <Star className="right-[15%] top-[700px] w-[40px]"/>
+      <Star className="right-[1%] top-[200px] w-[40px]" />
+      <Star className="right-[15%] top-[700px] w-[40px]" />
       <div className="absolute inset-0 w-full h-full -z-10">
-        <Blur className="w-[200px] h-[700px] top-[-300px] left-[-20%]"/>
-        <Blur className="bottom-0 right-0 w-[200px] h-[400px]"/> 
+        <Blur className="w-[200px] h-[700px] top-[-300px] left-[-20%]" />
+        <Blur className="bottom-0 right-0 w-[200px] h-[400px]" />
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} className={`${inter.className}`}>
+    <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale} className={`${inter.className} w-full overflow-x-hidden `}>
       <body>
         <Providers>
           <Header/>

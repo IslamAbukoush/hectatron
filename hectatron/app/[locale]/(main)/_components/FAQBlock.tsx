@@ -5,9 +5,11 @@ import * as m from "motion/react-m"
 import { useState } from "react";
 import { FAQBlockType } from "@/lib/types/FAQBlockType";
 import { cn } from "@/lib/utils";
+import { useLocale } from "next-intl";
 
 const FAQBlock = ({title, description, direction, index}: FAQBlockType & { index?: number }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const locale = useLocale();
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -38,10 +40,10 @@ const FAQBlock = ({title, description, direction, index}: FAQBlockType & { index
       <div className={cn("flex flex-row gap-4 items-center justify-between translate-y-2", "max-sm:translate-y-1")}>
         <h2 className={cn("font-semibold text-xl text-white", "max-md:text-lg max-sm:text-sm")}>{title}</h2>
         <m.div
-          animate={{ rotate: isOpen ? 90 : 0 }}
+          animate={{ rotate: isOpen ? 90 * (locale === "ar" ? -1 : 1) : 0 }}
           transition={{ duration: 0.3 }}
         >
-          <Image src='/icons/arrow-right.svg' alt="arrow" width={40} height={40} className={cn("max-sm:w-8")}/>
+          <Image src='/icons/arrow-right.svg' alt="arrow" width={40} height={40} className={cn("max-sm:w-8 rtl:rotate-180")} />
         </m.div>
       </div>
       
