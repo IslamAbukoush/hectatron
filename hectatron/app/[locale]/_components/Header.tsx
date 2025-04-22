@@ -22,7 +22,7 @@ const Header = () => {
     const path = usePathname();
     const isProjectPreviewPage = path.includes('/projects-review/');
 
-    const [width, height] = useWindowSize();
+    const [width ] = useWindowSize();
     const [scroll, setScroll] = useState({ y: 0, prevY: 0, dir: 'up' });
     const [scrollAmount, setScrollAmount] = useState({ oldScroll: 'up', amount: 0 });
     const [menuOpen, setMenuOpen] = useState(false);

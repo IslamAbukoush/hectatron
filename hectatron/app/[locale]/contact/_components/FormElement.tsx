@@ -66,7 +66,7 @@ export default function FormElement() {
                 form.reset(); // Reset the form after successful submission
                 setIsSubmitting(false);
             },
-            (error) => {
+            () => {
                 setMessage(t('error'));
                 setIsOpen(true);
                 setIsSubmitting(false);

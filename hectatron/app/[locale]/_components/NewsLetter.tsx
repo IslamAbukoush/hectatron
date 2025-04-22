@@ -30,6 +30,7 @@ export default function NewsLetter() {
     })
 
     function onSubmit(values: z.infer<typeof formSchema>) {
+        console.log(values)
         setMessage(t('success'));
         setIsOpen(true);
         form.reset();
