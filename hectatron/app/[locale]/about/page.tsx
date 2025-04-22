@@ -1,5 +1,5 @@
 import InfoBlock from "./_components/InfoBlock"
-import Team from "./_components/Team old"
+import Team from "./_components/Team"
 import WhatIs from "./_components/WhatIs"
 
 const page = () => {
