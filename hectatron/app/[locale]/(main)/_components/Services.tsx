@@ -26,10 +26,10 @@ const Services = () => {
           <ServicesBlock key={index} {...service} />
         ))}
       </div>
-      <div className="absolute right-0 top-[-300px] lg:block hidden -z-10">
+      <div className="absolute right-0 top-[-300px] lg:block hidden -z-10 rtl:-scale-x-100 rtl:left-0 rtl:right-auto">
           <Image className="" src='/images/robot-hand.png' alt='Diamand' width={500} height={200}/>
       </div>
-      <div className="absolute right-0 top-[800px] lg:block hidden -z-10">
+      <div className="absolute right-0 top-[800px] lg:block hidden -z-10 rtl:-scale-x-100 rtl:left-0 rtl:right-auto">
           <Image className="" src='/images/planet-diamand.png' alt='Diamand' width={500} height={200}/>
       </div>
       <Star className="left-[1%] top-[300px] w-[40px]"/>

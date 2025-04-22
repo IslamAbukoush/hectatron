@@ -152,7 +152,7 @@ const InfoBlock = () => {
             )}
 
             {/* Robot Image */}
-            <div className="absolute right-0 lg:bottom-[-250px] xl:bottom-[-320px] bottom-[-275px] lg:block hidden -z-10">
+            <div className="absolute right-0 lg:bottom-[-250px] xl:bottom-[-320px] bottom-[-275px] lg:block hidden -z-10 rtl:-scale-x-100 rtl:left-0 rtl:right-auto">
                 <m.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}

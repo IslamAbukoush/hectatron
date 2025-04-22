@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
           <Block key={index} {...block} />
         ))}
       </m.div>
-      <div className="absolute right-0 top-[-100px] lg:block hidden -z-10">
+      <div className="absolute right-0 top-[-100px] lg:block hidden -z-10 rtl:-scale-x-100 rtl:left-0 rtl:right-auto">
         <Image className="" src='/images/diamand.png' alt='Diamand' width={300} height={200} />
       </div>
       <Star className="right-[1%] top-[-130px]" />
