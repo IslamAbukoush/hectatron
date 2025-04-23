@@ -23,7 +23,7 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
         resetState();
         console.log('State reset to default values');
         console.log(`isNewPageAnimation: ${isNewPageAnimation}`);
-    }, [resetState]);
+    }, [resetState, isNewPageAnimation]);
 
     useEffect(() => {
     setWindowWidth(window.innerWidth);

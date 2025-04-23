@@ -20,25 +20,11 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
   const project = items.find(item => item.slug === resolvedParams.slug)
   const { resetState } = useMainAnimationStore()
   const router = useRouter()
-  const [isLoading, setIsLoading] = useState(true)
-  const [iframeReady, setIframeReady] = useState(false)
 
-  useEffect(() => {
-    // Create a small delay before starting animations to ensure smooth rendering
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 100)
-    
-    return () => clearTimeout(timer)
-  }, [])
 
   const handleBack = () => {
     resetState()
     router.back()
-  }
-
-  const handleIframeLoad = () => {
-    setIframeReady(true)
   }
 
   if (!project) {
@@ -76,7 +62,6 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
           height='100%' 
           draggable={false}
           allowFullScreen
-          onLoad={handleIframeLoad}
         />
       </div>
       
