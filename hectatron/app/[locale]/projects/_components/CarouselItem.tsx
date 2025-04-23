@@ -17,13 +17,13 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
     const router = useRouter();
     const {isNewPageAnimation, isHideHeading, changeState, resetState} = useMainAnimationStore();
 
-    useLayoutEffect(() => {
-        console.log('useEffect triggered');
-        console.log(`isNewPageAnimation: ${isNewPageAnimation}`);
-        resetState();
-        console.log('State reset to default values');
-        console.log(`isNewPageAnimation: ${isNewPageAnimation}`);
-    }, [resetState, isNewPageAnimation]);
+    // useLayoutEffect(() => {
+    //     console.log('useEffect triggered');
+    //     console.log(`isNewPageAnimation: ${isNewPageAnimation}`);
+    //     resetState();
+    //     console.log('State reset to default values');
+    //     console.log(`isNewPageAnimation: ${isNewPageAnimation}`);
+    // }, [resetState, isNewPageAnimation]);
 
     useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -107,11 +107,13 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
             scale: getScale(),
             translateY: -130,
             transform: 'perspective(1200px) rotateX(-70deg) rotateY(0deg) translateZ(30px)', 
-        } : isHideHeading ? {
+        } 
+        : isHideHeading ? {
             scale: 1,
             translateY: -130,
             transform: 'perspective(1200px) rotateX(-70deg) rotateY(0deg) translateZ(30px)',
-        } : {
+        } 
+        : {
         scale: isActive ? getScale() : 1,
         zIndex: isActive ? 20 : 6 - Math.abs(angleDiff),
         rotate: rotate,
