@@ -157,41 +157,49 @@
       },
       "testimonials": [
         {
+          "image": "Kareem Al-Mansour",
           "title": "Kareem Al-Mansour",
           "position": "Arhitect de Soluții Tehnice",
           "description": "Colaborarea cu Hectatron a fost mai degrabă ca o parteneriat decât ca o simplă angajare a unei echipe de dezvoltatori. Ei chiar și-au luat timpul să înțeleagă ceea ce aveam nevoie și au livrat cod rapid, curat și frumos."
         },
         {
+          "image": "Lilia Rusu",
           "title": "Lilia Rusu",
           "position": "Manager de Produs",
           "description": "Sincer, nu mă așteptam la acest nivel de finisare. Site-ul nu doar arată grozav, dar funcționează incredibil de bine—rata noastră de respingere a scăzut la jumătate după lansare. Sunt super mulțumită de proces și rezultat."
         },
         {
+          "image": "Jamal Thompson",
           "title": "Jamal Thompson",
           "position": "Director Creativ",
           "description": "Hectatron a nimerit-o perfect. De la kickoff până la implementarea finală, totul a decurs lin. Sunt inteligenți, receptivi și chiar înțeleg vibrațiile web moderne. Recomand cu căldură."
         },
         {
+          "image": "John Nguyen",
           "title": "John Nguyen",
           "position": "Specialist în Marketing",
           "description": "Acești tipi înțeleg marketingul! Modul în care au optimizat paginile noastre de destinație ne-a dat un impuls real în conversii. Ei chiar ascultă obiectivele tale și apoi le aduc la viață."
         },
         {
+          "image": "Ana-Maria Balan",
           "title": "Ana-Maria Bălan",
           "position": "Designer UX",
           "description": "Am lucrat cu mulți dezvoltatori înainte, dar echipa Hectatron chiar iese în evidență. Le pasă de experiența utilizatorului la fel de mult ca nouă, designerilor, ceea ce face munca mea mult mai ușoară."
         },
         {
+          "image": "Ahmed Shafiq",
           "title": "Ahmed Shafiq",
           "position": "Fondator de Startup",
           "description": "Aveam nevoie să ne mișcăm rapid, iar Hectatron a livrat. A fost ca și cum am fi avut o echipă internă—comunicare rapidă, decizii inteligente și un produs final frumos."
         },
         {
+          "image": "Sophie McAllister",
           "title": "Sophie McAllister",
           "position": "Consultant în E-commerce",
           "description": "Ceea ce am apreciat cel mai mult a fost cât de lipsit de stres a părut totul. Nu a fost nevoie de micromanagement—ei pur și simplu au *înțeles*. Viteza și calitatea m-au uimit."
         },
         {
+          "image": "Vlad Ceban",
           "title": "Vlad Ceban",
           "position": "Analist de Sisteme",
           "description": "Este foarte rar să găsești dezvoltatori care sunt atât super tehnici, cât și au un ochi bun pentru design. Site-ul Hectatron pe care l-au construit pentru noi funcționează ca o rachetă și arată incredibil de elegant."

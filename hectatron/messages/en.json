@@ -157,41 +157,49 @@
       },
       "testimonials": [
         {
+          "image": "Kareem Al-Mansour",
           "title": "Kareem Al-Mansour",
           "position": "Technical Solutions Architect",
           "description": "Working with Hectatron felt more like collaborating with a partner than just hiring a dev team. They really took the time to understand what we needed and delivered fast, clean, beautiful code."
         },
         {
+          "image": "Lilia Rusu",
           "title": "Lilia Rusu",
           "position": "Product Manager",
           "description": "Honestly, I didn’t expect this level of polish. The site not only looks great but performs insanely well—our bounce rate dropped by half after launch. Super happy with the process and outcome."
         },
         {
+          "image": "Jamal Thompson",
           "title": "Jamal Thompson",
           "position": "Creative Director",
           "description": "Hectatron totally nailed it. From kickoff to final deployment, everything ran smoothly. They’re sharp, responsive, and really get modern web vibes. Highly recommend."
         },
         {
+          "image": "John Nguyen",
           "title": "John Nguyen",
           "position": "Marketing Specialist",
           "description": "These guys get marketing! The way they optimized our landing pages gave us a real bump in conversions. They actually listen to your goals and then bring them to life."
         },
         {
+          "image": "Ana-Maria Balan",
           "title": "Ana-Maria Balan",
           "position": "UX Designer",
           "description": "I've worked with a lot of devs before, but the Hectatron team really stands out. They care about the user experience as much as we designers do, which makes my job so much easier."
         },
         {
+          "image": "Ahmed Shafiq",
           "title": "Ahmed Shafiq",
           "position": "Startup Founder",
           "description": "We needed to move fast, and Hectatron delivered. It was like having an in-house team—quick communication, smart decisions, and a beautiful end product."
         },
         {
+          "image": "Sophie McAllister",
           "title": "Sophie McAllister",
           "position": "E-commerce Consultant",
           "description": "What I appreciated most was how stress-free everything felt. No micromanaging needed—they just *got* it. The speed and quality blew me away."
         },
         {
+          "image": "Vlad Ceban",
           "title": "Vlad Ceban",
           "position": "Systems Analyst",
           "description": "Very rare to find devs who are both super technical and have a great design eye. The Hectatron site they built for us performs like a rocket and looks sleek as hell."

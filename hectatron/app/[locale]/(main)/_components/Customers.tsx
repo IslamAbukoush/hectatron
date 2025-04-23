@@ -22,7 +22,7 @@ const Customers = () => {
 
   for (let i = 0; i < 8; i++) {
     testimonials.push({
-      src: `/images/${t(`customers.testimonials.${i}.title`)}.jpg`,
+      src: `/images/${t(`customers.testimonials.${i}.image`)}.jpg`,
       alt: t(`customers.testimonials.${i}.title`),
       title: t(`customers.testimonials.${i}.title`),
       position: t(`customers.testimonials.${i}.position`),

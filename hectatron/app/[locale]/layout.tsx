@@ -4,10 +4,11 @@ import { routing } from '@/i18n/routing';
 import './globals.css';
 import Header from '@/app/[locale]/_components/Header';
 import Footer from './_components/Footer';
-import { Inter } from 'next/font/google'
+import { Inter, Tajawal } from 'next/font/google'
 import Providers from './Providers';
 import Alert from './_components/Alert';
-const inter = Inter({ subsets: ['latin', 'cyrillic'] })
+const inter = Inter({ subsets: ['latin', 'cyrillic'], variable: '--font-inter' });
+const tajawal = Tajawal({weight: ['400', '500', '700'], subsets: ['arabic'], variable: '--font-tajawal' });
 
 export default async function LocaleLayout({
   children,
@@ -23,7 +24,7 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale} className={`${inter.className} w-full overflow-x-hidden `}>
+    <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale} className={`${inter.variable} ${tajawal.variable} w-full overflow-x-hidden `}>
       <body>
         <Providers>
           <Header/>
