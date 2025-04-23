@@ -1,3 +1,6 @@
+'use client'
+
+import { useMainAnimationStore } from '@/lib/store/mainAnimation.store';
 import { cn } from '@/lib/utils'
 import * as m from 'motion/react-m'
 
@@ -6,14 +9,15 @@ interface TypeDetailes {
   description: string
 }
 
-const animateDiv = {
-  initial: { opacity: 0, scale: 0 },
-  animate: { opacity: 1, scale: 1 },
-  exit: { opacity: 0, scale: 0 },
-  transition: { duration: 0.5 },
-}
-
 const CarouselDetailes = ({ title, description }: TypeDetailes) => {
+const {isHideHeading} = useMainAnimationStore();
+
+const animateDiv = {
+  initial: isHideHeading ? {opacity: 1, scale: 1} : { opacity: 0, scale: 0 },
+  animate: isHideHeading ? {opacity: 0, scale: 0} : { opacity: 1, scale: 1 },
+  exit: { opacity: 0, scale: 0 },
+  transition: isHideHeading ? { duration: 0.5, ease: 'easeInOut' } : {duration: 0.5},
+}
   return (
     <div className="absolute w-full h-full pointer-events-none">
       <m.div
