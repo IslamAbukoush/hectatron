@@ -7,13 +7,23 @@ import { cn } from '@/lib/utils'
 import { useCarouselStore } from '@/lib/store/CarouselStore'
 import CarouselDetailes from './CarouselDetailes'
 import { AnimatePresence } from 'motion/react'
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { useMainAnimationStore } from '@/lib/store/mainAnimation.store'
 
 const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
     const {activeCardId, setActiveCardId} = useCarouselStore();
     const [windowWidth, setWindowWidth] = useState(0);
-    const router = useRouter()
+    const router = useRouter();
+    const {isNewPageAnimation, changeState, resetState} = useMainAnimationStore();
+
+    useEffect(() => {
+        console.log('useEffect triggered');
+        console.log(`isNewPageAnimation: ${isNewPageAnimation}`);
+        resetState();
+        console.log('State reset to default values');
+        console.log(`isNewPageAnimation: ${isNewPageAnimation}`);
+    }, [resetState]);
 
     useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -46,10 +56,11 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
 
 
     const updateActiveCardId = (id: number) => {
-        if(id === activeCardId){
+        if(activeCardId === id){
+            changeState(true, 'isNewPageAnimation');
             setTimeout(() => {
-                router.push(`/ru/projects-review/${item.slug}`)
-            }, 500)
+                router.push(`/projects-review/${item.slug}`)
+            }, 400)
         }else{
             setActiveCardId(id)
         }
@@ -71,9 +82,15 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
     const y = Math.sin((angleDiff - 3) * angleStep) * radius + getYgap() ;
 
     const isActive = activeCardId === item.id;
+    const isAnimate = isNewPageAnimation && isActive;
 
   return (
     <m.div
+    style={isAnimate ? {
+        transformStyle: 'preserve-3d',
+        transformOrigin: 'center bottom', 
+        perspective: '1200px'
+      } : {}}
     initial={{
         scale: 1,
         zIndex: isActive ? 20 : 6 - Math.abs(angleDiff),
@@ -84,7 +101,12 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
         translateX: 0, 
         translateY: 200
     }}
-    animate={{
+    animate={
+        isAnimate ? {
+            scale: getScale(),
+            translateY: -130,
+            transform: 'perspective(1200px) rotateX(-70deg) rotateY(0deg) translateZ(30px)', 
+        } :{
         scale: isActive ? getScale() : 1,
         zIndex: isActive ? 20 : 6 - Math.abs(angleDiff),
         rotate: rotate,
@@ -93,7 +115,10 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
         opacity: 1, 
         translateY: 0
     }}
-    transition={{
+    transition={isAnimate ? {
+        duration: 0.5,
+        ease: 'easeInOut'
+    } : {
         type: 'keyframes', 
         stiffness: 230, 
         damping: 32

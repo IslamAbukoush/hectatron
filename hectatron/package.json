@@ -19,7 +19,7 @@
     "flowbite": "^3.1.2",
     "hectatron": "file:",
     "lucide-react": "^0.487.0",
-    "motion": "^12.6.3",
+    "motion": "^12.8.0",
     "next": "15.2.4",
     "next-intl": "^4.0.2",
     "postcss": "^8.5.3",
