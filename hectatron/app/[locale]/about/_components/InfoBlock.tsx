@@ -51,33 +51,33 @@ const infoMax: InfoType[] = [
 const infoIslam: InfoType[] = [
     {
         src: '/icons/facebook-about.svg',
-        link: 'https://www.facebook.com/share/16aX8frmEy/',
-        text: 'Islam Abu-Koush'
+        link: 'https://www.facebook.com/profile.php?id=100094754474698',
+        text: 'Islam Abukoush'
     },
     {
         src: '/icons/telegram-about.svg',
-        link: '@Max_hdhi',
-        text: 'Islam Abu-Koush'
+        link: '@geografixx',
+        text: '@geografixx'
     },
     {
         src: '/icons/instagram-about.svg',
-        link: 'https://www.instagram.com/max.roenko',
-        text: 'Islam Abu-Koush'
+        link: 'https://www.instagram.com/geo_grafixx/',
+        text: 'geo_grafixx'
     },
     {
         src: '/icons/google-about.svg',
-        link: 'maxroenco2004@gmail.com',
-        text: 'Islam Abu-Koush'
+        link: 'iabukoush@gmail.com',
+        text: 'Islam Abu koush'
     },
     {
         src: '/icons/github-about.svg',
-        link: 'https://github.com/MaxRoenco',
-        text: 'Islam Abu-Koush'
+        link: 'https://github.com/IslamAbukoush',
+        text: 'IslamAbukoush'
     },
     {
         src: '/icons/linkedin-about.svg',
-        link: 'linkedin.com/in/roencomax' ,
-        text: 'Islam Abu-Koush'
+        link: 'https://www.linkedin.com/in/islam-abu-koush-a191a2299/' ,
+        text: 'Islam Abu koush'
     },
 ]
 

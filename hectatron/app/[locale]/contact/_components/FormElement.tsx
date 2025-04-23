@@ -46,10 +46,9 @@ export default function FormElement() {
 
     function onSubmit(values: z.infer<typeof formSchema>) {
         setIsSubmitting(true);
-
         emailjs.send(
-            'service_ygz6zab',
-            'template_fuu8po9',
+            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
             {
                 title: t('emailTitle'),
                 time: 'time',
@@ -57,7 +56,7 @@ export default function FormElement() {
                 ...values,
             },
             {
-                publicKey: 'NxaXNUOZOCYcvu-Jx'
+                publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '',
             }
         ).then(
             () => {
