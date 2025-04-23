@@ -16,7 +16,7 @@ const WhatIs = () => {
         variants={TitleAnimation}
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true, amount: 1 }}
+        viewport={{ once: true}}
         className="text-center">
         <h1 className={cn("w-fit text-gradient text-6xl", "max-lg:text-5xl max-sm:text-4xl")}>
           {t("title")}
@@ -27,7 +27,7 @@ const WhatIs = () => {
           variants={FAQLeftAnimation}
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true}}
           className={cn("flex flex-col justify-center gap-2 text-lg text-white/60 max-w-[700px] p-10", "max-xl:px-0 max-lg:text-base max-xl:pb-0 max-xl:pt-10 max-sm:text-sm max-sm:pt-5")}>
           <p className="indent-8">{t("p1")}</p>
           <p className="indent-8">{t("p2")}</p>
@@ -36,7 +36,7 @@ const WhatIs = () => {
           variants={FAQRightAnimation}
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true}}
           className="flex items-center justify-center w-[500px] max-sm:w-[300px]">
           <Image className={cn("object-contain w-full max-w-[400px]", "max-lg:max-w-[300px] max-sm:max-w-[200px]")} src="/images/hecta_logo.png" alt="Hectatron" width={500} height={300} />
         </m.div>
