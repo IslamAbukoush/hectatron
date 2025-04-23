@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 import { useCarouselStore } from '@/lib/store/CarouselStore'
 import CarouselDetailes from './CarouselDetailes'
 import { AnimatePresence } from 'motion/react'
-import { useEffect, useLayoutEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useMainAnimationStore } from '@/lib/store/mainAnimation.store'
 
@@ -15,7 +15,7 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
     const {activeCardId, setActiveCardId} = useCarouselStore();
     const [windowWidth, setWindowWidth] = useState(0);
     const router = useRouter();
-    const {isNewPageAnimation, isHideHeading, changeState, resetState} = useMainAnimationStore();
+    const {isNewPageAnimation, isHideHeading, changeState} = useMainAnimationStore();
 
     // useLayoutEffect(() => {
     //     console.log('useEffect triggered');
