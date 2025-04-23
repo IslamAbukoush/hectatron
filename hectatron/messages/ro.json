@@ -1,287 +1,300 @@
 {
-    "header": {
-        "navigation": {
-          "home": "Home",
-          "about": "About",
-          "projects": "Projects",
-          "contact": "Contact"
-        },
-        "getStarted": "Get Started"
+  "header": {
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "getStarted": "Get Started"
+  },
+  "footer": {
+    "home": "Acasă",
+    "privacyPolicy": "Politica de confidențialitate",
+    "termsOfUse": "Termeni de utilizare",
+    "copyright": "© Hectatron toate drepturile rezervate"
+  },
+  "newsletter": {
+    "title": "Abonează-te la newsletter!",
+    "placeholder": "exemplu@email.com",
+    "success": "Te-ai abonat cu succes!\nVei primi cele mai noi știri pe email."
+  },
+  "whatIs": {
+    "title": "Ce este Hectatron?",
+    "p1": "Hectatron este o companie IT dinamică, specializată în dezvoltarea modernă a site-urilor web, optimizare și SEO. Fondată de Maxim și Islam Abu-Koush, ambii dezvoltatori full-stack cu experiență, Hectatron reunește tehnologii de ultimă generație precum Next.js, Tailwind CSS și alte librării moderne pentru a oferi soluții web de înaltă calitate, eficiente și responsive.",
+    "p2": "Cu o pasiune pentru inovație și un angajament pentru excelență, echipa noastră se concentrează pe crearea de site-uri care nu sunt doar atrăgătoare vizual, ci și optimizate pentru performanță și vizibilitate în motoarele de căutare. Fie că este vorba de construcție de la zero sau de îmbunătățirea unor platforme existente, Hectatron livrează soluții personalizate pentru nevoile clienților."
+  },
+  "team": {
+    "title": "Echipă",
+    "maximTab": "Maxim",
+    "islamTab": "Islam",
+    "imageAlt": "Echipa Hectatron",
+    "islamTitle": "Islam Abu-Koush - Co-fondator & Full-Stack Developer",
+    "islamP1": "Islam este un dezvoltator full-stack versatil și co-fondator al Hectatron. Cu o bază tehnică solidă în Next.js, React, Express.js, Tailwind CSS și Node.js, și-a perfecționat abilitățile prin experiențe diverse, inclusiv proiecte de hackathon precum Codify și Investora.",
+    "islamP2": "Drumul său include și activitatea ca agent call-center, care i-a dezvoltat abilități de comunicare și focalizarea pe client. Priceperea lui în Figma și Photoshop îi permite să îmbine estetica cu funcționalitatea, creând soluții web moderne și atractive.",
+    "islamP3": "Pasionat de învățarea continuă, explorează constant noi practici pentru a menține Hectatron în avangarda inovației web.",
+    "maximTitle": "Maxim Roenco - Co-fondator & Full-Stack Developer",
+    "maximP1": "Maxim este un dezvoltator full-stack pasionat și co-fondator al Hectatron. Cu experiență practică acumulată la internship-uri la Amdaris, Smart Energy Solutions și Quant-Apps, excelează în construirea de aplicații web moderne folosind Next.js, React, Tailwind CSS, Node.js și MongoDB.",
+    "maximP2": "Proiectele sale variază de la platforme de învățare interactive la instrumente financiare inovatoare, remarcându-se prin abilități de rezolvare a problemelor și expertiză tehnică. Maxim cunoaște foarte bine și Figma, și Photoshop, putând crea interfețe plăcute și ușor de folosit.",
+    "maximP3": "Dedicat calității și performanței, explorează constant noi tehnologii. Ca lider, conduce misiunea Hectatron de a crea site-uri responsive și moderne."
+  },
+  "infobox": {
+    "islamTab": "Islam Abu-Koush",
+    "maximTab": "Maxim Roenco",
+    "roleWebDeveloper": "Dezvoltator web",
+    "roleCoFounder": "Cofondator"
+  },
+  "projects": {
+    "title": "Proiecte",
+    "description": "Site-uri Next.js rapide, sigure și scalabile, cu suport de specialitate pentru a-ți menține afacerea în frunte.",
+    "items": [
+      {
+        "title": "Investora",
+        "description": "O platformă web axată pe criptomonede, concepută pentru urmărirea și vizualizarea investițiilor."
       },
-      "footer": {
-        "home": "Acasă",
-        "privacyPolicy": "Politica de confidențialitate",
-        "termsOfUse": "Termeni de utilizare",
-        "copyright": "© Hectatron toate drepturile rezervate"
+      {
+        "title": "Site de Filme și Emisiuni TV",
+        "description": "O platformă receptivă pentru navigarea și descoperirea filmelor și emisiunilor TV populare."
       },
-      "newsletter": {
-        "title": "Abonează-te la newsletter!",
-        "placeholder": "exemplu@email.com",
-        "success": "Te-ai abonat cu succes!\nVei primi cele mai noi știri pe email."
+      {
+        "title": "Site de Filme și Emisiuni TV",
+        "description": "Un concept modern de interfață pentru un serviciu de streaming cu previzualizări vizuale de conținut."
       },
-      "whatIs": {
-        "title": "Ce este Hectatron?",
-        "p1": "Hectatron este o companie IT dinamică, specializată în dezvoltarea modernă a site-urilor web, optimizare și SEO. Fondată de Maxim și Islam Abu-Koush, ambii dezvoltatori full-stack cu experiență, Hectatron reunește tehnologii de ultimă generație precum Next.js, Tailwind CSS și alte librării moderne pentru a oferi soluții web de înaltă calitate, eficiente și responsive.",
-        "p2": "Cu o pasiune pentru inovație și un angajament pentru excelență, echipa noastră se concentrează pe crearea de site-uri care nu sunt doar atrăgătoare vizual, ci și optimizate pentru performanță și vizibilitate în motoarele de căutare. Fie că este vorba de construcție de la zero sau de îmbunătățirea unor platforme existente, Hectatron livrează soluții personalizate pentru nevoile clienților."
+      {
+        "title": "Site Portofoliu",
+        "description": "Portofoliu 3D interactiv care prezintă proiecte și abilități folosind Three.js și React."
       },
-      "team": {
-        "title": "Echipă",
-        "maximTab": "Maxim",
-        "islamTab": "Islam",
-        "imageAlt": "Echipa Hectatron",
-      
-        "islamTitle": "Islam Abu-Koush - Co-fondator & Full-Stack Developer",
-        "islamP1": "Islam este un dezvoltator full-stack versatil și co-fondator al Hectatron. Cu o bază tehnică solidă în Next.js, React, Express.js, Tailwind CSS și Node.js, și-a perfecționat abilitățile prin experiențe diverse, inclusiv proiecte de hackathon precum Codify și Investora.",
-        "islamP2": "Drumul său include și activitatea ca agent call-center, care i-a dezvoltat abilități de comunicare și focalizarea pe client. Priceperea lui în Figma și Photoshop îi permite să îmbine estetica cu funcționalitatea, creând soluții web moderne și atractive.",
-        "islamP3": "Pasionat de învățarea continuă, explorează constant noi practici pentru a menține Hectatron în avangarda inovației web.",
-      
-        "maximTitle": "Maxim Roenco - Co-fondator & Full-Stack Developer",
-        "maximP1": "Maxim este un dezvoltator full-stack pasionat și co-fondator al Hectatron. Cu experiență practică acumulată la internship-uri la Amdaris, Smart Energy Solutions și Quant-Apps, excelează în construirea de aplicații web moderne folosind Next.js, React, Tailwind CSS, Node.js și MongoDB.",
-        "maximP2": "Proiectele sale variază de la platforme de învățare interactive la instrumente financiare inovatoare, remarcându-se prin abilități de rezolvare a problemelor și expertiză tehnică. Maxim cunoaște foarte bine și Figma, și Photoshop, putând crea interfețe plăcute și ușor de folosit.",
-        "maximP3": "Dedicat calității și performanței, explorează constant noi tehnologii. Ca lider, conduce misiunea Hectatron de a crea site-uri responsive și moderne."
+      {
+        "title": "Site Portofoliu",
+        "description": "Portofoliu de dezvoltator captivant cu animații și tranziții în timp real."
       },
-      "infobox": {
-        "islamTab": "Islam Abu-Koush",
-        "maximTab": "Maxim Roenco",
-        "roleWebDeveloper": "Dezvoltator web",
-        "roleCoFounder": "Cofondator"
+      {
+        "title": "Site Portofoliu",
+        "description": "O prezentare creativă folosind vizualuri 3D pentru a îmbunătăți experiența utilizatorului."
       },
-      "projects": {
-        "title": "Proiecte",
-        "description": "Site-uri Next.js rapide, sigure și scalabile, cu suport de specialitate pentru a-ți menține afacerea în frunte.",
-        "items": [
-            {
-              "title": "Investora",
-              "description": "O platformă web axată pe criptomonede, concepută pentru urmărirea și vizualizarea investițiilor."
-            },
-            {
-              "title": "Site de Filme și Emisiuni TV",
-              "description": "O platformă receptivă pentru navigarea și descoperirea filmelor și emisiunilor TV populare."
-            },
-            {
-              "title": "Site de Filme și Emisiuni TV",
-              "description": "Un concept modern de interfață pentru un serviciu de streaming cu previzualizări vizuale de conținut."
-            },
-            {
-              "title": "Site Portofoliu",
-              "description": "Portofoliu 3D interactiv care prezintă proiecte și abilități folosind Three.js și React."
-            },
-            {
-              "title": "Site Portofoliu",
-              "description": "Portofoliu de dezvoltator captivant cu animații și tranziții în timp real."
-            },
-            {
-              "title": "Site Portofoliu",
-              "description": "O prezentare creativă folosind vizualuri 3D pentru a îmbunătăți experiența utilizatorului."
-            },
-            {
-              "title": "Site Portofoliu",
-              "description": "Portofoliu 3D elegant și optimizat pentru performanță folosind WebGL."
-            },
-            {
-              "title": "Site Portofoliu",
-              "description": "Portofoliu 3D minimalist, dar dinamic, construit pentru a evidenția abilitățile frontend."
-            },
-            {
-              "title": "Site Portofoliu",
-              "description": "Portofoliu 3D animat care oferă o experiență de utilizator captivantă și interactivă."
-            },
-            {
-              "title": "Companie IT – Quant Apps",
-              "description": "Un site profesional pentru Quant Apps, o companie tehnologică care oferă soluții de dezvoltare web și mobilă."
-            },
-            {
-              "title": "Companie IT – Quant Apps",
-              "description": "Site corporativ care evidențiază serviciile și proiectele Quant Apps cu un design curat și modern."
-            },
-            {
-              "title": "Tracker Ramadan",
-              "description": "Un instrument util pentru urmărirea activităților zilnice din Ramadan, a orelor și rugăciunilor, cu ghidare vizuală."
-            }
-          ]          
+      {
+        "title": "Site Portofoliu",
+        "description": "Portofoliu 3D elegant și optimizat pentru performanță folosind WebGL."
       },
-      "contact":{
-        "title": "Contactează-ne",
-        "description": "Site-uri Next.js rapide, sigure și scalabile, cu suport de specialitate pentru a-ți menține afacerea în frunte."
+      {
+        "title": "Site Portofoliu",
+        "description": "Portofoliu 3D minimalist, dar dinamic, construit pentru a evidenția abilitățile frontend."
       },
-      "contactCard": {
-        "title": "Informații de contact",
-        "description": "Scrie-ne ceva pentru a începe un chat live!",
-        "phone": "+373 697-048-56",
-        "email": "hectatron.web@gmail.com",
-        "location": "Chișinău, la Islam acasă"
+      {
+        "title": "Site Portofoliu",
+        "description": "Portofoliu 3D animat care oferă o experiență de utilizator captivantă și interactivă."
       },
-      "contactForm": {
-        "emailTitle": "Cerere nouă de la Hectatron",
-        "firstName": {
-          "label": "Prenume",
-          "placeholder": "Ion"
+      {
+        "title": "Companie IT – Quant Apps",
+        "description": "Un site profesional pentru Quant Apps, o companie tehnologică care oferă soluții de dezvoltare web și mobilă."
+      },
+      {
+        "title": "Companie IT – Quant Apps",
+        "description": "Site corporativ care evidențiază serviciile și proiectele Quant Apps cu un design curat și modern."
+      },
+      {
+        "title": "Tracker Ramadan",
+        "description": "Un instrument util pentru urmărirea activităților zilnice din Ramadan, a orelor și rugăciunilor, cu ghidare vizuală."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contactează-ne",
+    "description": "Site-uri Next.js rapide, sigure și scalabile, cu suport de specialitate pentru a-ți menține afacerea în frunte."
+  },
+  "contactCard": {
+    "title": "Informații de contact",
+    "description": "Scrie-ne ceva pentru a începe un chat live!",
+    "phone": "+373 697-048-56",
+    "email": "hectatron.web@gmail.com",
+    "location": "Chișinău, la Islam acasă"
+  },
+  "contactForm": {
+    "emailTitle": "Cerere nouă de la Hectatron",
+    "firstName": {
+      "label": "Prenume",
+      "placeholder": "Ion"
+    },
+    "lastName": {
+      "label": "Nume",
+      "placeholder": "Popescu"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "ionpopescu@gmail.com"
+    },
+    "phoneNumber": {
+      "label": "Număr de telefon",
+      "placeholder": "+40 712 345 678"
+    },
+    "serviceLabel": "Selectează serviciul",
+    "services": {
+      "newWebsite": "Website Nou",
+      "websiteRedisgn": "Redesign Website",
+      "websiteBugFixes": "Corectare Erori Website",
+      "technicalConsultation": "Consultanță Tehnică"
+    },
+    "message": {
+      "label": "Mesaj",
+      "placeholder": "Scrie mesajul tău..."
+    },
+    "sendMessage": "Trimite Mesajul",
+    "sending": "Se trimite...",
+    "success": "Am primit mesajul tău!\nEchipa noastră te va contacta cât mai curând posibil.",
+    "error": "A apărut o eroare. Te rugăm să încerci din nou mai târziu."
+  },
+  "home": {
+    "title": "Ridică-ți brandul cu soluții web personalizate",
+    "description": "Proiectăm și dezvoltăm site-uri web personalizate, de înaltă calitate, care îți îmbunătățesc brandul și generează rezultate.",
+    "getStarted": "Începe acum",
+    "testimonial": "Testimonial",
+    "customers": {
+      "title": "Vezi ce spun clienții",
+      "subtitle": "Proiectăm și dezvoltăm site-uri web personalizate, de înaltă calitate, care îți îmbunătățesc marca și generează rezultate.",
+      "navigation": {
+        "previous": "Anterior",
+        "next": "Următor"
+      },
+      "testimonials": [
+        {
+          "title": "Kareem Al-Mansour",
+          "position": "Arhitect de Soluții Tehnice",
+          "description": "Colaborarea cu Hectatron a fost mai degrabă ca o parteneriat decât ca o simplă angajare a unei echipe de dezvoltatori. Ei chiar și-au luat timpul să înțeleagă ceea ce aveam nevoie și au livrat cod rapid, curat și frumos."
         },
-        "lastName": {
-          "label": "Nume",
-          "placeholder": "Popescu"
+        {
+          "title": "Lilia Rusu",
+          "position": "Manager de Produs",
+          "description": "Sincer, nu mă așteptam la acest nivel de finisare. Site-ul nu doar arată grozav, dar funcționează incredibil de bine—rata noastră de respingere a scăzut la jumătate după lansare. Sunt super mulțumită de proces și rezultat."
         },
-        "email": {
-          "label": "Email",
-          "placeholder": "ionpopescu@gmail.com"
+        {
+          "title": "Jamal Thompson",
+          "position": "Director Creativ",
+          "description": "Hectatron a nimerit-o perfect. De la kickoff până la implementarea finală, totul a decurs lin. Sunt inteligenți, receptivi și chiar înțeleg vibrațiile web moderne. Recomand cu căldură."
         },
-        "phoneNumber": {
-          "label": "Număr de telefon",
-          "placeholder": "+40 712 345 678"
+        {
+          "title": "John Nguyen",
+          "position": "Specialist în Marketing",
+          "description": "Acești tipi înțeleg marketingul! Modul în care au optimizat paginile noastre de destinație ne-a dat un impuls real în conversii. Ei chiar ascultă obiectivele tale și apoi le aduc la viață."
         },
-        "serviceLabel": "Selectează serviciul",
-        "services": {
-          "newWebsite": "Website Nou",
-          "websiteRedisgn": "Redesign Website",
-          "websiteBugFixes": "Corectare Erori Website",
-          "technicalConsultation": "Consultanță Tehnică"
+        {
+          "title": "Ana-Maria Bălan",
+          "position": "Designer UX",
+          "description": "Am lucrat cu mulți dezvoltatori înainte, dar echipa Hectatron chiar iese în evidență. Le pasă de experiența utilizatorului la fel de mult ca nouă, designerilor, ceea ce face munca mea mult mai ușoară."
         },
-        "message": {
-          "label": "Mesaj",
-          "placeholder": "Scrie mesajul tău..."
+        {
+          "title": "Ahmed Shafiq",
+          "position": "Fondator de Startup",
+          "description": "Aveam nevoie să ne mișcăm rapid, iar Hectatron a livrat. A fost ca și cum am fi avut o echipă internă—comunicare rapidă, decizii inteligente și un produs final frumos."
         },
-        "sendMessage": "Trimite Mesajul",
-        "sending": "Se trimite...",
-        "success": "Am primit mesajul tău!\nEchipa noastră te va contacta cât mai curând posibil.",
-        "error": "A apărut o eroare. Te rugăm să încerci din nou mai târziu."
-      },      
-    "home": {
-        "title": "Ridică-ți brandul cu soluții web personalizate",
-        "description": "Proiectăm și dezvoltăm site-uri web personalizate, de înaltă calitate, care îți îmbunătățesc brandul și generează rezultate.",
-        "getStarted": "Începe acum",
-        "testimonial": "Testimonial",
-        "customers": {
-            "title": "Vezi ce spun clienții",
-            "subtitle": "Proiectăm și dezvoltăm site-uri web personalizate, de înaltă calitate, care îți îmbunătățesc marca și generează rezultate.",
-            "navigation": {
-                "previous": "Anterior",
-                "next": "Următor"
-            },
-            "testimonials": [
-                {
-                "title": "Stephen Brekke1",
-                "position": "Producător de Integrare Legacy",
-                "description": "Dacă dorești marketing real care funcționează și implementare eficientă - aplicația mobilă te acoperă."
-                },
-                {
-                "title": "Stephen Brekke2",
-                "position": "Producător de Integrare Legacy",
-                "description": "Dacă dorești marketing real care funcționează și implementare eficientă - aplicația mobilă te acoperă."
-                },
-                {
-                "title": "Stephen Brekke3",
-                "position": "Producător de Integrare Legacy",
-                "description": "Dacă dorești marketing real care funcționează și implementare eficientă - aplicația mobilă te acoperă."
-                },
-                {
-                "title": "John Doe",
-                "position": "Specialist în Marketing",
-                "description": "Dacă dorești marketing real care funcționează și implementare eficientă - aplicația mobilă te acoperă."
-                },
-                {
-                "title": "Jane Smith",
-                "position": "Designer UX",
-                "description": "Dacă dorești marketing real care funcționează și implementare eficientă - aplicația mobilă te acoperă."
-                }
-            ]
+        {
+          "title": "Sophie McAllister",
+          "position": "Consultant în E-commerce",
+          "description": "Ceea ce am apreciat cel mai mult a fost cât de lipsit de stres a părut totul. Nu a fost nevoie de micromanagement—ei pur și simplu au *înțeles*. Viteza și calitatea m-au uimit."
         },
-        "faq": {
-            "title": "Întrebări frecvente",
-            "description": "Găsește răspunsuri la întrebări frecvente despre serviciile, tehnologia și procesul nostru. Dacă ai nevoie de mai multe detalii, nu ezita să ne contactezi!",
-            "questions": [
-            {
-                "title": "Ce este Next.js și de ce îl folosiți?",
-                "description": "Next.js este un framework React care permite renderizare pe server, generare statică de site-uri și rute API. Este folosit pentru optimizarea performanței, împărțirea automată a codului și configurarea rapidă a aplicațiilor gata de producție."
-            },
-            {
-                "title": "Cum gestionează echipa voastră proiectele?",
-                "description": "Folosim metodologii Agile pentru a gestiona proiectele, asigurând flexibilitate și adaptabilitate la schimbări. Sprinturile regulate, stand-up-urile și retrospectivele ne ajută să rămânem aliniați cu obiectivele clientului."
-            },
-            {
-                "title": "În ce tehnologii sunteți specializați?",
-                "description": "Suntem specializați într-o gamă largă de tehnologii, incluzând React, Node.js, Python și diverse platforme cloud. Echipa noastră este mereu în proces de învățare pentru a ține pasul cu cele mai noi tendințe."
-            },
-            {
-                "title": "Cum asigurați calitatea codului?",
-                "description": "Respectăm cele mai bune practici de codare, realizăm recenzii regulate de cod și folosim instrumente automate de testare pentru a asigura calitatea ridicată și mentenabilitatea codului."
-            },
-            {
-                "title": "Care este abordarea voastră privind UI/UX design?",
-                "description": "Abordarea noastră este centrată pe utilizator, concentrându-ne pe utilizabilitate și accesibilitate. Efectuăm cercetări și teste cu utilizatorii pentru a crea designuri intuitive și atractive."
-            },
-            {
-                "title": "Cum comunicați cu clienții?",
-                "description": "Prioritizăm comunicarea clară și transparentă cu clienții prin actualizări regulate, sesiuni de feedback și manageri de proiect dedicați."
-            },
-            {
-                "title": "Care este procesul vostru de lansare al aplicațiilor?",
-                "description": "Folosim un pipeline CI/CD pentru lansarea aplicațiilor, asigurând tranziții line de la dezvoltare la producție cu timp de inactivitate minim."
-            },
-            {
-                "title": "Cum asigurați securitatea aplicațiilor?",
-                "description": "Implementăm cele mai bune practici de securitate, inclusiv criptarea datelor, autentificare sigură și audituri periodice pentru a proteja datele utilizatorilor."
-            }
-            ]
+        {
+          "title": "Vlad Ceban",
+          "position": "Analist de Sisteme",
+          "description": "Este foarte rar să găsești dezvoltatori care sunt atât super tehnici, cât și au un ochi bun pentru design. Site-ul Hectatron pe care l-au construit pentru noi funcționează ca o rachetă și arată incredibil de elegant."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Întrebări frecvente",
+      "description": "Găsește răspunsuri la întrebări frecvente despre serviciile, tehnologia și procesul nostru. Dacă ai nevoie de mai multe detalii, nu ezita să ne contactezi!",
+      "questions": [
+        {
+          "title": "Ce este Next.js și de ce îl folosiți?",
+          "description": "Next.js este un framework React care permite renderizare pe server, generare statică de site-uri și rute API. Este folosit pentru optimizarea performanței, împărțirea automată a codului și configurarea rapidă a aplicațiilor gata de producție."
         },
-        "services": {
-            "title": "Servicii",
-            "description": "Site-uri Next.js rapide, sigure și scalabile cu suport de specialitate pentru a-ți menține afacerea în frunte.",
-            "items": [
-              {
-                "title": "Dezvoltare Web",
-                "description": "Construim site-uri moderne, responsive și dinamice folosind Next.js, Tailwind CSS și cele mai noi tehnologii web.",
-                "src": "/icons/cubic.png",
-                "alt": "Dezvoltare Web"
-              },
-              {
-                "title": "Design UI/UX",
-                "description": "Creăm interfețe vizual atractive și ușor de folosit care îmbunătățesc experiența utilizatorului.",
-                "src": "/icons/batery.png",
-                "alt": "UI/UX"
-              },
-              {
-                "title": "Optimizare SEO",
-                "description": "Implementăm strategii SEO eficiente pentru a îmbunătăți vizibilitatea și poziționarea site-ului tău.",
-                "src": "/icons/seo.png",
-                "alt": "SEO"
-              },
-              {
-                "title": "Soluții E-commerce",
-                "description": "Dezvoltăm platforme e-commerce robuste cu plăți securizate și experiențe de cumpărături fără probleme.",
-                "src": "/icons/monitor.png",
-                "alt": "E-commerce"
-              }
-            ]
-          },
-          "whychoose": {
-            "title": "De ce să ne alegi?",
-            "description": "Site-uri Next.js rapide, sigure și scalabile cu suport de experți pentru a-ți menține afacerea în față.",
-            "items": [
-              {
-                "title": "Performanță de top",
-                "description": "Next.js asigură timpi de încărcare extrem de rapizi prin SSR, SSG și caching optimizat, oferind o experiență excelentă utilizatorilor.",
-                "src": "/icons/performance.png",
-                "alt": "performanță"
-              },
-              {
-                "title": "Securitate solidă",
-                "description": "Implementăm criptare SSL, autentificare sigură și protecție DDoS pentru ca site-ul tău să fie ferit de amenințări și vulnerabilități.",
-                "src": "/icons/security.png",
-                "alt": "securitate"
-              },
-              {
-                "title": "Scalabil & Fiabil",
-                "description": "Gata să gestioneze volume mari de trafic, soluțiile noastre oferă stabilitate și creștere fără efort pentru afacerea ta.",
-                "src": "/icons/scalable.png",
-                "alt": "scalabilitate"
-              },
-              {
-                "title": "Suport Continu",
-                "description": "Oferim întreținere constantă, update-uri de securitate și optimizări pentru ca site-ul tău să rămână sigur și actualizat.",
-                "src": "/icons/support.png",
-                "alt": "suport"
-              }
-            ]
-          }
+        {
+          "title": "Cum gestionează echipa voastră proiectele?",
+          "description": "Folosim metodologii Agile pentru a gestiona proiectele, asigurând flexibilitate și adaptabilitate la schimbări. Sprinturile regulate, stand-up-urile și retrospectivele ne ajută să rămânem aliniați cu obiectivele clientului."
+        },
+        {
+          "title": "În ce tehnologii sunteți specializați?",
+          "description": "Suntem specializați într-o gamă largă de tehnologii, incluzând React, Node.js, Python și diverse platforme cloud. Echipa noastră este mereu în proces de învățare pentru a ține pasul cu cele mai noi tendințe."
+        },
+        {
+          "title": "Cum asigurați calitatea codului?",
+          "description": "Respectăm cele mai bune practici de codare, realizăm recenzii regulate de cod și folosim instrumente automate de testare pentru a asigura calitatea ridicată și mentenabilitatea codului."
+        },
+        {
+          "title": "Care este abordarea voastră privind UI/UX design?",
+          "description": "Abordarea noastră este centrată pe utilizator, concentrându-ne pe utilizabilitate și accesibilitate. Efectuăm cercetări și teste cu utilizatorii pentru a crea designuri intuitive și atractive."
+        },
+        {
+          "title": "Cum comunicați cu clienții?",
+          "description": "Prioritizăm comunicarea clară și transparentă cu clienții prin actualizări regulate, sesiuni de feedback și manageri de proiect dedicați."
+        },
+        {
+          "title": "Care este procesul vostru de lansare al aplicațiilor?",
+          "description": "Folosim un pipeline CI/CD pentru lansarea aplicațiilor, asigurând tranziții line de la dezvoltare la producție cu timp de inactivitate minim."
+        },
+        {
+          "title": "Cum asigurați securitatea aplicațiilor?",
+          "description": "Implementăm cele mai bune practici de securitate, inclusiv criptarea datelor, autentificare sigură și audituri periodice pentru a proteja datele utilizatorilor."
+        }
+      ]
+    },
+    "services": {
+      "title": "Servicii",
+      "description": "Site-uri Next.js rapide, sigure și scalabile cu suport de specialitate pentru a-ți menține afacerea în frunte.",
+      "items": [
+        {
+          "title": "Dezvoltare Web",
+          "description": "Construim site-uri moderne, responsive și dinamice folosind Next.js, Tailwind CSS și cele mai noi tehnologii web.",
+          "src": "/icons/cubic.png",
+          "alt": "Dezvoltare Web"
+        },
+        {
+          "title": "Design UI/UX",
+          "description": "Creăm interfețe vizual atractive și ușor de folosit care îmbunătățesc experiența utilizatorului.",
+          "src": "/icons/batery.png",
+          "alt": "UI/UX"
+        },
+        {
+          "title": "Optimizare SEO",
+          "description": "Implementăm strategii SEO eficiente pentru a îmbunătăți vizibilitatea și poziționarea site-ului tău.",
+          "src": "/icons/seo.png",
+          "alt": "SEO"
+        },
+        {
+          "title": "Soluții E-commerce",
+          "description": "Dezvoltăm platforme e-commerce robuste cu plăți securizate și experiențe de cumpărături fără probleme.",
+          "src": "/icons/monitor.png",
+          "alt": "E-commerce"
+        }
+      ]
+    },
+    "whychoose": {
+      "title": "De ce să ne alegi?",
+      "description": "Site-uri Next.js rapide, sigure și scalabile cu suport de experți pentru a-ți menține afacerea în față.",
+      "items": [
+        {
+          "title": "Performanță de top",
+          "description": "Next.js asigură timpi de încărcare extrem de rapizi prin SSR, SSG și caching optimizat, oferind o experiență excelentă utilizatorilor.",
+          "src": "/icons/performance.png",
+          "alt": "performanță"
+        },
+        {
+          "title": "Securitate solidă",
+          "description": "Implementăm criptare SSL, autentificare sigură și protecție DDoS pentru ca site-ul tău să fie ferit de amenințări și vulnerabilități.",
+          "src": "/icons/security.png",
+          "alt": "securitate"
+        },
+        {
+          "title": "Scalabil & Fiabil",
+          "description": "Gata să gestioneze volume mari de trafic, soluțiile noastre oferă stabilitate și creștere fără efort pentru afacerea ta.",
+          "src": "/icons/scalable.png",
+          "alt": "scalabilitate"
+        },
+        {
+          "title": "Suport Continu",
+          "description": "Oferim întreținere constantă, update-uri de securitate și optimizări pentru ca site-ul tău să rămână sigur și actualizat.",
+          "src": "/icons/support.png",
+          "alt": "suport"
+        }
+      ]
     }
+  }
 }

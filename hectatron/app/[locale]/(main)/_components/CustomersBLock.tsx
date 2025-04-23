@@ -8,13 +8,13 @@ const CustomersBLock = ({src, alt, title, position, description}: CustomersBlock
   return (
     <div className={cn("bg-[#1A1A32] rounded-[16px] p-10 flex flex-col gap-4 border-2 border-white/20", "max-sm:p-5 max-xl:max-w-[600px]")}>
       <div className="flex items-center gap-6 justify-evenly">
-        <div className={cn("relative w-40 h-40 flex-shrink-0 rounded-full overflow-hidden", "max-sm:w-25 max-sm:h-25")}>
+        <div className={cn("relative w-40 h-40 rounded-full flex-shrink-0 overflow-hidden", "max-sm:w-25 max-sm:h-25")}>
           <Image 
             src={src}
             alt={alt}
             width={150}
             height={100}
-            className={cn(" object-cover", "")}
+            className={cn("object-cover w-full h-full", "")}
           />
         </div>
         

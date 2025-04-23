@@ -18,43 +18,17 @@ const Customers = () => {
   const [direction, setDirection] = useState(1);
   const [windowWidth, setWindowWidth] = useState(0);
 
-  const testimonials: CustomersBlockProps[] = [
-    {
-      src: "/images/testimonial1.png",
-      alt: t('customers.testimonials.0.title'),
-      title: t('customers.testimonials.0.title'),
-      position: t('customers.testimonials.0.position'),
-      description: t('customers.testimonials.0.description'),
-    },
-    {
-      src: "/images/testimonial2.png",
-      alt: t('customers.testimonials.1.title'),
-      title: t('customers.testimonials.1.title'),
-      position: t('customers.testimonials.1.position'),
-      description: t('customers.testimonials.1.description'),
-    },
-    {
-      src: "/images/testimonial1.png",
-      alt: t('customers.testimonials.2.title'),
-      title: t('customers.testimonials.2.title'),
-      position: t('customers.testimonials.2.position'),
-      description: t('customers.testimonials.2.description'),
-    },
-    {
-      src: "/images/testimonial1.png",
-      alt: t('customers.testimonials.3.title'),
-      title: t('customers.testimonials.3.title'),
-      position: t('customers.testimonials.3.position'),
-      description: t('customers.testimonials.3.description'),
-    },
-    {
-      src: "/images/testimonial2.png",
-      alt: t('customers.testimonials.4.title'),
-      title: t('customers.testimonials.4.title'),
-      position: t('customers.testimonials.4.position'),
-      description: t('customers.testimonials.4.description'),
-    },
-  ];
+  const testimonials: CustomersBlockProps[] = [];
+
+  for (let i = 0; i < 8; i++) {
+    testimonials.push({
+      src: `/images/${t(`customers.testimonials.${i}.title`)}.jpg`,
+      alt: t(`customers.testimonials.${i}.title`),
+      title: t(`customers.testimonials.${i}.title`),
+      position: t(`customers.testimonials.${i}.position`),
+      description: t(`customers.testimonials.${i}.description`),
+    })
+  }
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
