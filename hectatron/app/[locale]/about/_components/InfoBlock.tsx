@@ -94,7 +94,7 @@ const InfoBlock = () => {
                 <m.div
                     initial={{ opacity: 0, scale: 0.5, x: -200}}
                     whileInView={{ opacity: 1, scale: 1, x: 0}}
-                    viewport={{ once: true, amount: 0.5}}
+                    viewport={{ once: true}}
                     transition={{ type: 'spring', stiffness: 120, damping: 25, duration: 0.5}}
                     className="flex flex-col gap-4 bg-[#1A1A32] inner-shadow rounded-[16px] p-6 max-w-2xl w-full">
                     <div className="w-full text-center">
@@ -122,7 +122,7 @@ const InfoBlock = () => {
                 <m.div
                     initial={{ opacity: 0, scale: 0.5, x: -200}}
                     whileInView={{ opacity: 1, scale: 1, x: 0}}
-                    viewport={{ once: true, amount: 0.5}}
+                    viewport={{ once: true}}
                     transition={{ type: 'spring', stiffness: 120, damping: 25, duration: 0.5}}
                     className="flex flex-col gap-4 bg-[#1A1A32] inner-shadow rounded-[16px] p-6 max-w-2xl w-full">
                     <div className="w-full text-center">
@@ -156,7 +156,7 @@ const InfoBlock = () => {
                 <m.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true, amount: 0.5}}
+                    viewport={{ once: true}}
                     transition={{ type: 'spring', stiffness: 80, damping: 20, delay: 0.3 }}
                 >
                     <Image 
