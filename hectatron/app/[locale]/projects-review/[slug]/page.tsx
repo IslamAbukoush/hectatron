@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { items } from '@/lib/data/projects.data'
 import { useRouter } from 'next/navigation'
-import { use, useState, useEffect } from 'react'
+import { use } from 'react'
 import { cn } from '@/lib/utils'
 import { useMainAnimationStore } from '@/lib/store/mainAnimation.store'
 import * as m from 'motion/react-m'
