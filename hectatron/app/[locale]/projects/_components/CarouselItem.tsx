@@ -15,9 +15,9 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
     const {activeCardId, setActiveCardId} = useCarouselStore();
     const [windowWidth, setWindowWidth] = useState(0);
     const router = useRouter();
-    const {isNewPageAnimation, changeState, resetState} = useMainAnimationStore();
+    const {isNewPageAnimation, isHideHeading, changeState, resetState} = useMainAnimationStore();
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         console.log('useEffect triggered');
         console.log(`isNewPageAnimation: ${isNewPageAnimation}`);
         resetState();
@@ -58,6 +58,7 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
     const updateActiveCardId = (id: number) => {
         if(activeCardId === id){
             changeState(true, 'isNewPageAnimation');
+            changeState(true, 'isHideHeading');
             setTimeout(() => {
                 router.push(`/projects-review/${item.slug}`)
             }, 400)
@@ -106,7 +107,11 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
             scale: getScale(),
             translateY: -130,
             transform: 'perspective(1200px) rotateX(-70deg) rotateY(0deg) translateZ(30px)', 
-        } :{
+        } : isHideHeading ? {
+            scale: 1,
+            translateY: -130,
+            transform: 'perspective(1200px) rotateX(-70deg) rotateY(0deg) translateZ(30px)',
+        } : {
         scale: isActive ? getScale() : 1,
         zIndex: isActive ? 20 : 6 - Math.abs(angleDiff),
         rotate: rotate,

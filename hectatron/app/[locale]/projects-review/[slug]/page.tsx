@@ -6,6 +6,8 @@ import { use, useState, useEffect } from 'react'
 import { cn } from '@/lib/utils'
 import { useMainAnimationStore } from '@/lib/store/mainAnimation.store'
 import * as m from 'motion/react-m'
+import Star from '../../_components/Star'
+import Blur from '../../_components/Blur'
 
 interface ProjectPageProps {
   params: Promise<{
@@ -47,7 +49,6 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
     <div className="h-screen w-full relative">
       <div 
         className="w-full h-full"
-
       >
         <m.iframe 
           src={project.link} 
@@ -100,6 +101,14 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
         />
         <p>Stop viewing</p>
       </m.div>
+      <div className="absolute inset-0 w-full h-full -z-10 overflow-hidden">
+          <Blur className="right-[-20%] top-[100px] w-[300px] h-[300px]"/>
+          <Image className="absolute right-[5%] top-[150px] block max-md:hidden" src='/images/projects-planet.png' alt="planet" width={200} height={200}/>
+        </div>
+        <Star className="top-[150px] left-[5%]"/>
+        <Star className="top-[550px] left-[2%]"/>
+        <Star className="top-[150px] right-[20%]"/>
+        <Star className="top-[450px] right-[2%]"/>
     </div>
   )
 }
