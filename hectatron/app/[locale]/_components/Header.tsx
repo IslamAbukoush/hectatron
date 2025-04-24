@@ -9,8 +9,8 @@ import MobileMenu from "./MobileMenu"
 import { useWindowSize } from "@/lib/hooks/useWindowSize"
 import LanguageSwitcher from "./LanguageSwitcher"
 import * as m from 'motion/react-m'
-import { buttonAnimation } from "@/lib/animations/buttonAnimation"
-import { useTranslations } from "next-intl" // Import the translation hook
+import { buttonAnimation, textAnimation } from "@/lib/animations/buttonAnimation"
+import { useTranslations } from "next-intl" 
 
 interface LinkItem {
     href: string;
@@ -18,7 +18,7 @@ interface LinkItem {
 }
 
 const Header = () => {
-    const t = useTranslations(); // Initialize the translation hook
+    const t = useTranslations(); 
     const path = usePathname();
     const isProjectPreviewPage = path.includes('/projects-review/');
 
@@ -50,7 +50,6 @@ const Header = () => {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    // Define links with translated labels
     const links: LinkItem[] = [
         { href: '/', label: t('header.navigation.home') },
         { href: '/about', label: t('header.navigation.about') },
@@ -98,13 +97,20 @@ const Header = () => {
 
                 <div className="relative h-full md:flex hidden justify-around items-center bg-white/11 px-10 rounded-3xl lg:px-16">
                     {links.map((link, i) => (
+                        <m.div 
+                            variants={textAnimation}
+                            initial='hidden'
+                            animate='visible'
+                            whileHover='hover'
+                            key={i} className="cursor-pointer"
+                        >
                         <Link
-                            key={i}
                             href={link.href}
                             className={cn("text-sm text-white opacity-45 py-3", path === link.href && "opacity-100")}
                         >
                             {link.label}
                         </Link>
+                        </m.div>
                     ))}
                     <LanguageSwitcher />
                 </div>

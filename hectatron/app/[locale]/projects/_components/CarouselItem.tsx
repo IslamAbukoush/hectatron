@@ -17,14 +17,6 @@ const CarouselItem = ({item, index, arrayLength}: CarouselType) => {
     const router = useRouter();
     const {isNewPageAnimation, isHideHeading, changeState} = useMainAnimationStore();
 
-    // useLayoutEffect(() => {
-    //     console.log('useEffect triggered');
-    //     console.log(`isNewPageAnimation: ${isNewPageAnimation}`);
-    //     resetState();
-    //     console.log('State reset to default values');
-    //     console.log(`isNewPageAnimation: ${isNewPageAnimation}`);
-    // }, [resetState, isNewPageAnimation]);
-
     useEffect(() => {
     setWindowWidth(window.innerWidth);
     
